@@ -7,7 +7,7 @@ description: "Person mapping from HES APC hes_patient table"
 
 ---
 
-# CDM Table name: PERSON (CDM v5.3)
+# CDM Table name: PERSON (CDM v5.3 / v5.4)
 
 ## Reading from hes_patient
 
@@ -28,13 +28,13 @@ The patients mapped to the CDM from HES APC in this instance were restricted to 
 | day_of_birth |  |  |  |
 | birth_datetime |  |  |  |
 | race_concept_id | gen_ethnicity | | In OMOP, use "race" instead of "ethnicity", but at a later stage|
-| ethnicity_concept_id |  | 0 |   |
+| ethnicity_concept_id |  |  |   |
 | location_id |  |  |  |
 | provider_id |  |  |  |
 | care_site_id | | |  |
 | person_source_value | patid |  |  |
 | gender_source_value | |  | |
-| gender_source_concept_id |  | 0 |  |
+| gender_source_concept_id |  |  |  |
 | race_source_value | gen_ethnicity| | In OMOP, use "race" instead of "ethnicity", but at a later stage|
 | race_source_concept_id |  | |
 | ethnicity_source_value |  |  |  | 

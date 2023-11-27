@@ -7,7 +7,7 @@ description: "Provider mapping from HES APC hes_episodes table"
 
 ---
 
-# CDM Table name: PROVIDER (CDM v5.3)
+# CDM Table name: PROVIDER (CDM v5.3 / v5.4)
 
 ## Reading from hes_episodes
 
