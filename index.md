@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Home
-nav_order: 0
-nav_exclude: true
+nav_order: 1
 description: "This site is the documentation for all OMOP CDM ETLs at Janssen Research & Development"
 
 ---
