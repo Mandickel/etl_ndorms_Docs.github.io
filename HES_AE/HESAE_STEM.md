@@ -11,4 +11,4 @@ description: "Stem table description"
 
 The stem_table is a staging area where HES A&E source codes like Read codes will first be mapped to concept_ids.
 
-## Stem table to be Mapped on a later stage.
+## Stem tables to be Mapped on a later stage.

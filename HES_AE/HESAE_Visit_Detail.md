@@ -13,9 +13,7 @@ description: "Visit_Detil mapping from hes_episodes tables"
 
 ## Reading from hesae_attendance.
 
-Extract the meticulously curated data from Hospital Episode Statistics(HES) Accident & Emergency (A&E)tables, specifically, the table denoted as hesae_attendance. Subsequently, systematically transform and align this information into the corresponding OMOP CDM versions outlined below.
-
-**Reading from hesae_attendance to Visit_Detail CDM v5.3 table:**
+**Reading from hesae_attendance to Visit_Detail CDM v5.3 / v5.4 table:**
 ![](images/image4.png)
 
 **Figure.1**
@@ -29,7 +27,7 @@ Extract the meticulously curated data from Hospital Episode Statistics(HES) Acci
 | visit_detail_start_datetime | arrivaldate | |  |
 | visit_detail_end_date |  | | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
 | visit_detail_end_datetime | | |  Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
-| visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
+| visit_detail_type_concept_id |  |  | 32818 = "EHR administration record” |
 | provider_id | |  | |
 | care_site_id | |  |  |
 | visit_detail_source_value | aekey | | This will allow us to retrieve visit_detail_id using patid. |
