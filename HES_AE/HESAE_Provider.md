@@ -2,7 +2,7 @@
 layout: default
 title: Provider
 nav_order: 5
-parent: HES AE
+parent: HES A&E
 description: "Provider mapping from HES APC hes_episodes table"
 
 ---
