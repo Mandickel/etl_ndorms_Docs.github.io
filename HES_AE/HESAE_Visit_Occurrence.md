@@ -33,4 +33,4 @@ description: "Visit_Occurrence mapping from hes_hospital table"
 | admitting_source_value | aerefsource |  | Definition to be added instead of number |
 | discharge_to_concept_id |  |  | |
 | discharge_to_source_value |  |  |  |
-| preceding_visit_occurrence_id |  | | Using person_id, look up the hospitalisation that occurs prior to this and put the visit_occurrence_id here.  |
+| preceding_visit_occurrence_id |  | | Using person_id, look up the attendances that occurred prior to this and put the visit_occurrence_id here.  |
