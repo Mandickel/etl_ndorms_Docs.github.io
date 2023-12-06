@@ -27,8 +27,8 @@ Extract the meticulously curated data from Hospital Episode Statistics(HES) Acci
 | visit_detail_concept_id |  |  | 9201 = Inpatient visit |
 | visit_detail_start_date | arrivaldate | |  |
 | visit_detail_start_datetime | arrivaldate | |  |
-| visit_detail_end_date |  | | |
-| visit_detail_end_datetime | | |  |
+| visit_detail_end_date |  | | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
+| visit_detail_end_datetime | | |  Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | |  | |
 | care_site_id | |  |  |

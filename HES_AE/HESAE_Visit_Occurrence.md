@@ -22,7 +22,7 @@ description: "Visit_Occurrence mapping from hes_hospital table"
 | visit_concept_id |  |  | 9201 = Inpatient visit |
 | visit_start_date | arrivaldate | | Arrival date will be mapped to visit_start_date  |
 | visit_start_datetime | | |Arrival date will be mapped to visit_start_date  |
-| visit_end_date | | | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
+| visit_end_date | rrivaldate| | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
 | visit_end_datetime | | | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later) |
 | visit_type_concept_id |  | 32818 = EHR administration record |  |
 | provider_id | | |  |
