@@ -3,13 +3,13 @@ layout: default
 title: CDM v5.4
 nav_order: 2
 parent: Visit_Detail
-grand_parent: HES APC
+grand_parent: HES A&E
 description: "Visit_detail v5.4 description"
 ---
 
 # CDM Table name: Visit_detail (CDM v5.4)
 
-**Reading from hes_episodes to Visit_Detail CDM v5.4 table:**
+**Reading from hes_attendance to Visit_Detail CDM v5.4 table:**
 ![](images/image9.png)
 
 **Figure.1**
