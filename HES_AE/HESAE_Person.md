@@ -2,16 +2,16 @@
 layout: default
 title: Person
 nav_order: 1
-parent: HES AE
-description: "Person mapping from HES APC hes_patient table"
+parent: HES A&E
+description: "Person mapping from HES APC hesae_patient table"
 
 ---
 
 # CDM Table name: PERSON (CDM v5.3 / v5.4)
 
-## Reading from hes_patient
+## Reading from hesae_patient
 
-The patients mapped to the CDM from HES APC in this instance were restricted to those with a match_rank equal to one or two and had an entry in the hospital visit table, while the others were discarded.
+The patients mapped to the CDM from HES A&E in this instance were restricted to those with a match_rank equal to one or two and had an entry in the hospital visit table, while the others were discarded.
 
 
 
