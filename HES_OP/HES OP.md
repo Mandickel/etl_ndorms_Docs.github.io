@@ -14,3 +14,6 @@ These materials are meant to serve as documentation and reference for how the [H
 The image below (Figure.1) shows a high-level diagram of how the native tables in the HES OP database were mapped to the OMOP CDM. The main HES OP tables converted include: (hesop_patient, hesop_appointment, hesop_clinical, hesop_patient_pathway).
 
 *HES OP source Data Mapping for CDM v5.3 & CDM v5.4*
+
+![](images/image1.png)
+**Figure.1**
