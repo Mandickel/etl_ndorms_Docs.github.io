@@ -9,3 +9,24 @@ description: "Provider mapping from HES APC hes_episodes table"
 
 # CDM Table name: PROVIDER (CDM v5.3 / v5.4)
 
+## Reading from hesop_clinical
+
+Use the hes_episodes table to populate the provider table. In HES APC, the Pconsult field represents the unique identifier given to the consultant which in this case is representing the provider.  
+
+![](images/image3.png)
+
+| Destination Field | Source field | Logic | Comment field |
+| --- | --- | :---: | --- |
+| provider_id | | | Autogenerate: If table is empty, start from MAX(public.Provider)+1 |
+| provider_name |  |  |  |
+| npi |  |  |  |
+| dea |  |  |  |
+| specialty_concept_id | tretspef, mainspef | If tretspef is not null then tretspef else mainspef|
+| care_site_id | | | |
+| year_of_birth |  |  |  |
+| gender_concept_id |  | |  |
+| provider_source_value | |  | Create a dummy provider_source_value since we do not have an actual provider |
+| specialty_source_value | tretspef, mainspef | If tretspef is not null then tretspef else mainspef|
+| specialty_source_concept_id |  |  | |
+| gender_source_value | | |  |
+| gender_source_concept_id |  |  | |
