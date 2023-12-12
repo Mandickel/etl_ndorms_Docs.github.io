@@ -39,8 +39,3 @@ description: "Visit_Detil mapping from hes_episodes tables"
 | preceding_visit_detail_id |  |  | Use patid + aekey where to get the preceding visit_detail_id if any.|
 | visit_detail_parent_id | NULL |  |  |
 | visit_occurrence_id |  |  | Use aekey to retrieve visit_occurrence_id from visit_occurrence.visit_source_value |
-
-## Change log
-
-### 12-Dec-2023
-- Creation of documentation

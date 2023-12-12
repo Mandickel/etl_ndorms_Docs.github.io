@@ -30,8 +30,3 @@ Use the hes_episodes table to populate the provider table. In HES APC, the Pcons
 | specialty_source_concept_id | NULL |  | |
 | gender_source_value | NULL| |  |
 | gender_source_concept_id | NULL |  | |
-
-## Change log
-
-### 12-Dec-2023
-- Creation of documentation

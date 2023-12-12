@@ -39,7 +39,3 @@ The patients mapped to the CDM from HES OP in this instance were restricted to t
 | race_source_concept_id | NULL | |
 | ethnicity_source_value | NULL |  |  | 
 
-## Change log
-
-### 12-Nov-2023
-- Creation of documentation

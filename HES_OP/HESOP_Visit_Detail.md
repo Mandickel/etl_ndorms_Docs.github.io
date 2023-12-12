@@ -39,7 +39,3 @@ description: "Visit_Detil mapping from hes_episodes tables"
 | visit_detail_parent_id | NULL |  |  |
 | visit_occurrence_id |  |  | Use attendkey to retrieve visit_occurrence_id from public.visit_occurrence |
 
-## Change log
-
-### 12-Dec-2023
-- Creation of documentation

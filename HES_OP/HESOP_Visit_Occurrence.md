@@ -35,7 +35,3 @@ description: "Visit_Occurrence mapping from hes_hospital table"
 | discharge_to_source_value | NULL |  |  |
 | preceding_visit_occurrence_id |  | | Using person_id, look up the attendances that occurred prior to this and put the visit_occurrence_id here.  |
 
-## Change log
-
-### 12-Dec-2023
-- Creation of documentation

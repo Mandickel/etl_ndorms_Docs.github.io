@@ -38,8 +38,3 @@ The patients mapped to the CDM from HES A&E in this instance were restricted to 
 | race_source_value | gen_ethnicity| | In OMOP, use "race" instead of "ethnicity", but at a later stage|
 | race_source_concept_id | NULL | |
 | ethnicity_source_value | NULL |  |  | 
-
-## Change log
-
-### 12-Dec-2023
-- Creation of documentation
