@@ -27,7 +27,7 @@ The patients mapped to the CDM from HES APC in this instance were restricted to 
 | month_of_birth | |  | |
 | day_of_birth |  |  |  |
 | birth_datetime |  |  |  |
-| race_concept_id | gen_ethnicity | | In OMOP, use "race" instead of "ethnicity", but at a later stage|
+| race_concept_id | gen_ethnicity | | race_concept_id will be mapped to SNOMED Concept_id by using gen_ethnicity to retrieve the target_concept_id from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHIC_STCM"|
 | ethnicity_concept_id |  |  |   |
 | location_id |  |  |  |
 | provider_id |  |  |  |
@@ -35,7 +35,7 @@ The patients mapped to the CDM from HES APC in this instance were restricted to 
 | person_source_value | patid |  |  |
 | gender_source_value | |  | |
 | gender_source_concept_id |  |  |  |
-| race_source_value | gen_ethnicity| | In OMOP, use "race" instead of "ethnicity", but at a later stage|
+| race_source_value | gen_ethnicity| | race_concept_id will be mapped to SNOMED Concept_id by using gen_ethnicity to retrieve the target_concept_id from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHIC_STCM"|
 | race_source_concept_id |  | |
 | ethnicity_source_value |  |  |  | 
 
