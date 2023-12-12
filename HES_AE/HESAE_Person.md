@@ -3,7 +3,7 @@ layout: default
 title: Person
 nav_order: 1
 parent: HES A&E
-description: "Person mapping from HES APC hesae_patient table"
+description: "Person mapping from HES AE hesae_patient table"
 
 ---
 

@@ -4,7 +4,7 @@ title: Visit_Occurrence
 nav_order: 7
 parent: HES A&E
 has_children: false
-description: "Visit_Occurrence mapping from hes_hospital table"
+description: "Visit_Occurrence mapping from hesae_attendance table"
 
 ---
 

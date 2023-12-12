@@ -2,7 +2,7 @@
 layout: default
 title: HES OP
 nav_order: 4
-description: "Hospital Episode Statistics (HES) Admitted Patient Care (APC) ETL Documentation"
+description: "Hospital Episode Statistics (HES) Out Patient (OP) ETL Documentation"
 has_children: true
 permalink: /docs/HES_OP
 ---

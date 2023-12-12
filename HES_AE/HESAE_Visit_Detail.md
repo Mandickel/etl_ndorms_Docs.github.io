@@ -4,7 +4,7 @@ title: Visit_Detail
 nav_order: 6
 parent: HES A&E
 has_children: false
-description: "Visit_Detil mapping from hes_episodes tables"
+description: "Visit_Detil mapping from hesae_attendance tables"
 
 ---
 

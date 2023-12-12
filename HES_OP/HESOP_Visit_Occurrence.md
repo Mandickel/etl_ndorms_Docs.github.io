@@ -3,7 +3,7 @@ layout: default
 title: Visit_Occurrence
 nav_order: 7
 parent: HES OP
-description: "Visit_Occurrence mapping from hes_hospital table"
+description: "Visit_Occurrence mapping from hesop_appointment table"
 
 ---
 
@@ -11,7 +11,7 @@ description: "Visit_Occurrence mapping from hes_hospital table"
 # CDM Table name: VISIT_OCCURRENCE (CDM v5.3 / v5.4)
 
 ## Reading from hesop_appointment.
-**Reading from hesae_appointment to Visit_Occurrence CDM v5.3/ v5.4 table:**
+**Reading from hesop_appointment to Visit_Occurrence CDM v5.3/ v5.4 table:**
 ![](images/image4.png)
 **Figure.1**
 
