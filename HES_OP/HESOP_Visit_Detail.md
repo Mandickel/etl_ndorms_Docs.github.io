@@ -25,16 +25,21 @@ description: "Visit_Detil mapping from hes_episodes tables"
 | visit_detail_start_date | apptdate | |  |
 | visit_detail_start_datetime | apptdate | |  |
 | visit_detail_end_date | apptdate | | Appointment date will also be mapped to visit_detail_end_date because it's an outpatient appointment |
-| visit_detail_end_datetime | | | |
+| visit_detail_end_datetime |NULL | | |
 | visit_detail_type_concept_id |  |  | 32818 = "EHR administration record” |
-| provider_id | |  | |
-| care_site_id | |  |  |
+| provider_id | NULL|  | |
+| care_site_id | NULL|  |  |
 | visit_detail_source_value | attendkey | | This will allow us to retrieve visit_detail_id using patid. |
-| visit_detail_source_concept_id |  |  | |
-| admitting_source_concept_id | |  |  |
-| admitting_source_value | |  |  |
-| discharge_to_concept_id | |  |  |
-| discharge_to_source_value |  |  |  |
+| visit_detail_source_concept_id |NULL  |  | |
+| admitting_source_concept_id |NULL |  |  |
+| admitting_source_value | NULL|  |  |
+| discharge_to_concept_id |NULL |  |  |
+| discharge_to_source_value |NULL  |  |  |
 | preceding_visit_detail_id |  |  | Use patid + attendkey where to get the preceding visit_detail_id if any.|
-| visit_detail_parent_id |  |  |  |
+| visit_detail_parent_id | NULL |  |  |
 | visit_occurrence_id |  |  | Use attendkey to retrieve visit_occurrence_id from public.visit_occurrence |
+
+## Change log
+
+### 12-Dec-2023
+- Creation of documentation
