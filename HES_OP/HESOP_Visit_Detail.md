@@ -10,7 +10,7 @@ description: "Visit_Detil mapping from hes_episodes tables"
 
 # CDM Table name: VISIT_DETAIL (CDM v5.3 / v5.4)
 
-## Reading from hesae_attendance.
+## Reading from hesop_appointment.
 
 **Reading from hesop_appointment to Visit_Detail CDM v5.3 / v5.4 table:**
 ![](images/image3.png)
