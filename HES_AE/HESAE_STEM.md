@@ -22,7 +22,7 @@ The stem_table is a staging area where HES A&E source codes like Read codes will
 | domain_id | NULL | | |
 | person_id | patid| | |
 | visit_occurrence_id |aekey,patid| | Use patid and aekey to retrieve visit_occurrence_id |
-| visit_detail_id|aekey,patid||Use patid+epikey to retrieve visit_detail_id |
+| visit_detail_id|aekey,patid||Use patid+aekey to retrieve visit_detail_id |
 | provider_id | NULL| | |
 | start_datetime | NULL | | |
 | concept_id | diag | | If there is no mapping then set to 0 and set domain_id as ‘Observation’.otherwise left join Source_to_Source_vocab_map AS s ON s.SOURCE_CODE = (SELECT CASE WHEN LENGTH(t2.diag) = 4 AND RIGHT(t2.diag, 1) IN ('X', '.')THEN LEFT(t2.diag, 3)WHEN LENGTH(t2.diag) = 4 THEN CONCAT(LEFT(t2.diag, 3), '.', RIGHT(t2.diag, 1))ELSE t2.diag END AS source_value FROM {SOURCE_SCHEMA}.hesae_diagnosis) AND s.SOURCE_VOCABULARY_ID=’ICD10’ AND target_standard_concept = ‘S’ AND target_invalid_reason is NULL|
