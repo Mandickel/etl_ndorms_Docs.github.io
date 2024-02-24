@@ -25,7 +25,11 @@ The stem_table is a staging area where HES A&E source codes like Read codes will
 | visit_detail_id|aekey,patid||Use patid+aekey to retrieve visit_detail_id |
 | provider_id | NULL| | |
 | start_datetime | NULL | | |
-| concept_id | diag | | If there is no mapping then set to 0 and set domain_id as ‘Observation’.otherwise left join Source_to_Source_vocab_map AS s ON s.SOURCE_CODE = (SELECT CASE WHEN LENGTH(t2.diag) = 4 AND RIGHT(t2.diag, 1) IN ('X', '.')THEN LEFT(t2.diag, 3)WHEN LENGTH(t2.diag) = 4 THEN CONCAT(LEFT(t2.diag, 3), '.', RIGHT(t2.diag, 1))ELSE t2.diag END AS source_value FROM {SOURCE_SCHEMA}.hesae_diagnosis) AND s.SOURCE_VOCABULARY_ID=’ICD10’ AND target_standard_concept = ‘S’ AND target_invalid_reason is NULL|
+| concept_id | diag | | If there is no mapping then set to 0 and set domain_id as ‘Observation’.otherwise left join Source_to_Source_vocab_map AS s ON s.SOURCE_CODE = (SELECT CASE WHEN LENGTH(t2.diag) = 4 AND RIGHT(t2.diag, 1) IN ('X', '.')THEN LEFT(t2.diag, 3) WHEN LENGTH(t2.diag) = 4 THEN CONCAT(LEFT(t2.diag, 3), '.', RIGHT(t2.diag, 1))ELSE t2.diag END AS source_value FROM {SOURCE_SCHEMA}.hesae_diagnosis) AND s.SOURCE_VOCABULARY_ID=’ICD10’ 
+
+ALSO
+
+left join Source_to_Source_vocab_map AS s ON s.SOURCE_CODE = ( SELECT t2.cleansedreadcode as source_value, FROM {SOURCE_SCHEMA}.hesae_diagnosis AS t1 INNER JOIN source.medicaldictionary AS t2 ON LEFT(t2.cleansedreadcode, 5) = LEFT(t1.diag, 5)) AND s.SOURCE_VOCABULARY_ID=’READ’|
 | source_value| diag ||SELECT CASE WHEN LENGTH(t2.diag) = 4 AND RIGHT(t2.diag, 1) IN ('X', '.')THEN LEFT(t2.diag, 3)WHEN LENGTH(t2.diag) = 4 THEN CONCAT(LEFT(t2.diag, 3), '.', RIGHT(t2.diag, 1))ELSE t2.diag END AS source_value FROM {SOURCE_SCHEMA}.hesae_diagnosis|
 | source_concept_id | diag | concept_id of diag | |
 | type_concept_id |  | |32829 |
