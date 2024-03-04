@@ -20,20 +20,20 @@ The stem_table is a staging area where HES A&E source codes like Read codes will
 | --- | 
 | id|||Removed for performance reasons|
 | domain_id | NULL | | |
-| person_id | patid| | |
-| visit_occurrence_id |aekey,patid| | Use patid and aekey to retrieve visit_occurrence_id |
-| visit_detail_id|aekey,patid||Use patid+aekey to retrieve visit_detail_id |
+| person_id | patid| Use patid to lookup Person_id in the  Person table| |
+| visit_occurrence_id |visit_detail.visit_occurrence_id| Lookup the visit_occurrence_id of the diagnosis record in the visit_detail table where visit_detail.person_id = hesae_diagnosis.patid AND visit_detail.Visit_detail_source_value = hesae_diagnosis.aekey | |
+| visit_detail_id|visit_detail.visit_detail_id| Lookup the visit_detail_id of the diagnosis record in the visit_detail table where visit_detail.person_id = hesae_diagnosis.patid AND visit_detail.Visit_detail_source_value = hesae_diagnosis.aekey | |
 | provider_id | NULL| | |
-| start_datetime | NULL | | |
-| concept_id | diag | | If there is no mapping then set to 0 and set domain_id as ‘Observation’.otherwise left join Source_to_Source_vocab_map AS s ON s.SOURCE_CODE = (SELECT CASE WHEN LENGTH(t2.diag) = 4 AND RIGHT(t2.diag, 1) IN ('X', '.')THEN LEFT(t2.diag, 3) WHEN LENGTH(t2.diag) = 4 THEN CONCAT(LEFT(t2.diag, 3), '.', RIGHT(t2.diag, 1))ELSE t2.diag END AS source_value FROM {SOURCE_SCHEMA}.hesae_diagnosis) AND s.SOURCE_VOCABULARY_ID=’ICD10’  ALSO left join Source_to_Source_vocab_map AS s ON s.SOURCE_CODE = ( SELECT t2.cleansedreadcode as source_value, FROM {SOURCE_SCHEMA}.hesae_diagnosis AS t1 INNER JOIN source.medicaldictionary AS t2 ON LEFT(t2.cleansedreadcode, 5) = LEFT(t1.diag, 5)) AND s.SOURCE_VOCABULARY_ID=’READ’|
-| source_value| diag ||SELECT CASE WHEN LENGTH(t2.diag) = 4 AND RIGHT(t2.diag, 1) IN ('X', '.')THEN LEFT(t2.diag, 3)WHEN LENGTH(t2.diag) = 4 THEN CONCAT(LEFT(t2.diag, 3), '.', RIGHT(t2.diag, 1))ELSE t2.diag END AS source_value FROM {SOURCE_SCHEMA}.hesae_diagnosis|
-| source_concept_id | diag | concept_id of diag | |
+| start_datetime | hesae_attendance.arrivaldate | Lookup the arrivaldate in the hesae_attendance table using the following filters: Where hesae_attendance.patid = hesae_diagnosis.patid AND hesae_attendance.aekeay = hesae_diagnosis.aekey | |
+| concept_id | diag | Lookup the hesae_diagnosis.diag in the medicaldictionary and source_to_standard_vocab_map tables, if there are Read codes and ICD10 codes mapped, then get the source_concept_id WHERE Target_standard_concept = ‘S’ and target_invalid_reason is NULL. | |
+| source_value| diag || When doing this you will need to Transform the hesae_diagnosis.diag into standard format that matchs the concept source_code.  |
+| source_concept_id | diag | Use the hesae_diagnosis.diag to link to the medicaldictionary table to find the read codes. And use the hesae_diagnosis.diag to link to the SOURCE_TO_STANDARD_VOCAB_MAP table to find the ICD10 code source_concept_id with the following filters:  Where source_vocabulary_id = ‘Read’ or ‘ICD10’ or ‘HESAE_DIAG_STCM’| When doing this you will need to Transform the hesae_diagnosis.diag into standard format that matchs the concept source_code. |
 | type_concept_id |  | |32829 |
 | operator_concept_id |NULL | | |
 | unit_concept_id |NULL  | | |
 | unit_source_value |NULL | | |
-| start_date | patid, aekey | | Use patid and aekey to retrieve hesae_attendance.arrivaldate.
-| end_date | NULL | | |
+| start_date | hesae_attendance.arrivaldate | | Lookup the arrivaldate in the hesae_attendance table using the following filters: Where hesae_attendance.patid = hesae_diagnosis.patid AND hesae_attendance.aekeay = hesae_diagnosis.aekey |
+| end_date | hesae_attendance.arrivaldate | Lookup the arrivaldate in the hesae_attendance table using the following filters: Where hesae_attendance.patid = hesae_diagnosis.patid AND hesae_attendance.aekeay = hesae_diagnosis.aekey | |
 | range_high | NULL | | |
 | range_low |NULL | | |
 | value_as_number | NULL| | |
