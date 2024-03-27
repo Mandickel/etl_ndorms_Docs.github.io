@@ -11,7 +11,7 @@ description: "Provider mapping from HES OP hesop_clinical table"
 
 ## Reading from hesop_clinical
 
-Use the hes_episodes table to populate the provider table. 
+Use the hesop_clinical table to populate the provider table. 
 
 ![](images/image5.png)
 
