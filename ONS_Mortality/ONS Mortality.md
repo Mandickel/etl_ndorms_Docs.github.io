@@ -1,10 +1,10 @@
 ---
 layout: default
-title: HES OP
-nav_order: 4
+title: ONS Mortality
+nav_order: 5
 description: "Hospital Episode Statistics (HES) Out Patient (OP) ETL Documentation"
 has_children: true
-permalink: /docs/HES_OP
+permalink: /docs/ONS_Mortality
 ---
 
 # Hospital Episode Statistics (HES)Outpatient Care ETL Documentation
