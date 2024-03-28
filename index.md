@@ -8,7 +8,7 @@ description: "This site is the documentation for CPRD Linked Datasets OMOP Conve
 
 # CPRD Linked Datasets CDM Documentation
 
-This documentation is meant to show how NDORMS converted to the Hospital Episode Statistics (HES) Datasets into the [OMOP Common Data Model](https://ohdsi.github.io/CommonDataModel).
+This documentation is meant to show how NDORMS converted its licensed CPRD Linked Datasets to the [OMOP Common Data Model](https://ohdsi.github.io/CommonDataModel).
 
 * [Hospital Episode Statistics (HES) Admitted Patient Care (APC)](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/HES_APC).
 * [Hospital Episode Statistics (HES) Accident and Emergency (A&E)](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/HES_AE).
