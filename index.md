@@ -6,7 +6,7 @@ description: "This site is the documentation for CPRD Linked Datasets OMOP Conve
 
 ---
 
-# CPRD Linked Datasets CDM Documentation
+# Ndorms CDM Documentation
 
 This documentation is meant to show how NDORMS converted its licensed CPRD Linked Datasets to the [OMOP Common Data Model](https://ohdsi.github.io/CommonDataModel).
 
