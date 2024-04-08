@@ -17,7 +17,7 @@ Use the hes_episodes table to populate the provider table. In HES APC, the Pcons
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| provider_id | pconsult | Autogenerate |  |
+| provider_id |  | nextval('{TARGET_SCHEMA}.sequence_pro') AS provider_id | A sequence named sequence_pro is established in the TARGET_SCHEMA to generate provider_id's. The next value of this sequence is determined by fetching the highest value from a table named "_max_id". "_max_id" is a repository for maximum ID values across various tables in the CDM. It selects the specific maximum ID by filtering on the table_name column, where it matches 'provider'. Consequently, the sequence_pro sequence generates IDs based on the maximum value found in _max_id for the 'provider' table |
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea | NULL |  |  |
