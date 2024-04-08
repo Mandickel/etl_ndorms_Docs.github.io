@@ -9,13 +9,13 @@ description: "Visit_detail v5.4 description"
 
 # CDM Table name: Visit_detail (CDM v5.4)
 
-**Reading from hes_episodes to Visit_Detail CDM v5.4 table:**
+## Reading from hes_episodes to Visit_Detail CDM v5.4 table:
 ![](images/image9.png)
 
 **Figure.1**
 
 | Destination Field | Source field | Logic | Comment field |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | visit_detail_id |  |  | Autogenerate: if table is empty, starts from MAX(public.visit_detail) + 1|
 | person_id | patid |  |  |
 | visit_detail_concept_id |  |  | 9201 = Inpatient visit |
@@ -27,7 +27,7 @@ description: "Visit_detail v5.4 description"
 | provider_id | pconsult,tretspef |  | Provider_id from PROVIDER using pconsult and tretspef |
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | epikey | | This will allow us to retrieve visit_detail_id using patid. |
-| visit_source_concept_id |NULL  |  |  |
+| visit_detail_source_concept_id |NULL  |  |  |
 | admitting_from_source_concept_id | admimeth |  | Definition to be added instead of number |
 | admitting_from_source_value | admimeth |  | Check for OMOP codes from admimeth |
 | discharge_to_concept_id | dismeth |  | Definition to be added instead of number |
@@ -36,15 +36,13 @@ description: "Visit_detail v5.4 description"
 | visit_detail_parent_id | NULL |  |  |
 | visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value |
 
-
-
-**Reading from hes_acp to Visit_Detail CDM v5.4 table:**
+## Reading from hes_acp to Visit_Detail CDM v5.4 table:
 ![](images/image11.png)
 
 **Figure.2**
 
 | Destination Field | Source field | Logic | Comment field |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | visit_detail_id |  |  | Autogenerate: if table is empty, starts from MAX(public.visit_detail) + 1|
 | person_id | patid |  |  |
 | visit_detail_concept_id |  |  | 32037 = Intensive care |
@@ -67,13 +65,13 @@ description: "Visit_detail v5.4 description"
 
 
 
-**Reading from hes_ccare to Visit_Detail CDM v5.4 table:**
+## Reading from hes_ccare to Visit_Detail CDM v5.4 table:
 ![](images/image10.png)
 
 **Figure.3**
 
 | Destination Field | Source field | Logic | Comment field |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | visit_detail_id |  |  | Autogenerate: if table is empty, starts from MAX(public.visit_detail) + 1|
 | person_id | patid |  |  |
 | visit_detail_concept_id |  |  | 32037 = Intensive care |

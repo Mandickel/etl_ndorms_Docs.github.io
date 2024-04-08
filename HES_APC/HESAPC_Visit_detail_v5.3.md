@@ -65,6 +65,7 @@ description: "Visit_detail v5.3 description"
 
 ## Reading from hes_ccare to Visit_Detail CDM v5.3 table:
 ![](images/image10.1.png)
+
 **Figure.3**
 
 | Destination Field | Source field | Logic | Comment field |
