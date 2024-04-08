@@ -9,12 +9,13 @@ description: "Visit_occurrence v5.4 description"
 
 # CDM Table name: Visit_Occurrence (CDM v5.4)
 
-**Reading from hes_hospital to Visit_Occurrence CDM v5.4 table:**
+## Reading from hes_hospital to Visit_Occurrence CDM v5.4 table:
 ![](images/image12.png)
+
 **Figure.1**
 
 | Destination Field | Source field | Logic | Comment field |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | visit_occurrence_id |  |  | Autogenerate: if table is empty, start from MAX(public.visit_occurrence)+1  |
 | person_id | patid |  |  |
 | visit_concept_id |  |  | 9201 = Inpatient visit |
