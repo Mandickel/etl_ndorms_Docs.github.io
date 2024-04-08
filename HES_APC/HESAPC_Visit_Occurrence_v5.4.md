@@ -11,7 +11,7 @@ description: "Visit_occurrence v5.4 description"
 
 **Reading from hes_hospital to Visit_Occurrence CDM v5.4 table:**
 ![](images/image12.png)
-**Figure.2**
+**Figure.1**
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | --- | --- |
