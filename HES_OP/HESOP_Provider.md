@@ -21,7 +21,7 @@ Use the hesop_clinical table to populate the provider table.
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea |NULL  |  |  |
-| specialty_concept_id | tretspef, mainspef | If tretspef is not null then tretspef else mainspef|
+| specialty_concept_id | tretspef, mainspef | Select the value of tretspef if it is not equal to '&', otherwise select the value of mainspef as 'specialty'. Filter the rows where tretspef, mainspef and pconsult are not equal to '&'. ||
 | care_site_id | NULL| | |
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
