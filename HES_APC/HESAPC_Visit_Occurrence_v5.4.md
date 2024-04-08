@@ -8,6 +8,7 @@ description: "Visit_occurrence v5.4 description"
 ---
 
 # CDM Table name: Visit_Occurrence (CDM v5.4)
+
 **Reading from hes_hospital to Visit_Occurrence CDM v5.4 table:**
 ![](images/image12.png)
 **Figure.2**
@@ -25,7 +26,7 @@ description: "Visit_occurrence v5.4 description"
 | provider_id |NULL | |  |
 | care_site_id | NULL| |  |
 | visit_source_value | spno | This will allow us to retrieve Visit_occurrence_id. |  |
-| visit_source_concept_id | NULL |  |  |
+| visit_source_concept_id |NULL  |  |  |
 | admitting_from_source_concept_id | admimeth |  | Check for OMOP codes from admimeth |
 | admitting_from_source_value | admimeth |  | Definition to be added instead of number |
 | discharge_to_concept_id | dismeth |  | Check for OMOP codes from dismeth |
