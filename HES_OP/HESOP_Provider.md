@@ -21,12 +21,12 @@ Use the hesop_clinical table to populate the provider table.
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea |NULL  |  |  |
-| specialty_concept_id | tretspef, mainspef | Select the value of tretspef if it is not equal to '&', otherwise select the value of mainspef as 'specialty'. Filter the rows where tretspef, mainspef and pconsult are not equal to '&'. ||
+| specialty_concept_id | tretspef, mainspef | Select the value of tretspef if it is not equal to '&', otherwise select the value of mainspef as 'specialty'. Filter the rows where tretspef and mainspef are not equal to '&'. ||
 | care_site_id | NULL| | |
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
 | provider_source_value | NULL |  | |
-| specialty_source_value | tretspef, mainspef | Select the value of tretspef if it is not equal to '&', otherwise select the value of mainspef as 'specialty'. Filter the rows where tretspef, mainspef and pconsult are not equal to '&'.||
+| specialty_source_value | tretspef, mainspef | Select the value of tretspef if it is not equal to '&', otherwise select the value of mainspef as 'specialty'. Filter the rows where tretspef and mainspef are not equal to '&'.||
 | specialty_source_concept_id |NULL  |  | |
 | gender_source_value | NULL| |  |
 | gender_source_concept_id | NULL |  | |
