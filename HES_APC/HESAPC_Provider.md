@@ -26,7 +26,7 @@ Use the hes_episodes table to populate the provider table. In HES APC, the Pcons
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
 | provider_source_value | pconsult |  |  |
-| specialty_source_value | tretspef,mainspef | Specialty_source_value will be mapped by using tretspef if it is not equal to ‘&’ OR mainspef if it is not equal to ‘&’ to retrieve the source_code_description from source_to_concept_map WHERE source_code = tretspef <> '&' OR mainspef <> '&' AND source_vocabulary_id = "HES_SPEC_STCM"|  |
+| specialty_source_value | tretspef,mainspef | Specialty_source_value will be mapped by using tretspef if it is not equal to ‘&’ OR mainspef is not equal to ‘&’ as Specialty WHERE Pconsult is not equal to ‘&’ aswel to retrieve the source_code_description from source_to_concept_map WHERE source_code = Specialty AND source_vocabulary_id = “HES_SPEC_STCM”.|  |
 | specialty_source_concept_id | NULL |  | |
 | gender_source_value | NULL| |  |
 | gender_source_concept_id | NULL |  | |
