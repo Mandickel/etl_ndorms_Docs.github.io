@@ -21,12 +21,12 @@ Use the hes_episodes table to populate the provider table. In HES APC, the Pcons
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea | NULL |  |  |
-| specialty_concept_id | tretspef,mainspef | 	 Select the value of tretspef if it is not equal to '&', otherwise select the value of mainspef as 'specialty'. Filter the rows where tretspef, mainspef and pconsult are not equal to '&'. |  |
+| specialty_concept_id | tretspef,mainspef | Specialty_concept_id will be mapped to SNOMED Concept_id by using tretspef if it is not equal to ‘&’ OR mainspef if it is not equal to ‘&’ to retrieve the target_concept_id from source_to_concept_map where source_code = tretspef OR mainspef AND source_vocabulary_id = “HES_SPEC_STCM”.|  |
 | care_site_id |NULL | | |
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
 | provider_source_value | pconsult |  |  |
-| specialty_source_value | tretspef,mainspef | 	 Select the value of tretspef if it is not equal to '&', otherwise select the value of mainspef as 'specialty'. Filter the rows where tretspef, mainspef and pconsult are not equal to '&'. |  |
+| specialty_source_value | tretspef,mainspef | Specialty_concept_id will be mapped to SNOMED Concept_id by using tretspef if it is not equal to ‘&’ OR mainspef if it is not equal to ‘&’ to retrieve the target_concept_id from source_to_concept_map where source_code = tretspef OR mainspef AND source_vocabulary_id = “HES_SPEC_STCM”.S|  |
 | specialty_source_concept_id | NULL |  | |
 | gender_source_value | NULL| |  |
 | gender_source_concept_id | NULL |  | |
