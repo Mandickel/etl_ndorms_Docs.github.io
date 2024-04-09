@@ -21,12 +21,12 @@ Use the hesop_clinical table to populate the provider table.
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea |NULL  |  |  |
-| specialty_concept_id | tretspef, mainspef | use tretspef OR mainspef as Speciality FROM hes_episode WHERE (tretspef <> '&' OR mainspef <> '&'), inorder to retrieve the target_concept_id from source_to_concept_map by joining to the source_to_concept_map with the following JOIN: LEFT JOIN source_to_concept_map as t2 on hesop_clinical.specialty = t2.source_code AND t2.source_vocabulary_id = “HES_SPEC_STCM”. ||
+| specialty_concept_id | tretspef, mainspef | use tretspef OR mainspef as Speciality FROM hesop_clinical WHERE (tretspef <> '&' OR mainspef <> '&'), inorder to retrieve the target_concept_id from source_to_concept_map by joining to the source_to_concept_map with the following JOIN: LEFT JOIN source_to_concept_map as t2 on hesop_clinical.specialty = t2.source_code AND t2.source_vocabulary_id = “HES_SPEC_STCM”. ||
 | care_site_id | NULL| | |
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
 | provider_source_value | NULL |  | |
-| specialty_source_value | tretspef, mainspef | use tretspef OR mainspef as Speciality FROM hes_episode WHERE (tretspef <> '&' OR mainspef <> '&'), inorder to retrieve the source_code_description from source_to_concept_map by joining to the source_to_concept_map with the following JOIN: LEFT JOIN source_to_concept_map as t2 on hesop_clinical.specialty = t2.source_code AND t2.source_vocabulary_id = “HES_SPEC_STCM”.||
+| specialty_source_value | tretspef, mainspef | use tretspef OR mainspef as Speciality FROM hesop_clinical WHERE (tretspef <> '&' OR mainspef <> '&'), inorder to retrieve the source_code_description from source_to_concept_map by joining to the source_to_concept_map with the following JOIN: LEFT JOIN source_to_concept_map as t2 on hesop_clinical.specialty = t2.source_code AND t2.source_vocabulary_id = “HES_SPEC_STCM”.||
 | specialty_source_concept_id |NULL  |  | |
 | gender_source_value | NULL| |  |
 | gender_source_concept_id | NULL |  | |
