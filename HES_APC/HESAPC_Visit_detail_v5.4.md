@@ -19,10 +19,10 @@ description: "Visit_detail v5.4 description"
 | visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence called "sequence_vd" is created in the public schema to ensure the unique generation of visit_detail_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_detail".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_detail_id in the sequence. |
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | 9201 = Inpatient visit |  |
-| visit_detail_start_date | epistart | If epistart is null, use admidate in hes_episodes, and if these are also null, use epiend | COALESCE(epistart, admidate, epiend) |
-| visit_detail_start_datetime | epistart | If epistart is null, use admidate in hes_episodes, and if these are also null, use epiend | COALESCE(epistart, admidate, epiend) |
-| visit_detail_end_date | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
-| visit_detail_end_datetime | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
+| visit_detail_start_date | epistart | COALESCE(epistart, admidate, epiend)| If epistart is null, use admidate, and if these are also null, use epiend  |
+| visit_detail_start_datetime | epistart | COALESCE(epistart, admidate, epiend) | If epistart is null, use admidate, and if these are also null, use epiend  |
+| visit_detail_end_date | epiend | COALESCE(epiend, discharged, epistart) | If epiend is null, use discharged, and if these are also null, use epistart |
+| visit_detail_end_datetime | epiend | COALESCE(epiend, discharged, epistart) | If epiend is null, use discharged, and if these are also null, use epistart |
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | pconsult | use hes_episode.pconsult inorder to retrieve the provider_id from provider by LEFT JOINING provider as t1 on  t1.provider_source_value = hes_episode.pconsult. | |
 | care_site_id |NULL |  |  |
