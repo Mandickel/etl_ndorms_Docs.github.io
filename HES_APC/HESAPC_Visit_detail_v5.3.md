@@ -24,7 +24,7 @@ description: "Visit_detail v5.3 description"
 | visit_detail_end_date | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
 | visit_detail_end_datetime | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
-| provider_id | pconsult,tretspef |  | Provider_id from PROVIDER using pconsult and tretspef |
+| provider_id | pconsult | use hes_episode.pconsult inorder to retrieve the provider_id from provider by LEFT JOINING provider as t1 on  t1.provider_source_value = hes_episode.pconsult. | |
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | epikey | | This will allow us to retrieve visit_detail_id using patid. |
 | visit_detail_source_concept_id | NULL|  | |
