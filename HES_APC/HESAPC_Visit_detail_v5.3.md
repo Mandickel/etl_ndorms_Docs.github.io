@@ -19,10 +19,10 @@ description: "Visit_detail v5.3 description"
 | visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence called "sequence_vd" is created in the public schema to ensure the unique generation of visit_detail_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_detail".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_detail_id in the sequence. |
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | 9201 = Inpatient visit |  |
-| visit_detail_start_date | epistart | If epistart is null, use admidate in hes_episodes, and if also these are null, use epiend | COALESCE(epistart, admidate, epiend) |
-| visit_detail_start_datetime | epistart | If epistart is null, use admidate in hes_episodes, and if also these are null, use epiend | COALESCE(epistart, admidate, epiend) |
-| visit_detail_end_date | epiend | If epiend is null, use discharged in hes_episodes, and if also these are null, use epistart | COALESCE(epiend, discharged, epistart) |
-| visit_detail_end_datetime | epiend | If epiend is null, use discharged in hes_episodes, and if also these are null, use epistart | COALESCE(epiend, discharged, epistart) |
+| visit_detail_start_date | epistart | If epistart is null, use admidate in hes_episodes, and if these are also null, use epiend | COALESCE(epistart, admidate, epiend) |
+| visit_detail_start_datetime | epistart | If epistart is null, use admidate in hes_episodes, and if these are also null, use epiend | COALESCE(epistart, admidate, epiend) |
+| visit_detail_end_date | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
+| visit_detail_end_datetime | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | pconsult,tretspef |  | Provider_id from PROVIDER using pconsult and tretspef |
 | care_site_id |NULL |  |  |
