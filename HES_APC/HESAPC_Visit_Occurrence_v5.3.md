@@ -28,7 +28,7 @@ description: "Visit_occurrence v5.3 description"
 | care_site_id | NULL| |  |
 | visit_source_value | spno | This will allow us to retrieve Visit_occurrence_id. |  |
 | visit_source_concept_id |NULL  |  |  |
-| admitting_source_concept_id | admimeth | use admimeth FROM hes_hospital, inorder to retrieve the source_code_description from source_to_standard_vocab_map by joining source_to_standard_vocab_map and hes_episode with the following JOIN: LEFT JOIN source_to_standard_vocab_map as t1 on hes_hospital.admimeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_ADMIMETH_STCM”. | Check for OMOP codes from admimeth |
+| admitting_source_concept_id | admimeth | use admimeth inorder to retrieve the source_code_description from source_to_standard_vocab_map by joining source_to_standard_vocab_map and hes_episode with the following JOIN: LEFT JOIN source_to_standard_vocab_map as t1 on hes_hospital.admimeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_ADMIMETH_STCM”. | Check for OMOP codes from admimeth |
 | admitting_source_value | admimeth |  | Definition to be added instead of number |
 | discharge_to_concept_id | dismeth |  | Check for OMOP codes from dismeth |
 | discharge_to_source_value | dismeth |  | Definition to be added instead of number |
