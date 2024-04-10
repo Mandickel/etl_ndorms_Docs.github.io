@@ -20,9 +20,9 @@ description: "Visit_detail v5.3 description"
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | 9201 = Inpatient visit |  |
 | visit_detail_start_date | epistart | If epistart is null, use admidate in hes_episodes, and if these are also null, use epiend | COALESCE(epistart, admidate, epiend) |
-| visit_detail_start_datetime | epistart | If epistart is null, use admidate in hes_episodes, and if these are also null, use epiend | COALESCE(epistart, admidate, epiend) |
-| visit_detail_end_date | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
-| visit_detail_end_datetime | epiend | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart | COALESCE(epiend, discharged, epistart) |
+| visit_detail_start_datetime | epistart | COALESCE(epistart, admidate, epiend)| If epistart is null, use admidate in hes_episodes, and if these are also null, use epiend  |
+| visit_detail_end_date | epiend | COALESCE(epiend, discharged, epistart)| If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart  |
+| visit_detail_end_datetime | epiend | COALESCE(epiend, discharged, epistart) | If epiend is null, use discharged in hes_episodes, and if these are also null, use epistart|
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | pconsult | use hes_episode.pconsult inorder to retrieve the provider_id from provider by LEFT JOINING provider as t1 on  t1.provider_source_value = hes_episode.pconsult. | |
 | care_site_id |NULL |  |  |
