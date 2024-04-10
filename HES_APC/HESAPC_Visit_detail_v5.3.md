@@ -82,10 +82,10 @@ description: "Visit_detail v5.3 description"
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | epikey | | This will allow to retrieve visit_details_id set to 0 at the end |
 | visit_detail_source_concept_id | NULL|  | |
-| admitting_source_concept_id | ccadmisorc |  | Definition to be added instead of number |
-| admitting_source_value | ccadmisorc |  | Check for OMOP codes from ccadmisorc |
-| discharge_to_concept_id | ccdisdest |  | Definition to be added instead of number |
-| discharge_to_source_value | ccdisdest |  | Check for OMOP codes from ccdisdest |
+| admitting_source_concept_id | ccadmisorc | use ccadmisorc to retrieve the target_concept_id from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccadmisorc AND t1.source_vocabulary_id = “HESAPC_ADMISORC_STCM”. | Definition to be added instead of number |
+| admitting_source_value | ccadmisorc | use ccadmisorc to retrieve the source_code_description from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccadmisorc AND t1.source_vocabulary_id = “HESAPC_ADMISORC_STCM”. | Check for OMOP codes from ccadmisorc |
+| discharge_to_concept_id | ccdisdest | use ccdisdest to retrieve the target_concept_id from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccdisdest AND t1.source_vocabulary_id = “HESAPC_DISDEST_STCM”. | Definition to be added instead of number |
+| discharge_to_source_value | ccdisdest | use ccdisdest to retrieve the source_code_description from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccdisdest AND t1.source_vocabulary_id = “HESAPC_DISDEST_STCM”. | Check for OMOP codes from ccdisdest |
 | preceding_visit_detail_id | | If eorder = 1 then 0 else use eorder with patid+epikey to find the preceding_visit_detail_id |  |
 | visit_detail_parent_id |  |  | Use patid + epikey where visit_detail_source_value= “Visit episode” to get the visit_detail_parent_id  |
 | visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value   |
