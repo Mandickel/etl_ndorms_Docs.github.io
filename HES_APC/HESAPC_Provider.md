@@ -17,7 +17,7 @@ Use the hes_episodes table to populate the provider table.
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| provider_id |  | nextval('public.sequence_pro') AS provider_id | A sequence called sequence_pro is created in the public schema to ensure unique identifier generation for provider_id's. Firstly, the existence of this sequence is verified, and if absent, it's created with an incremental value of 1. Next, the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) linked to the public schema for providers. This establishes a starting point for the sequence, guaranteeing uniqueness. Subsequently, as data is inserted into the PROVIDER table, the provider_id column is populated using the next value from the sequence, ensuring each provider record receives a distinct identifier. |
+| provider_id |  | nextval('public.sequence_pro') AS provider_id | A sequence called sequence_pro is created in the public schema to ensure unique identifier generation for provider_id’s. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids).The _max_ids table is established in the schema to be linked to the target schema(public), serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next Provider_ID in the sequence. |
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea | NULL |  |  |

@@ -17,7 +17,7 @@ Use the hesop_clinical table to populate the provider table.
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| provider_id | | nextval('{TARGET_SCHEMA}.sequence_pro') AS provider_id| A sequence called sequence_pro is created in the public schema to ensure unique identifier generation for provider_id’s. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids).The _max_ids table is established in the schema to be linked to the target schema(public), serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next Provider_ID in the sequence. |
+| provider_id | | nextval('public.sequence_pro') AS provider_id| A sequence called sequence_pro is created in the public schema to ensure unique identifier generation for provider_id’s. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids).The _max_ids table is established in the schema to be linked to the target schema(public), serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next Provider_ID in the sequence. |
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea |NULL  |  |  |
