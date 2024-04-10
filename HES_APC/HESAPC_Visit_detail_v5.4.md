@@ -18,20 +18,20 @@ description: "Visit_detail v5.4 description"
 | --- | --- | :---: | --- |
 | visit_detail_id |  |  | Autogenerate: if table is empty, starts from MAX(public.visit_detail) + 1|
 | person_id | patid |  |  |
-| visit_detail_concept_id |  |  | 9201 = Inpatient visit |
+| visit_detail_concept_id |  | 9201 = Inpatient visit |  |
 | visit_detail_start_date | epistart | |  |
 | visit_detail_start_datetime | epistart | |  |
 | visit_detail_end_date | epiend | | |
 | visit_detail_end_datetime | epiend | |  |
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
-| provider_id | pconsult,tretspef |  | Provider_id from PROVIDER using pconsult and tretspef |
+| provider_id | pconsult | use hes_episode.pconsult inorder to retrieve the provider_id from provider by LEFT JOINING provider as t1 on  t1.provider_source_value = hes_episode.pconsult. | |
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | epikey | | This will allow us to retrieve visit_detail_id using patid. |
 | visit_detail_source_concept_id |NULL  |  |  |
-| admitting_from_source_concept_id | admimeth |  | Definition to be added instead of number |
-| admitting_from_source_value | admimeth |  | Check for OMOP codes from admimeth |
-| discharge_to_concept_id | dismeth |  | Definition to be added instead of number |
-| discharge_to_source_value | dismeth |  | Check for OMOP codes from dismeth |
+| admitting_source_concept_id | admimeth | use admimeth to retrieve the target_concept_id from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.admimeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_ADMIMETH_STCM”. | Check for OMOP codes from admimeth |
+| admitting_source_value | admimeth | use admimeth to retrieve the source_code_description from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.admimeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_ADMIMETH_STCM”.| Definition to be added instead of number |
+| discharge_to_concept_id | dismeth | use dismeth to retrieve the target_concept_id from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.dismeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_DISMETH_STCM”. | Check for OMOP codes from dismeth |
+| discharge_to_source_value | dismeth | use dismeth to retrieve the source_code_description from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.dismeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_DISMETH_STCM”. | Definition to be added instead of number |
 | preceding_visit_detail_id | eorder | If eorder = 1 then 0 else check for preceding_visit_detail_id by using eorder for this patient using patid+epikey+spno. |  |
 | visit_detail_parent_id | NULL |  |  |
 | visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value |
