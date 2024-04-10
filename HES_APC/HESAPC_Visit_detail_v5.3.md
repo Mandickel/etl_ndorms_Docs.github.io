@@ -46,10 +46,10 @@ description: "Visit_detail v5.3 description"
 | visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence called "sequence_vd" is created in the public schema to ensure the unique generation of visit_detail_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_detail".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_detail_id in the sequence. |
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | 32037 = Intensive care |  |
-| visit_detail_start_date | acpstart,epistart | | If acpstart in not null then acpstar else epistart |
-| visit_detail_start_datetime | acpstar, epistart | | If acpstart in not null then acpstar else epistart  |
-| visit_detail_end_date | acpend, epiend | |If acpend is not null then acpend else epiend |
-| visit_detail_end_datetime | acpend, epiend | | If acpend is not null then acpend else epiend  |
+| visit_detail_start_date | acpstart,epistart | COALESCE(acpstar,epistart) | If acpstart in not null then acpstar else epistart |
+| visit_detail_start_datetime | acpstar, epistart | COALESCE(acpstar,epistart) | If acpstart in not null then acpstar else epistart  |
+| visit_detail_end_date | acpend, epiend | COALESCE(acpstar,epistart) | If acpend is not null then acpend else epiend |
+| visit_detail_end_datetime | acpend, epiend | COALESCE(acpend,epiend) | If acpend is not null then acpend else epiend  |
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | hes_episodes.pconsult |  | Use patid+epikey to get it (only if efficient and provider populated) |
 | care_site_id |NULL |  |  |
