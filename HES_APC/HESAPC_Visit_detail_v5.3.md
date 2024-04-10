@@ -16,9 +16,9 @@ description: "Visit_detail v5.3 description"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| visit_detail_id |  |  | Autogenerate: if table is empty, starts from MAX(public.visit_detail) + 1|
+| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence called "sequence_vd" is created in the public schema to ensure the unique generation of visit_detail_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_detail".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_detail_id in the sequence. |
 | person_id | patid |  |  |
-| visit_detail_concept_id |  |  | 9201 = Inpatient visit |
+| visit_detail_concept_id |  | 9201 = Inpatient visit |  |
 | visit_detail_start_date | epistart | |  |
 | visit_detail_start_datetime | epistart | |  |
 | visit_detail_end_date | epiend | | |
@@ -43,9 +43,9 @@ description: "Visit_detail v5.3 description"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| visit_detail_id |  |  | Autogenerate: if table is empty, starts from MAX(public.visit_detail) + 1|
+| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence called "sequence_vd" is created in the public schema to ensure the unique generation of visit_detail_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_detail".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_detail_id in the sequence. |
 | person_id | patid |  |  |
-| visit_detail_concept_id |  |  | 32037 = Intensive care |
+| visit_detail_concept_id |  | 32037 = Intensive care |  |
 | visit_detail_start_date | acpstart,epistart | | If acpstart in not null then acpstar else epistart |
 | visit_detail_start_datetime | acpstar, epistart | | If acpstart in not null then acpstar else epistart  |
 | visit_detail_end_date | acpend, epiend | |If acpend is not null then acpend else epiend |
@@ -70,9 +70,9 @@ description: "Visit_detail v5.3 description"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| visit_detail_id |  |  | Autogenerate: if table is empty, starts from MAX(public.visit_detail) + 1|
+| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence called "sequence_vd" is created in the public schema to ensure the unique generation of visit_detail_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_detail".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_detail_id in the sequence. |
 | person_id | patid |  |  |
-| visit_detail_concept_id |  |  | 32037 = Intensive care |
+| visit_detail_concept_id |  | 32037 = Intensive care |  |
 | visit_detail_start_date | ccstartdate | | |
 | visit_detail_start_datetime | ccstartdate | | |
 | visit_detail_end_date | ccdisdate | | |
