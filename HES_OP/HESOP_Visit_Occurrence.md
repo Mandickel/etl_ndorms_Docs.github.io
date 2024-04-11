@@ -13,6 +13,7 @@ description: "Visit_Occurrence mapping from hesop_appointment table"
 ## Reading from hesop_appointment.
 **Reading from hesop_appointment to Visit_Occurrence CDM v5.3/ v5.4 table:**
 ![](images/image4.png)
+
 **Figure.1**
 
 | Destination Field | Source field | Logic | Comment field |
