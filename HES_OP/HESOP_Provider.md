@@ -21,7 +21,7 @@ Use the hesop_clinical table to populate the provider table.
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea |NULL  |  |  |
-| specialty_concept_id | tretspef, mainspef | specialty_concept_id will be mapped to standard SNOMED Concept_id by using tretspef <> ‘&’ else mainspef <> ‘&’ as Speciality FROM hesop_clinical WHERE (tretspef <> ‘&’ OR mainspef <> ‘&’) to retrieve the target_concept_id from source_to_concept_map as t1 where t1.source_code = hesop_clinical.specialty AND source_vocabulary_id = “HES_SPEC_STCM”.||
+| specialty_concept_id | tretspef, mainspef | specialty_concept_id will be mapped to standard SNOMED Concept_id by using tretspef if not equal to ‘&’ else mainspef as Speciality FROM hesop_clinical WHERE (tretspef <> ‘&’ OR mainspef <> ‘&’) to retrieve the target_concept_id from source_to_concept_map as t1 where t1.source_code = hesop_clinical.specialty AND source_vocabulary_id = “HES_SPEC_STCM”.||
 | care_site_id | NULL| | |
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
