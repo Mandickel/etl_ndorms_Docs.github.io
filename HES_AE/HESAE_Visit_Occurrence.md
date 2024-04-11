@@ -25,7 +25,7 @@ description: "Visit_Occurrence mapping from hesae_attendance table"
 | visit_start_datetime | arrivaldate | MIN(arrivaldate) |  |
 | visit_end_date | arrivaldate| MAX(arrivaldate) | The last Arrival date of that patid will be mapped to visit_end_date|
 | visit_end_datetime | arrivaldate | MAX(arrivaldate) | |
-| visit_type_concept_id |  |  | 32818 = "EHR administration record” |
+| visit_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | NULL | |  |
 | care_site_id | NULL | |  |
 | visit_source_value | aekey | | This will allow us to retrieve Visit_occurrence_id.  |
