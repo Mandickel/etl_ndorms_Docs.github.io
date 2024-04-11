@@ -25,8 +25,8 @@ description: "Visit_Detil mapping from hesae_attendance tables"
 | visit_detail_concept_id |  | 9203 = "Emergency Room Visit"  | |
 | visit_detail_start_date | arrivaldate | |  |
 | visit_detail_start_datetime | arrivaldate | |  |
-| visit_detail_end_date |  | | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
-| visit_detail_end_datetime | | |  Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
+| visit_detail_end_date | arrivaldate | | |
+| visit_detail_end_datetime | arrivaldate | | |
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id |NULL |  | |
 | care_site_id |NULL |  |  |
