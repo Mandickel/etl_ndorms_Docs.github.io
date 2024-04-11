@@ -32,8 +32,8 @@ description: "Visit_Detil mapping from hesae_attendance tables"
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | aekey | | This will allow us to retrieve visit_detail_id using patid. |
 | visit_detail_source_concept_id | NULL |  | |
-| admitting_source_concept_id | aerefsource | use aerefsource to retrieve the target_concept_id from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on t1.source_code = hesae_attendance.aerefsource AND t1.source_vocabulary_id = “HESAE_REFSOURCE_STCM”. | Definition to be added instead of number |
-| admitting_source_value | aerefsource | use aerefsource to retrieve the source_code_description from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on t1.source_code = hesae_attendance.ccdisdest AND t1.source_vocabulary_id = “HESAE_REFSOURCE_STCM”. | Check for OMOP codes from aerefsource |
+| admitting_source_concept_id | aerefsource | use aerefsource to retrieve the target_concept_id from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on t1.source_code = hesae_attendance.aerefsource AND t1.source_vocabulary_id = “HESAE_REFSOURCE_STCM”. | Check for OMOP codes from aerefsource |
+| admitting_source_value | aerefsource | use aerefsource to retrieve the source_code_description from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on t1.source_code = hesae_attendance.ccdisdest AND t1.source_vocabulary_id = “HESAE_REFSOURCE_STCM”. | Definition to be added instead of number |
 | discharge_to_concept_id |NULL |  |  |
 | discharge_to_source_value |  NULL|  |  |
 | preceding_visit_detail_id |  |  | Use patid + aekey where to get the preceding visit_detail_id if any.|
