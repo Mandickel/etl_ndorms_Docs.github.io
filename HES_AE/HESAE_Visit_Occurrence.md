@@ -13,17 +13,18 @@ description: "Visit_Occurrence mapping from hesae_attendance table"
 
 **Reading from hesae_attendance to Visit_Occurrence CDM v5.3/ v5.4 table:**
 ![](images/image3.png)
+
 **Figure.1**
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | --- | --- |
-| visit_occurrence_id |  |  | Autogenerate: if table is empty, start from MAX(public.visit_occurrence)+1  |
+| visit_occurrence_id |  |  nextval('public.sequence_vo') AS visit_occurrence_id | A sequence called "sequence_vo" is created in the public schema to ensure the unique generation of visit_occurrence_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_occurrence".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_occurrence_id in the sequence. | 
 | person_id | patid |  |  |
-| visit_concept_id |  |  | 9203 = "Emergency Room Visit" |
-| visit_start_date | arrivaldate | | Arrival date will be mapped to visit_start_date  |
-| visit_start_datetime | | |Arrival date will be mapped to visit_start_date  |
-| visit_end_date | arrivaldate| | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later)|
-| visit_end_datetime | | | Arrivaldate+depdur may allow us to retrieve the visit_end_date (To be investigated later) |
+| visit_concept_id |  | 9203 = "Emergency Room Visit" |  |
+| visit_start_date | arrivaldate | MIN(arrivaldate) | The first Arrival date of that patid will be mapped to visit_start_date  |
+| visit_start_datetime | arrivaldate | MIN(arrivaldate) |  |
+| visit_end_date | arrivaldate| MAX(arrivaldate) | The last Arrival date of that patid will be mapped to visit_end_date|
+| visit_end_datetime | arrivaldate | MAX(arrivaldate) | |
 | visit_type_concept_id |  |  | 32818 = "EHR administration record” |
 | provider_id | NULL | |  |
 | care_site_id | NULL | |  |
