@@ -25,7 +25,7 @@ description: "Visit_Occurrence mapping from hesop_appointment table"
 | visit_end_date | apptdate| | Appointment date will also be mapped to visit_end_date because its an Outpatient appointment|
 | visit_end_datetime |apptdate| | |
 | visit_type_concept_id |  | 32818 = "EHR administration record” |  |
-| provider_id |NULL | | use patid+attendkey to retrive "tretspef if tretspef<>‘&’ else use mainspef if mainspef<>'&' else null as speciality" FROM hesop_clinical, inorder to retrieve the source_code_description from source_to_concept_map by LEFT JOINING source_to_concept_map as t1 on hesop_clinical.specialty = t1.source_code AND t2.source_vocabulary_id = “HES_SPEC_STCM”. Which will then be used to retrieve provider_id by LEFT JOINING provider as t2 on t2.specialty_source_value = t1.source_code_description |
+| provider_id | provider.provider_id | | use patid+attendkey to retrive "tretspef if tretspef<>‘&’ else use mainspef if mainspef<>'&' else null as speciality" FROM hesop_clinical, inorder to retrieve the source_code_description from source_to_concept_map by LEFT JOINING source_to_concept_map as t1 on hesop_clinical.specialty = t1.source_code AND t2.source_vocabulary_id = “HES_SPEC_STCM”. Which will then be used to retrieve provider_id by LEFT JOINING provider as t2 on t2.specialty_source_value = t1.source_code_description |
 | care_site_id |NULL | |  |
 | visit_source_value | attendkey | | This will allow us to retrieve Visit_occurrence_id.  |
 | visit_source_concept_id | NULL |  |  |
