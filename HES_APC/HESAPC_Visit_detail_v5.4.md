@@ -16,7 +16,7 @@ description: "Visit_detail v5.4 description"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence called "sequence_vd" is created in the public schema to ensure the unique generation of visit_detail_id's. Firstly,the value of the sequence is determined by querying the maximum ID from a predefined source ({TARGET_SCHEMA_TO_LINK}._max_ids) where the field "tbl_name" = "visit_detail".The _max_ids table is established in the schema to be linked to the target schema, serving the purpose of storing maximum IDs for all CDM tables. This facilitates the determination of the next visit_detail_id in the sequence. |
+| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence named "sequence_vd" is created in the public schema to uniquely generate "visit_detail_id"s. It initializes by fetching the highest ID from the {TARGET_SCHEMA_TO_LINK}._max_ids table where "tbl_name" equals "visit_detail". This table, located in the schema to be linked to the target schema, stores the maximum IDs for all CDM tables to help set the starting point for the next "visit_detail_id" in the sequence.|
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | 9201 = Inpatient visit |  |
 | visit_detail_start_date | epistart | COALESCE(epistart, admidate, epiend)| If epistart is null, use admidate, and if these are also null, use epiend  |
