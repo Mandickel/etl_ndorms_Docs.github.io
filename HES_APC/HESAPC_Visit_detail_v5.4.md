@@ -19,10 +19,10 @@ description: "Visit_detail v5.4 description"
 | visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | A sequence named "sequence_vd" is created in the public schema to uniquely generate "visit_detail_id"s. It initializes by fetching the highest ID from the {TARGET_SCHEMA_TO_LINK}._max_ids table where "tbl_name" equals "visit_detail". This table, located in the schema to be linked to the target schema, stores the maximum IDs for all CDM tables to help set the starting point for the next ID in a given sequence.|
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | 9201 = Inpatient visit |  |
-| visit_detail_start_date | epistart | COALESCE(epistart, admidate, epiend)| If epistart is null, use admidate,if null use epiend  |
-| visit_detail_start_datetime | epistart | COALESCE(epistart, admidate, epiend)| If epistart is null, use admidate, if null use epiend  |
-| visit_detail_end_date | epiend | COALESCE(epiend, discharged, epistart)| If epiend is null, use discharged,if null use epistart  |
-| visit_detail_end_datetime | epiend | COALESCE(epiend, discharged, epistart) | If epiend is null, use discharged, if null use epistart|
+| visit_detail_start_date | epistart | COALESCE(epistart, admidate, epiend)| If epistart is not null then epistart else use admidate if not null else use epiend  |
+| visit_detail_start_datetime | epistart | COALESCE(epistart, admidate, epiend)| If epistart is not null then epistart else use admidate if not null else use epiend |
+| visit_detail_end_date | epiend | COALESCE(epiend, discharged, epistart)| If epiend is not null then use epiend else use discharged if not null else use epistart  |
+| visit_detail_end_datetime | epiend | COALESCE(epiend, discharged, epistart) | If epiend is not null then use epiend else use discharged if not null else use epistart  |
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | pconsult | use hes_episode.pconsult inorder to retrieve the provider_id from provider by LEFT JOINING provider as t1 on  t1.provider_source_value = hes_episode.pconsult. | |
 | care_site_id |NULL |  |  |
