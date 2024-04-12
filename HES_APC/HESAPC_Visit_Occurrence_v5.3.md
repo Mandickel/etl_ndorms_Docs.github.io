@@ -19,10 +19,10 @@ description: "Visit_occurrence v5.3 description"
 | visit_occurrence_id |  |  nextval('public.sequence_vo') AS visit_occurrence_id | A sequence named "sequence_vo" is created in the public schema to uniquely generate "visit_occurrence_id"s. It initializes by fetching the highest ID from the _max_ids table where "tbl_name" equals "visit_occurrence". This table, located in the schema to be linked to the target schema, stores the maximum IDs for all CDM tables to help set the starting point for the next ID in a given sequence.| 
 | person_id | patid |  |  |
 | visit_concept_id |  | 9201 = Inpatient visit  | |
-| visit_start_date | admidate | COALESCE(admidate, MIN(epistart), discharged)| If admidate is null, use the first epistart in episode, and if these are also null, use discharged |
-| visit_start_datetime | admidate | COALESCE(admidate, MIN(epistart), discharged) | If admidate is null, use the first epistart in episode, and if these are also null, use discharged |
-| visit_end_date | discharged | COALESCE(discharged, MAX(epiend), admidate, MIN(epistart)) | If discharged is null, use the last epiend in episode, and if those are also null, use admidate or the first of epistart |
-| visit_end_datetime | discharged | COALESCE(discharged, MAX(epiend), admidate, MIN(epistart)) |If discharged is null, use the last epiend in episode, and if those are also null, use admidate or the first of epistart |
+| visit_start_date | admidate | COALESCE(admidate, MIN(epistart), discharged)|  If admidate is null, use the first epistart in episode, if null use discharged  |
+| visit_start_datetime | admidate | COALESCE(admidate, MIN(epistart), discharged)| If admidate is null, use the first epistart in episode, if null use discharged |
+| visit_end_date | discharged | COALESCE(discharged, MAX(epiend), admidate, MIN(epistart))| If discharged is null, use the last epiend in episode, if null use admidate, and if null use the first epistart |
+| visit_end_datetime | discharged | COALESCE(discharged, MAX(epiend), admidate, MIN(epistart)) |If discharged is null, use the last epiend in episode, if null use admidate, and if null use the first epistart |
 | visit_type_concept_id |  | 32818 = EHR administration record |  |
 | provider_id |NULL | |  |
 | care_site_id | NULL| |  |
