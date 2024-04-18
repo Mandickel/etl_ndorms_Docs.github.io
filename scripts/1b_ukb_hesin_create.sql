@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS {SOURCE_SCHEMA}.biob_hesin (
 	
 ---Creating biob_hesin_critical Table ---------------------------------------
 CREATE TABLE IF NOT EXISTS {SOURCE_SCHEMA}.biob_hesin_critical (
-	eid					bigint,
+	eid				bigint,
 	ins_index			bigint,
 	arr_index			bigint,
 	dsource				varchar(10),
