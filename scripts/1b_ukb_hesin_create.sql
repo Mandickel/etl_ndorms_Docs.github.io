@@ -37,9 +37,9 @@ CREATE TABLE IF NOT EXISTS {SOURCE_SCHEMA}.biob_hesin (
 	tretspef				varchar(10),
 	operstat				int,
 	disdate					date,
-	dismeth_uni					int,
+	dismeth_uni				int,
 	dismeth					int,
-	disdest_uni					int,
+	disdest_uni				int,
 	disdest					int,
 	carersi					int)
 	TABLESPACE pg_default;
