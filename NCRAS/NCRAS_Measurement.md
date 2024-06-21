@@ -37,5 +37,5 @@ description: "Measurement mapping from hesop_appointment tables"
 |measurement_source_value |eventcode  |  |MEASUREMENT_SOURCE_VALUE will be mapped to Standard OMOP Concept_id by using NCRAS_EVENTDESC_STCM.  |
 |measurement_source_concept_id |eventcode  |  |MEASUREMENT_SOURCE_CONCEPT_ID will be mapped to the exact value in the source data field eventcode |
 |unit_source_value |  |  | |
-|value_source_value |lesionsize,number_of_tumours  |  | VALUE_SOURCE_VALUE will be mapped from lesionsize and number_of tumours.|
+|value_source_value |lesionsize  |  | VALUE_SOURCE_VALUE will be mapped from lesionsize.|
 
