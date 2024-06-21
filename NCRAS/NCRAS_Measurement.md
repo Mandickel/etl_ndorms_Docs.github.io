@@ -8,11 +8,9 @@ description: "Measurement mapping from hesop_appointment tables"
 ---
 
 
-# CDM Table name: VISIT_DETAIL (CDM v5.3 / v5.4)
+# CDM Table name: MEASUREMENT (CDM v5.3)
 
-## Reading from Treatment.
-
-**Reading from Treatment to Measurement CDM v5.3**
+## Reading from Treatment to Measurement CDM v5.3
 
 ![](images/image3.png)
 
