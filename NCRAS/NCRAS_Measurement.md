@@ -13,6 +13,7 @@ description: "Measurement mapping from hesop_appointment tables"
 ## Reading from Treatment.
 
 **Reading from Treatment to Measurement CDM v5.3**
+
 ![](images/image3.png)
 
 **Figure.1**
