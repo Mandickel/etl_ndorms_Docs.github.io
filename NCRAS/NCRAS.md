@@ -2,7 +2,7 @@
 layout: default
 title: NCRAS
 nav_order: 4
-description: "Hospital Episode Statistics (HES) Out Patient (OP) ETL Documentation"
+description: "National Cancer Registration and Analysis Service (NCRAS) Documentation"
 has_children: true
 permalink: /docs/NCRAS
 ---
@@ -15,7 +15,7 @@ These materials are meant to serve as documentation and reference for how the NC
 
 ![](images/image1.png)
 
-**Figure.1**
+**Figure.**
 
 ## Change log
 
