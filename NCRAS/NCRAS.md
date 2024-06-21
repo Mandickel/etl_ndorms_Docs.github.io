@@ -15,7 +15,7 @@ These materials are meant to serve as documentation and reference for how the NC
 
 ![](images/image1.png)
 
-**Figure.**
+**Figure.1**
 
 ## Change log
 
