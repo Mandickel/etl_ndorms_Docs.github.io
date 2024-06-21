@@ -26,7 +26,7 @@ description: "Measurement mapping from hesop_appointment tables"
 |measurement_time |  |  | |
 |measurement_type_concept_id |  |32818  |32818 = "EHR administration record" |
 |operator_concept_id |  |  | |
-|value_as_number | lesionsize,number_of_tumours |  | VALUE_AS_NUMBER will be mapped from lesionsize and number_of tumours.|
+|value_as_number | lesionsize |  | VALUE_AS_NUMBER will be mapped from lesionsize.|
 |value_as_concept_id |  |  | |
 |unit_concept_id |  | 8588 |8588 = "millimeter" |
 |range_low |  |  | |
