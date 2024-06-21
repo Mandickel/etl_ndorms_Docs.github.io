@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Procedure_occurrence
-nav_order: 7
+title: Drug_exposure
+nav_order: 8
 parent: NCRAS
 description: "Visit_Occurrence mapping from hesop_appointment table"
 

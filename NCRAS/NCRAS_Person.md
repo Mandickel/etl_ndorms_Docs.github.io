@@ -9,10 +9,7 @@ description: "Person mapping from HES OP hesop_patient table"
 
 # CDM Table name: PERSON (CDM v5.3 / v5.4)
 
-## Reading from hesop_patient
-
-The patients mapped to the CDM from HES OP in this instance were restricted to those with a match_rank equal to one or two and the others were discarded.
-
+## Reading from Tumour
 
 
 ![](images/image2.png)
