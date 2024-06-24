@@ -25,7 +25,7 @@ description: "Drug exposure mapping from treatment table"
 |drug_exposure_end_date|  | | |
 |drug_exposure_end_datetime|  | | |
 |verbatim_end_date|  | | |
-|drug_type_concept_id|  |32818 |32818  = "EHR administration record" |
+|drug_type_concept_id|  |32879 |32879  = "Registry" |
 |stop_reason|  | | |
 |refills|  | | |
 |quantity|  | | |
