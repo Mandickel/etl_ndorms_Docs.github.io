@@ -24,7 +24,7 @@ description: "Measurement mapping from hesop_appointment tables"
 |measurement_date |eventdate  |  |MEASUREMENT_DATETIME will be mapped from eventdate. |
 |measurement_datetime |eventdate  | CAST(eventdate AS DATETIME) AS MEASUREMENT_DATETIME |MEASUREMENT_DATETIME will be mapped from eventdate. |
 |measurement_time |  |  | |
-|measurement_type_concept_id |  |32818  |32818 = "EHR administration record" |
+|measurement_type_concept_id |  |32879  |32879  = "Registry" |
 |operator_concept_id |  |  | |
 |value_as_number | lesionsize |  | VALUE_AS_NUMBER will be mapped from lesionsize.|
 |value_as_concept_id |  |  | |

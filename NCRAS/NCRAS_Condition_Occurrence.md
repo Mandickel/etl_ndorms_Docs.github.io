@@ -24,7 +24,7 @@ description: "CONDITION_OCCURRENCE mapping from NCRAS Tumour table"
 |condition_start_datetime |diagnosisdatebest  |CAST(diagnosisdatebest AS DATATIME) AS CONDITION_START_DATETIME |CONDITION_START_DATETIME will be mapped from diagnosisdatebest. |
 |condition_end_date |diagnosisdatebest | | CONDITION_END_DATE will be mapped from diagnosisdatebest.|
 |condition_end_datetime |diagnosisdatebest  | |CONDITION_END_DATETIME will be mapped from diagnosisdatebest. |
-|condition_type_concept_id |  |32818 |32818 = "EHR administration record" |
+|condition_type_concept_id |  |32879 |32879  = "Registry" |
 |condition_status_concept_id |  | | |
 |stop_reason |  | | |
 |provider_id |  | | |
