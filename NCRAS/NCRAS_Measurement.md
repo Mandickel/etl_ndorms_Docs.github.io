@@ -20,7 +20,7 @@ description: "Measurement mapping from hesop_appointment tables"
 | --- | --- | --- | --- |
 |measurement_id |  |  | Autogenerate: if table is empty, start from MAX(public.measurement_id)+1|
 |person_id |e_patid  |  | PERSON_ID will be mapped from e_patid.|
-|measurement_concept_id |eventcode  |  | MEASUREMENT_CONCEPT_ID will be mapped to SNOMED Concept_id by using NCRAS_EVENTDESC_STCM.|
+|measurement_concept_id |eventcode  |  | MEASUREMENT_CONCEPT_ID will be mapped to a standard OMOP Concept_id by using NCRAS_EVENTDESC_STCM.|
 |measurement_date |eventdate  |  |MEASUREMENT_DATETIME will be mapped from eventdate. |
 |measurement_datetime |eventdate  | CAST(eventdate AS DATETIME) AS MEASUREMENT_DATETIME |MEASUREMENT_DATETIME will be mapped from eventdate. |
 |measurement_time |  |  | |
