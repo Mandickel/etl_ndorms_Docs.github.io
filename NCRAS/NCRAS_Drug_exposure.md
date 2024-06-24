@@ -11,7 +11,7 @@ description: "Drug exposure mapping from treatment table"
 # CDM Table name: DRUG_EXPOSURE (CDM v5.3)
 
 ## Reading from Treatment table to Drug_exposure CDM v5.3 table:
-![](images/image4.png)
+![](images/image6.png)
 
 **Figure.1**
 
