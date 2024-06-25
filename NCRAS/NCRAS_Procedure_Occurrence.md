@@ -24,7 +24,7 @@ description: "Visit_Occurrence mapping from hesop_appointment table"
 |procedure_concept_id |opcs4_code,radiodesc,eventcode  |Case WHEN Oposc4_code IS NULL THEN radiocode ELSE eventcode END| PROCEDURE_SOURCE_VALUE will be mapped to standard Procedure Concept_id by using NCRAS_EVENTDESC_STCM,Oposc4_code,radiocode.|
 |procedure_date |eventdate  | | PROCEDURE_DATE will be mapped from eventdate|
 |procedure_datetime |eventdate  | CAST(eventdate AS DATETIME) AS PROCEDURE_DATE| PROCEDURE_DATETIME will be mapped from eventdate|
-|procedure_type_concept_id |  | 32879 |32879  = "Registry" |
+|procedure_type_concept_id |  |32879 |32879  = "Registry" |
 |modifier_concept_id |  | | |
 |quantity |  | 1| |
 |provider_id |  | | |
