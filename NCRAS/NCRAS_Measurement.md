@@ -20,7 +20,7 @@ description: "Measurement mapping from hesop_appointment tables"
 | --- | --- | --- | --- |
 |measurement_id |  |  | Autogenerate: if table is empty, start from MAX(public.measurement_id)+1|
 |person_id |e_patid  |  | PERSON_ID will be mapped from e_patid.|
-|measurement_concept_id | histology_coded | WITH ct1 AS (SELECT histology_coded FROM Tumour WHERE ) SELECT CONCEPT_ID FROM CONCEPT AS t1 INNER JOIN ct1 AS t2 ON t1.concept_code = t2.history_coded WHERE t1.domain_id = 'Measurement' AND t1.vocabulary_id = 'CPT4' AND t1.standard_concept = 'S' |MEASUREMENT_CONCEPT_ID will be mapped to standard CPT4 Concept_id by using histology_coded |
+|measurement_concept_id | histology_coded | WITH ct1 AS (SELECT histology_coded FROM Tumour) SELECT CONCEPT_ID FROM CONCEPT AS t1 INNER JOIN ct1 AS t2 ON t1.concept_code = t2.history_coded WHERE t1.domain_id = 'Measurement' AND t1.vocabulary_id = 'CPT4' AND t1.standard_concept = 'S' |MEASUREMENT_CONCEPT_ID will be mapped to standard CPT4 Concept_id by using histology_coded |
 |measurement_date |diagnosisdatebest  |  |MEASUREMENT_DATE will be mapped from diagnosisdatebest.|
 |measurement_datetime | diagnosisdatebest | CAST(diagnosisdatebest AS DATETIME) AS MEASUREMENT_DATETIME | MEASUREMENT_DATE will be mapped from diagnosisdatebest.|
 |measurement_time |  |  | |
