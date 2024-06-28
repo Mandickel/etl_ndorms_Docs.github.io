@@ -24,7 +24,7 @@ description: "Person mapping from HES OP hesop_patient table"
 | month_of_birth | NULL|  | |
 | day_of_birth | NULL |  |  |
 | birth_datetime |NULL  |  |  |
-| race_concept_id | ethnicity | |RACE_CONCEPT_ID will be mapped to race Concept_id by using NCRAS_ETHINIC_STCM |
+| race_concept_id | ethnicity | |RACE_CONCEPT_ID will be mapped to race Concept_id by using CPRD_ETHINIC_STCM |
 | ethnicity_concept_id | 0 |  |   |
 | location_id |NULL  |  |  |
 | provider_id | NULL |  |  |
@@ -32,7 +32,7 @@ description: "Person mapping from HES OP hesop_patient table"
 | person_source_value | e_patid|  |  |
 | gender_source_value |NULL |  | |
 | gender_source_concept_id | NULL |  |  |
-| race_source_value | ethnicity|  |RACE_CONCEPT_ID will be mapped to race Concept_id by using NCRAS_ETHINIC_STCM |
+| race_source_value | ethnicity|  |RACE_CONCEPT_ID will be mapped to race Concept_id by using CPRD_ETHINIC_STCM |
 | race_source_concept_id | NULL | |
 | ethnicity_source_value | NULL |  |  | 
 | ethnicity_source_concept_id | 0 |  |  |
