@@ -48,14 +48,14 @@ description: "Measurement mapping from hesop_appointment tables"
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | --- | --- |
 |measurement_id |  |  | Autogenerate: if table is empty, start from MAX(public.measurement_id)+1|
-|person_id |e_patid  |  | PERSON_ID will be mapped from e_patid.|
+|person_id |e_patid  |  | |
 |measurement_concept_id |eventcode  |  | MEASUREMENT_CONCEPT_ID will be mapped to a standard Measurement Concept_id by using NCRAS_EVENTDESC_STCM.|
 |measurement_date |eventdate  |  | |
 |measurement_datetime |eventdate  |  | |
 |measurement_time |  |  | |
 |measurement_type_concept_id |  |32879  |32879  = "Registry" |
 |operator_concept_id |  |  | |
-|value_as_number | lesionsize |  | VALUE_AS_NUMBER will be mapped from lesionsize.|
+|value_as_number | lesionsize |  | |
 |value_as_concept_id |  |  | |
 |unit_concept_id |  | 8588 |8588 = "millimeter" |
 |range_low |  |  | |
