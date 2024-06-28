@@ -18,10 +18,10 @@ description: "Drug exposure mapping from treatment table"
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
 |drug_exposure_id |  | | Autogenerate: if table is empty, start from MAX(public.drug_exposure_id)+1|
-|person_id| e_patid | |PERSON_ID will be mapped from e_patid. |
+|person_id| e_patid | | |
 |drug_concept_id|chemo_all_drug  | |DRUG_CONCEPT_ID will be mapped to a standard Concept_id by using NCRAS_DRUG_STCM. |
-|drug_exposure_start_date|eventdate  |eventdate AS DRUG_EXPOSURE_START_DATE |DRUG_EXPOSURE_START_DATE will be mapped from eventdate. |
-|drug_exposure_start_datetime|eventdate  |CAST(eventdate AS DATETIME) AS DRUG_EXPOSURE_START_DATETIME | DRUG_EXPOSURE_START_DATE will be mapped from eventdate.|
+|drug_exposure_start_date|eventdate  | | |
+|drug_exposure_start_datetime|eventdate  | | |
 |drug_exposure_end_date|  | | |
 |drug_exposure_end_datetime|  | | |
 |verbatim_end_date|  | | |
