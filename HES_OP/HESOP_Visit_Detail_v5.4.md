@@ -30,7 +30,7 @@ description: "Visit_detail v5.4 description"
 | visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
 | provider_id | NULL|  | |
 | care_site_id | NULL|  |  |
-| visit_detail_source_value | attendkey | | This will allow us to retrieve visit_detail_id using patid. |
+| visit_detail_source_value | attendkey | | This will allow us to retrieve visit_detail_id using attendkey. |
 | visit_detail_source_concept_id |NULL  |  | |
 | admitted_from_concept_id |NULL |  |  |
 | admitted_from_source_value | NULL|  |  |
