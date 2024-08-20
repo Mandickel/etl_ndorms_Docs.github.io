@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Visit_Detail
-nav_order: 6
+nav_order: 1
 parent: HES A&E
 has_children: false
 description: "Visit_Detil mapping from hesae_attendance tables"
@@ -9,11 +9,11 @@ description: "Visit_Detil mapping from hesae_attendance tables"
 ---
 
 
-# CDM Table name: VISIT_DETAIL (CDM v5.3 / v5.4)
+# CDM Table name: VISIT_DETAIL (CDM v5.3)
 
 ## Reading from hesae_attendance.
 
-**Reading from hesae_attendance to Visit_Detail CDM v5.3 / v5.4 table:**
+**Reading from hesae_attendance to Visit_Detail CDM v5.3 table:**
 ![](images/image4.png)
 
 **Figure.1**
