@@ -4,8 +4,7 @@ title: CDM v5.4
 nav_order: 2
 parent: Visit_Detail
 grand_parent: HES A&E
-has_children: false
-description: "Visit_Detil mapping from hesae_attendance tables"
+description: "Visit_detail v5.3 description"
 
 ---
 
