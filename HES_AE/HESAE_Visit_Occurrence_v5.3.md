@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Visit_Occurrence
-nav_order: 7
-parent: HES A&E
-has_children: false
-description: "Visit_Occurrence mapping from hesae_attendance table"
+title: CDM v5.3
+nav_order: 1
+parent: Visit_Occurrence
+grand_parent: HES APC
+description: "Visit_occurrence v5.3 description"
 
 ---
 
 
-# CDM Table name: VISIT_OCCURRENCE (CDM v5.3 / v5.4)
+# CDM Table name: VISIT_OCCURRENCE (CDM v5.3)
 
-**Reading from hesae_attendance to Visit_Occurrence CDM v5.3/ v5.4 table:**
+**Reading from hesae_attendance to Visit_Occurrence CDM v5.3 table:**
 ![](images/image3.png)
 
 **Figure.1**
