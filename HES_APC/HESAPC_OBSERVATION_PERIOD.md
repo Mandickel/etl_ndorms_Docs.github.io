@@ -1,9 +1,8 @@
 ---
 layout: default
 title: OBSERVATION_PERIOD
-nav_order: 7
+nav_order: 3
 parent: HES APC
-has_children: true
 description: "OBSERVATION_PERIOD mapping from hes_hospital table"
 
 ---
