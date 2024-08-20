@@ -13,7 +13,7 @@ description: "Visit_occurrence v5.4 description"
 
 ## Reading from hesop_appointment.
 **Reading from hesop_appointment to Visit_Occurrence CDM v5.4 table:**
-![](images/image4.png)
+![](images/image4.1.png)
 
 **Figure.1**
 
