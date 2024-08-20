@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Visit_Occurrence
-nav_order: 7
-parent: HES OP
-description: "Visit_Occurrence mapping from hesop_appointment table"
+title: CDM v5.4
+nav_order: 2
+parent: Visit_Occurrence
+grand_parent: HES OP
+description: "Visit_occurrence v5.4 description"
 
 ---
 
@@ -30,9 +31,9 @@ description: "Visit_Occurrence mapping from hesop_appointment table"
 | care_site_id |NULL | |  |
 | visit_source_value | attendkey | | This will allow us to retrieve Visit_occurrence_id.  |
 | visit_source_concept_id | NULL |  |  |
-| admitting_source_concept_id | NULL|  | |
-| admitting_source_value | NULL |  | |
-| discharge_to_concept_id | NULL |  | |
-| discharge_to_source_value | NULL |  |  |
+| admitted_from_concept_id | NULL|  | |
+| admitted_from_source_value | NULL |  | |
+| discharged_to_concept_id | NULL |  | |
+| discharged_to_source_value | NULL |  |  |
 | preceding_visit_occurrence_id |  | | Using person_id, look up the attendances that occurred prior to this and put the visit_occurrence_id here.  |
 

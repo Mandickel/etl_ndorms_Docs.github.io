@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Visit_Occurrence
-nav_order: 7
-parent: HES OP
-description: "Visit_Occurrence mapping from hesop_appointment table"
+title: CDM v5.3
+nav_order: 1
+parent: Visit_Occurrence
+grand_parent: HES OP
+description: "Visit_occurrence v5.3 description"
 
 ---
 
