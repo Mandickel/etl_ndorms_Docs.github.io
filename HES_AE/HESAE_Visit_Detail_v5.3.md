@@ -2,7 +2,8 @@
 layout: default
 title: Visit_Detail
 nav_order: 1
-parent: HES A&E
+parent: Visit_Detail
+grand_parent: HES A&E
 has_children: false
 description: "Visit_Detil mapping from hesae_attendance tables"
 
