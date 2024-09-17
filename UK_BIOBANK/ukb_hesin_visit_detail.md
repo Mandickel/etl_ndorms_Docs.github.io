@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Person
+title: Visit_Detail
 nav_order: 3
 parent: ukb_hesin
 description: "Person mapping from HES AE hesae_patient table"
