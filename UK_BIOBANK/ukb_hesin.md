@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Person
+title: ukb_hesin
 nav_order: 2
 parent: UK BIOBANK
 description: "Person mapping from HES AE hesae_patient table"
