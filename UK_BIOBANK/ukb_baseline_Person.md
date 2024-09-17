@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ukb_hesin
+title: Person
 nav_order: 1
 parent: ukb_baseline
 description: "Person mapping from HES AE hesae_patient table"
