@@ -3,6 +3,7 @@ layout: default
 title: ukb_hesin
 nav_order: 2
 parent: UK BIOBANK
+has_children: true
 description: "Person mapping from HES AE hesae_patient table"
 
 ---
