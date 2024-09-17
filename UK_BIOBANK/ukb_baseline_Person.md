@@ -1,9 +1,8 @@
 ---
 layout: default
-title: ukb_baseline
+title: ukb_hesin
 nav_order: 1
-parent: UK BIOBANK
-has_children: true
+parent: ukb_baseline
 description: "Person mapping from HES AE hesae_patient table"
 
 ---
