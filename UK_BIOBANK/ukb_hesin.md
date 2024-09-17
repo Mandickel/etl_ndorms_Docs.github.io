@@ -9,9 +9,10 @@ description: "Person mapping from HES AE hesae_patient table"
 
 # UK BioBank Hospital Episode Statistics Inpatient ETL Documentation
 
-These materials are meant to serve as documentation and reference for how the UK BioBank Hospital Episode Statistics (HES) Inpatient ETL Documentation data was converted to the OMOP Common Data Model (CDM).
+These materials are meant to serve as documentation and reference for how the UK BioBank Hospital Episode Statistics Inpatient (HESIN) ETL Documentation data was converted to the OMOP Common Data Model (CDM).
 
 **UKB HESIN source Data Mapping for CDM v5.4**
+
 ![](images/image1.png)
 
 **Figure.1**
