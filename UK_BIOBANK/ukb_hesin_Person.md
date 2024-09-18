@@ -7,13 +7,9 @@ description: "Person mapping from HES AE hesae_patient table"
 
 ---
 
-# CDM Table name: PERSON (CDM v5.3 / v5.4)
+# CDM Table name: PERSON (CDM v5.4)
 
-## Reading from hesae_patient
-
-The patients mapped to the CDM from HES A&E in this instance were restricted to those with a match_rank equal to one or two and had an entry in the hospital visit table, while the others were discarded.
-
-
+## Reading from hesin
 
 ![](images/image2.png)
 

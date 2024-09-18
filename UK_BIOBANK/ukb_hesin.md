@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ukb_hesin
+title: UKB_HESIN
 nav_order: 2
 parent: UK BIOBANK
 has_children: true
@@ -8,7 +8,7 @@ description: "Person mapping from HES AE hesae_patient table"
 
 ---
 
-# UK BioBank Hospital Episode Statistics Inpatient ETL Documentation
+# UK Biobank Hospital Episode Statistics Inpatient ETL Documentation
 
 These materials are meant to serve as documentation and reference for how the UK BioBank Hospital Episode Statistics Inpatient (HESIN) ETL Documentation data was converted to the OMOP Common Data Model (CDM).
 
