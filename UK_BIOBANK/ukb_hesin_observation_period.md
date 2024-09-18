@@ -2,7 +2,7 @@
 layout: default
 title: Observation_Period
 nav_order: 2
-parent: ukb_hesin
+parent: UKB_HESIN
 description: "Person mapping from HES AE hesae_patient table"
 
 ---

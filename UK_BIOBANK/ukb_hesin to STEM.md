@@ -2,7 +2,7 @@
 layout: default
 title: UKB_HESIN to STEM
 nav_order: 6
-parent: ukb_hesin
+parent: UKB_HESIN
 description: "Person mapping from HES AE hesae_patient table"
 
 ---

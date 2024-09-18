@@ -2,7 +2,7 @@
 layout: default
 title: Death
 nav_order: 5
-parent: ukb_hesin
+parent: UKB_HESIN
 description: "Person mapping from HES AE hesae_patient table"
 
 ---
