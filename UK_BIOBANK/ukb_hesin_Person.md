@@ -30,7 +30,7 @@ description: "Person mapping from HES AE hesae_patient table"
 | care_site_id |NULL | |  |
 | person_source_value | eid |  |  |
 | gender_source_value |baseline.p31  | CONCAT('9-', baseline.p31)  | |
-| gender_source_concept_id | concept.source_concept_id |  |  |
+| gender_source_concept_id | concept.source_concept_id |  gender_source_value will be mapped to a standard Concept_id by using baseline.p31 to retrieve the target_concept_id from source_to_standard_vocab_map where source_code = CONCAT(‘9-‘, baseline.p31)|  |
 | race_source_value | baseline.p21000_i0| CONCAT('1001-', baseline.p21000_i0)| |
-| race_source_concept_id | concept.source_concept_id | |
+| race_source_concept_id | concept.source_concept_id |race_source_concept_id will be mapped to a standard Concept_id by using baseline.p21000_i0 to retrieve the target_concept_id from source_to_standard_vocab_map where source_code = CONCAT('1001-', baseline.p21000_i0::integer)|
 | ethnicity_source_value | NULL |  |  | 
