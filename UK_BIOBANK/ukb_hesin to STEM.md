@@ -46,13 +46,14 @@ description: "Stem table description"
 | person_id | eid | | | 
 | visit_occurrence_id |eid,ins_index,arr_index | | Use eid+ins_index+arr_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,ins_index,arr_index ||Use eid+ins_index+arr_index to retrieve visit_detail_id |
-| source_value| oper3,oper4|||
-| source_concept_id | oper3,oper4 | concept_id of either oper3 or oper4 | |
+| source_value| oper4|||
+| source_concept_id | oper4 | concept_id of oper4 | |
 | type_concept_id |  | 32829 | |
+| modifier_source_value | level | | |
 | start_date | opdate | | |
 | start_datetime | opdate |   | |
 | end_date | opdate | | |
 | end_datetime | opdate | | |
 | end_datetime | opdate | | |
-| concept_id  | oper3,oper4 |  |  |
+| concept_id  | oper4 | WHEN LENGTH(hesin_oper.oper4) = 4 THEN CONCAT(LEFT(hesin_oper.oper4, 3), '.', RIGHT(hesin_oper.oper4, 1))  |  |
 | stem_source_table | | "hesin_oper" | |
