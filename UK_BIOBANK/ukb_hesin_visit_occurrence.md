@@ -23,8 +23,8 @@ description: "VISIT_OCCURRENCE mapping from HESIN table"
 | visit_concept_id |  | 9201 = Inpatient visit |  |
 | visit_start_date | admidate | COALESCE(admidate, MIN(epistart), disdate)|    |
 | visit_start_datetime | admidate | COALESCE(admidate, MIN(epistart), disdate)|  |
-| visit_end_date | discharged | COALESCE(disdate, MAX(epiend), admidate, MIN(epistart))|  |
-| visit_end_datetime | discharged | COALESCE(disdate, MAX(epiend), admidate, MIN(epistart)) | |
+| visit_end_date | disdate| COALESCE(disdate, MAX(epiend), admidate, MIN(epistart))|  |
+| visit_end_datetime | disdate | COALESCE(disdate, MAX(epiend), admidate, MIN(epistart)) | |
 | visit_type_concept_id |  | 32818 = EHR administration record |  |
 | provider_id |NULL | |  |
 | care_site_id | NULL| |  |
