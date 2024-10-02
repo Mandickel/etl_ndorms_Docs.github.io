@@ -27,9 +27,9 @@ description: "Stem table description"
 | type_concept_id |  | 32829 | |
 | start_date | epistart | | |
 | end_date | epiend | | |
-| start_datetime |  | epistart  | |
+| start_datetime | epistart |   | |
 | concept_id  | NULL |  |  |
 | end_datetime | epiend| | |
 | disease_status_source_value | level| | |
-| stem_source_table | | 'hesin_diag' | |
+| stem_source_table | | "hesin_diag" | |
  
