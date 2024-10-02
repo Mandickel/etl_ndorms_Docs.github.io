@@ -3,38 +3,41 @@ layout: default
 title: Death
 nav_order: 5
 parent: UKB_HESIN
-description: "Person mapping from HES AE hesae_patient table"
+description: "Death mapping from Death and Deathe_cause tables"
 
 ---
 
-# CDM Table name: PERSON (CDM v5.3 / v5.4)
+# CDM Table name: DEATH (CDM v5.3 / v5.4)
 
-## Reading from hesae_patient
-
-The patients mapped to the CDM from HES A&E in this instance were restricted to those with a match_rank equal to one or two and had an entry in the hospital visit table, while the others were discarded.
+## Reading from DEATH_CAUSE
 
 
-
-![](images/image2.png)
+![](images/image7.png)
 
 **Figure.1**
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| person_id | patid |  	If match_rank >= 3 discard patient (we accept only match_rank = 1 or match_rank = 2)|  Data like gender, year_of_birth, location_id, Care_site_id comes from AURUM/GOLD as the data are linked to them.|
-| gender_concept_id | 0 | | |
-| year_of_birth | 0 | | |
-| month_of_birth |NULL |  | |
-| day_of_birth |NULL  |  |  |
-| birth_datetime |NULL  |  |  |
-| race_concept_id | gen_ethnicity |race_concept_id will be mapped to SNOMED Concept_id by using gen_ethnicity to retrieve the target_concept_id from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
-| ethnicity_concept_id | 0 |  |   |
-| location_id |NULL  |  |  |
-| provider_id |NULL  |  |  |
-| care_site_id |NULL | |  |
-| person_source_value | patid |  |  |
-| gender_source_value |NULL |  | |
-| gender_source_concept_id |NULL  |  |  |
-| race_source_value | gen_ethnicity|race_source_value will be mapped by using gen_ethnicity to retrieve source_code_description from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
-| race_source_concept_id | NULL | |
-| ethnicity_source_value | NULL |  |  | 
+| person_id| eid | | |
+| death_date| NULL | | |
+| death_datetime| NULL | | |
+| death_type_concept_id| | 32818 = EHR administration record | |
+| cause_concept_id| cause_icd10 | use cause_icd10 to retrieve the concept_id from CONCEPT table by doing a JOIN to public.concept as t1 on t1.concept_code = death_cause.cause_icd10 where vocabulary_id = 'ICD10'| |
+| cause_source_value| cause_icd10 | | |
+| cause_source_concept_id| cause_icd10 | | |
+
+## Reading from DEATH
+
+![](images/image8.png)
+
+**Figure.2**
+
+| Destination Field | Source field | Logic | Comment field |
+| --- | --- | :---: | --- |
+| person_id| eid | | |
+| death_date| date_of_death | | |
+| death_datetime| date_of_death | | |
+| death_type_concept_id| | 32818 = EHR administration record | |
+| cause_concept_id|  NULL| | |
+| cause_source_value| NULL| | |
+| cause_source_concept_id| NULL | | |

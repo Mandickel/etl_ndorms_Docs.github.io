@@ -3,38 +3,35 @@ layout: default
 title: Visit_Occurrence
 nav_order: 4
 parent: UKB_HESIN
-description: "Person mapping from HES AE hesae_patient table"
+description: "VISIT_OCCURRENCE mapping from HESIN table"
 
 ---
 
-# CDM Table name: PERSON (CDM v5.3 / v5.4)
+# CDM Table name: VISIT_OCCURRENCE (CDM v5.4)
 
-## Reading from hesae_patient
-
-The patients mapped to the CDM from HES A&E in this instance were restricted to those with a match_rank equal to one or two and had an entry in the hospital visit table, while the others were discarded.
+## Reading from HESIN
 
 
-
-![](images/image2.png)
+![](images/image6.png)
 
 **Figure.1**
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| person_id | patid |  	If match_rank >= 3 discard patient (we accept only match_rank = 1 or match_rank = 2)|  Data like gender, year_of_birth, location_id, Care_site_id comes from AURUM/GOLD as the data are linked to them.|
-| gender_concept_id | 0 | | |
-| year_of_birth | 0 | | |
-| month_of_birth |NULL |  | |
-| day_of_birth |NULL  |  |  |
-| birth_datetime |NULL  |  |  |
-| race_concept_id | gen_ethnicity |race_concept_id will be mapped to SNOMED Concept_id by using gen_ethnicity to retrieve the target_concept_id from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
-| ethnicity_concept_id | 0 |  |   |
-| location_id |NULL  |  |  |
-| provider_id |NULL  |  |  |
-| care_site_id |NULL | |  |
-| person_source_value | patid |  |  |
-| gender_source_value |NULL |  | |
-| gender_source_concept_id |NULL  |  |  |
-| race_source_value | gen_ethnicity|race_source_value will be mapped by using gen_ethnicity to retrieve source_code_description from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
-| race_source_concept_id | NULL | |
-| ethnicity_source_value | NULL |  |  | 
+| visit_occurrence_id |  |  nextval('public.sequence_vo') AS visit_occurrence_id | Autogenerate | 
+| person_id | eid |  |  |
+| visit_concept_id |  | 9201 = Inpatient visit |  |
+| visit_start_date | admidate | COALESCE(admidate, MIN(epistart), disdate)|    |
+| visit_start_datetime | admidate | COALESCE(admidate, MIN(epistart), disdate)|  |
+| visit_end_date | discharged | COALESCE(disdate, MAX(epiend), admidate, MIN(epistart))|  |
+| visit_end_datetime | discharged | COALESCE(disdate, MAX(epiend), admidate, MIN(epistart)) | |
+| visit_type_concept_id |  | 32818 = EHR administration record |  |
+| provider_id |NULL | |  |
+| care_site_id | NULL| |  |
+| visit_source_value | ins_index |  | This will allow us to retrieve Visit_occurrence_id. |
+| visit_source_concept_id |NULL  |  |  |
+| admitted_from_concept_id | admimeth_uni | use admimeth to retrieve the target_concept_id from source_to_standard_vocab_map by doing a INNER JOIN to source_to_standard_vocab_map as t1 on CONCAT('264-',hesin.admimeth_uni) = t1.source_code AND t1.target_domain_id = 'visit' AND t1.source_vocabulary_id = “HESIN_ADMIMETH_STCM”. |  |
+| admitted_from_source_value | admimeth_uni | use admimeth to retrieve the source_code_description from source_to_standard_vocab_map by doing a INNER JOIN to source_to_standard_vocab_map as t1 on CONCAT('264-',hesin.admimeth_uni) = t1.source_code AND t1.target_domain_id = 'visit' AND t1.source_vocabulary_id = “HESIN_ADMIMETH_STCM”.|  |
+| discharged_to_concept_id | NULL | |  |
+| discharged_to_source_value | NULL | |  |
+| preceding_visit_occurrence_id |  | Using eid+ins_index, look up the episode that occurs prior to this and put the visit_occurrence_id here. |  |

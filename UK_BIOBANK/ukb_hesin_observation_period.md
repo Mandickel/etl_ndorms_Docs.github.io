@@ -18,20 +18,8 @@ description: "Person mapping from HES AE hesae_patient table"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| person_id | patid |  	If match_rank >= 3 discard patient (we accept only match_rank = 1 or match_rank = 2)|  Data like gender, year_of_birth, location_id, Care_site_id comes from AURUM/GOLD as the data are linked to them.|
-| gender_concept_id | 0 | | |
-| year_of_birth | 0 | | |
-| month_of_birth |NULL |  | |
-| day_of_birth |NULL  |  |  |
-| birth_datetime |NULL  |  |  |
-| race_concept_id | gen_ethnicity |race_concept_id will be mapped to SNOMED Concept_id by using gen_ethnicity to retrieve the target_concept_id from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
-| ethnicity_concept_id | 0 |  |   |
-| location_id |NULL  |  |  |
-| provider_id |NULL  |  |  |
-| care_site_id |NULL | |  |
-| person_source_value | patid |  |  |
-| gender_source_value |NULL |  | |
-| gender_source_concept_id |NULL  |  |  |
-| race_source_value | gen_ethnicity|race_source_value will be mapped by using gen_ethnicity to retrieve source_code_description from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
-| race_source_concept_id | NULL | |
-| ethnicity_source_value | NULL |  |  | 
+| observation_period_id |  | nextval('public.observation_period_seq') AS observation_period_id |  Autogenerate|
+| person_id | eid | | |
+| observation_period_start_date | admidate,epistart,disdate,epiend | Retrieve the earliest date among those dates like this: LEAST(MIN(admidate), MIN(epistart),MIN(disdate), MIN(epiend)) AS min_date| |
+| observation_period_end_date |disdate,epiend,admidate,epistart | Retrieve the latest date among the date fields like this: GREATEST(MAX(disdate), MAX(epiend), MAX(admidate), MAX(epistart)) AS max_date | |
+| period_type_concept_id | | 32880 | |
