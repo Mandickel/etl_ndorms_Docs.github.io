@@ -20,8 +20,8 @@ description: "Stem table description"
 | id|||Removed for performance reasons|
 | domain_id | NULL | | | 
 | person_id | eid | | | 
-| visit_occurrence_id | | | Use eid+ins_index+arr_index to retrieve visit_occurrence_id |
-| visit_detail_id|||Use eid+ins_index+arr_index to retrieve visit_detail_id |
+| visit_occurrence_id |eid+ins_index+arr_index | | Use eid+ins_index+arr_index to retrieve visit_occurrence_id |
+| visit_detail_id|eid+ins_index+arr_index ||Use eid+ins_index+arr_index to retrieve visit_detail_id |
 | source_value| diag_icd9,diag_icd10 |||
 | source_concept_id | diag_icd9,diag_icd10 | concept_id of either diag_icd9 or diag_icd10 | |
 | type_concept_id |  | 32829 | |
