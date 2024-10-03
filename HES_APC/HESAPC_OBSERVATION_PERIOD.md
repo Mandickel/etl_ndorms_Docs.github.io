@@ -21,6 +21,6 @@ Use the hes_hospital & hes_episodes tables to populate the observation_period ta
 | --- | --- | :---: | --- |
 | observation_period_id |  | nextval('public.observation_period_seq') AS observation_period_id |  Autogenerate|
 | person_id | patid| | |
-| observation_period_start_date | admidate,epistart | Retrieve the earliest date among those dates like this: LEAST(MIN(t1.admidate), MIN(t2.epistart)) AS min_date| |
-| observation_period_end_date | discharged,epiend | Retrieve the latest date among the date fields like this: GREATEST(MAX(t1.discharged), MAX(t2.epiend)) AS max_date | |
+| observation_period_start_date | admidate,hes_episodes.epistart | Retrieve the earliest date among those dates like this: LEAST(MIN(admidate), MIN(hes_episodes.epistart)) AS min_date| |
+| observation_period_end_date | discharged,hes_episodes.epiend | Retrieve the latest date among the date fields like this: GREATEST(MAX(discharged), MAX(hes_episodes.epiend)) AS max_date | |
 | period_type_concept_id | | 32880 | |
