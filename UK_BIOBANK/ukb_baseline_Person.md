@@ -23,7 +23,7 @@ description: "Person mapping from UKB Baseline table"
 | month_of_birth |p52 |  | |
 | day_of_birth |NULL  |  |  |
 | birth_datetime |NULL  |  |  |
-| race_concept_id |  | | |
+| race_concept_id | p21000_i0 | race_concept_id will be mapped to a standard Concept_id by using baseline.p21000_i0 to retrieve the target_concept_id from source_to_standard_vocab_map where source_code = CONCAT('1001-', baseline.p21000_i0::integer) AND vocabulary_id = 'UK Biobank'| |
 | ethnicity_concept_id | 0 |  |   |
 | location_id |NULL  |  |  |
 | provider_id |NULL  |  |  |
