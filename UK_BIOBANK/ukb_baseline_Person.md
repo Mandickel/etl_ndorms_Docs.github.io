@@ -7,13 +7,9 @@ description: "Person mapping from HES AE hesae_patient table"
 
 ---
 
-# CDM Table name: PERSON (CDM v5.3 / v5.4)
+# CDM Table name: PERSON (CDM v5.4)
 
-## Reading from hesae_patient
-
-The patients mapped to the CDM from HES A&E in this instance were restricted to those with a match_rank equal to one or two and had an entry in the hospital visit table, while the others were discarded.
-
-
+## Reading from baseline
 
 ![](images/image2.png)
 
@@ -21,20 +17,20 @@ The patients mapped to the CDM from HES A&E in this instance were restricted to 
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| person_id | patid |  	If match_rank >= 3 discard patient (we accept only match_rank = 1 or match_rank = 2)|  Data like gender, year_of_birth, location_id, Care_site_id comes from AURUM/GOLD as the data are linked to them.|
+| person_id | eid |  |  |
 | gender_concept_id | 0 | | |
-| year_of_birth | 0 | | |
-| month_of_birth |NULL |  | |
+| year_of_birth | p34 | | |
+| month_of_birth |p52 |  | |
 | day_of_birth |NULL  |  |  |
 | birth_datetime |NULL  |  |  |
-| race_concept_id | gen_ethnicity |race_concept_id will be mapped to SNOMED Concept_id by using gen_ethnicity to retrieve the target_concept_id from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
+| race_concept_id |  | | |
 | ethnicity_concept_id | 0 |  |   |
 | location_id |NULL  |  |  |
 | provider_id |NULL  |  |  |
 | care_site_id |NULL | |  |
-| person_source_value | patid |  |  |
-| gender_source_value |NULL |  | |
-| gender_source_concept_id |NULL  |  |  |
-| race_source_value | gen_ethnicity|race_source_value will be mapped by using gen_ethnicity to retrieve source_code_description from source_to_standard_vocab_map where source_vocabulary_id = "CPRD_ETHNIC_STCM" | |
-| race_source_concept_id | NULL | |
+| person_source_value | eid |  |  |
+| gender_source_value |p31  | CONCAT('9-', p31)  | |
+| gender_source_concept_id | concept.source_concept_id |  gender_source_concept_id will be mapped to a standard Concept_id by using baseline.p31 to retrieve the target_concept_id from source_to_standard_vocab_map where source_code = CONCAT(‘9-‘, baseline.p31) AND vocabulary_id = 'UK Biobank'|  |
+| race_source_value | baseline.p21000_i0| CONCAT('1001-', baseline.p21000_i0)| |
+| race_source_concept_id | concept.source_concept_id |race_source_concept_id will be mapped to a standard Concept_id by using baseline.p21000_i0 to retrieve the target_concept_id from source_to_standard_vocab_map where source_code = CONCAT('1001-', baseline.p21000_i0::integer) AND vocabulary_id = 'UK Biobank'|
 | ethnicity_source_value | NULL |  |  | 
