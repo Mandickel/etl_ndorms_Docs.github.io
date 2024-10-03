@@ -64,4 +64,4 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 | discharged_to_concept_id| NULL | | |
 | preceding_visit_detail_id| | | check for preceding_visit_detail_id by checking the max(visit_detail_id) for this patient using eid+ins_index|
 | parent_visit_detail_id| NULL | | |
-| visit_occurrence_id| ins_index,eid | | Use eid+ins_index to retrieve visit_occurrence_id from visit_occurrence | 
+| visit_occurrence_id| eid, ins_index | | Use eid+ins_index to retrieve visit_occurrence_id from visit_occurrence | 
