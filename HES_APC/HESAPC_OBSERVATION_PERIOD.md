@@ -13,7 +13,7 @@ description: "OBSERVATION_PERIOD mapping from hes_hospital table"
 ## Reading from hes_hospital,hes_episodes.
 Use the hes_hospital & hes_episodes tables to populate the observation_period table.
 
-![](images/image3.png)
+![](images/image13.png)
 
 **Figure.1**
 
