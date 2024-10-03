@@ -4,7 +4,7 @@ title: UKB_HESIN
 nav_order: 2
 parent: UK BIOBANK
 has_children: true
-description: "Person mapping from HES AE hesae_patient table"
+description: "UK Biobank Hospital Episode Statistics Inpatient ETL Documentation"
 
 ---
 

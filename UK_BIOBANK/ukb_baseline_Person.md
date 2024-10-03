@@ -3,7 +3,7 @@ layout: default
 title: Person
 nav_order: 1
 parent: UKB_BASELINE
-description: "Person mapping from HES AE hesae_patient table"
+description: "Person mapping from UKB Baseline table"
 
 ---
 
@@ -11,7 +11,7 @@ description: "Person mapping from HES AE hesae_patient table"
 
 ## Reading from baseline
 
-![](images/image2.png)
+![](images/image12.png)
 
 **Figure.1**
 
