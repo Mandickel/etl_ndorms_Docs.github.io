@@ -11,7 +11,7 @@ description: "Person mapping from UKB Baseline table"
 
 ## Reading from baseline
 
-![](images/image12.png)
+![](images/image11.png)
 
 **Figure.1**
 

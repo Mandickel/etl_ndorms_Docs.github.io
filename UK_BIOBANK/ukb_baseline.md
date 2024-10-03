@@ -14,7 +14,7 @@ These materials are meant to serve as documentation and reference for how the UK
 
 **UKB Baseline source Data Mapping for CDM v5.4**
 
-![](images/image11.png)
+![](images/image12.png)
 
 **Figure.1**
 
