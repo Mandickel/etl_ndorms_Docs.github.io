@@ -10,7 +10,7 @@ description: "UK Biobank Baseline ETL Documentation"
 
 # UK Biobank Baseline ETL Documentation
 
-These materials are meant to serve as documentation and reference for how the UK Biobank data was converted to the OMOP Common Data Model (CDM).
+These materials are meant to serve as documentation and reference for how the UK Biobank Baseline data was converted to the OMOP Common Data Model (CDM).
 
 **UKB Baseline source Data Mapping for CDM v5.4**
 
