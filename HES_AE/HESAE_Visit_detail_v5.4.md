@@ -14,6 +14,7 @@ description: "Visit_detail v5.3 description"
 ## Reading from hesae_attendance.
 
 **Reading from hesae_attendance to Visit_Detail CDM v5.4 table:**
+
 ![](images/image13.png)
 
 **Figure.1**
