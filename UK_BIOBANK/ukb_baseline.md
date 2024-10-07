@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UKB_BASELINE
+title: UKB BASELINE
 nav_order: 1
 parent: UK BIOBANK
 has_children: true

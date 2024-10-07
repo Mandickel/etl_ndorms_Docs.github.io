@@ -2,7 +2,7 @@
 layout: default
 title: Person
 nav_order: 1
-parent: UKB_BASELINE
+parent: UKB BASELINE
 description: "Person mapping from UKB Baseline table"
 
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: Death
 nav_order: 5
-parent: UKB_HESIN
+parent: UKB HESIN
 description: "Death mapping from Death and Deathe_cause tables"
 
 ---

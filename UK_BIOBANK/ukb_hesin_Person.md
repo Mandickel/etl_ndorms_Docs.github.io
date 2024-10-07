@@ -2,7 +2,7 @@
 layout: default
 title: Person
 nav_order: 1
-parent: UKB_HESIN
+parent: UKB HESIN
 description: "Person mapping from HES AE hesae_patient table"
 
 ---

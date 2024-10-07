@@ -2,7 +2,7 @@
 layout: default
 title: Visit_Occurrence
 nav_order: 4
-parent: UKB_HESIN
+parent: UKB HESIN
 description: "VISIT_OCCURRENCE mapping from HESIN table"
 
 ---
