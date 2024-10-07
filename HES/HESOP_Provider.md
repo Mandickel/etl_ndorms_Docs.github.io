@@ -13,7 +13,7 @@ description: "Provider mapping from HES OP hesop_clinical table"
 
 Use the hesop_clinical table to populate the provider table. 
 
-![](images/image5.png)
+![](images/image5.12.png)
 
 **Figure.1**
 

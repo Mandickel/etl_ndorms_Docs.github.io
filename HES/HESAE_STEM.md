@@ -13,7 +13,7 @@ The stem_table is a staging area where HES A&E source codes like Read codes will
 
 **Reading from hes_diagnosis_epi**
 
-![](images/image12.png)
+![](images/image12.11.png)
 
 **Figure.1**
 

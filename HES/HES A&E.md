@@ -1,10 +1,10 @@
 ---
 layout: default
 title: HES A&E
-nav_order: 3
-description: "Hospital Episode Statistics (HES) Accident & Emergency (A&E) ETL Documentation"
+nav_order: 2
+parent: HES
 has_children: true
-permalink: /docs/HES_AE
+description: "Hospital Episode Statistics (HES) Accident & Emergency (A&E) ETL Documentation"
 ---
 
 # Hospital Episode Statistics (HES) Accident & Emergency ETL Documentation
@@ -15,7 +15,7 @@ The image below (Figure.1) shows a high-level diagram of how the native tables i
 
 *HES A&E source Data Mapping for CDM v5.3 & CDM v5.4*
 
-![](images/image1.png)
+![](images/image1.11.png)
 
 **Figure.1**
 

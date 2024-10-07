@@ -15,7 +15,7 @@ The patients mapped to the CDM from HES OP in this instance were restricted to t
 
 
 
-![](images/image2.png)
+![](images/image2.12.png)
 
 **Figure.1**
 

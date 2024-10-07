@@ -13,7 +13,7 @@ description: "OBSERVATION_PERIOD mapping from hes_hospital table"
 ## Reading from hesop_appointment.
 Use the hesop_appointment table to populate the observation_period table.
 
-![](images/image6.png)
+![](images/image6.12.png)
 
 **Figure.1**
 

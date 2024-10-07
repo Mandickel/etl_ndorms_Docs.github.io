@@ -12,7 +12,7 @@ description: "Visit_occurrence v5.3 description"
 # CDM Table name: VISIT_OCCURRENCE (CDM v5.3)
 
 **Reading from hesae_attendance to Visit_Occurrence CDM v5.3 table:**
-![](images/image3.png)
+![](images/image3.11.png)
 
 **Figure.1**
 

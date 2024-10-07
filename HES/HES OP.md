@@ -1,10 +1,10 @@
 ---
 layout: default
 title: HES OP
-nav_order: 4
-description: "Hospital Episode Statistics (HES) Out Patient (OP) ETL Documentation"
+nav_order: 3
+parent: HES
 has_children: true
-permalink: /docs/HES_OP
+description: "Hospital Episode Statistics (HES) Out Patient (OP) ETL Documentation"
 ---
 
 # Hospital Episode Statistics (HES)Outpatient Care ETL Documentation
@@ -15,7 +15,7 @@ The image below (Figure.1) shows a high-level diagram of how the native tables i
 
 *HES OP source Data Mapping for CDM v5.3 & CDM v5.4*
 
-![](images/image1.png)
+![](images/image1.12.png)
 
 **Figure.1**
 

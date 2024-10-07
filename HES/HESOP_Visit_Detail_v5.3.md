@@ -14,7 +14,7 @@ description: "Visit_detail v5.3 description"
 ## Reading from hesop_appointment.
 
 **Reading from hesop_appointment to Visit_Detail CDM v5.3 table:**
-![](images/image3.png)
+![](images/image3.12.png)
 
 **Figure.1**
 

@@ -15,7 +15,7 @@ The patients mapped to the CDM from HES A&E in this instance were restricted to 
 
 
 
-![](images/image2.png)
+![](images/image2.11.png)
 
 **Figure.1**
 
