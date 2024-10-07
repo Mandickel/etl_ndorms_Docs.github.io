@@ -20,9 +20,9 @@ This documentation is meant to show how NDORMS converted its licensed CPRD Linke
 
 * [Office for National Statistics (ONS) Mortality ](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/ONS_Mortality).
 
-**UK BioBank**
+**UK BioBank (UKB)**
 
-* [ukb_baseline](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK).
-* [ukb_hesin](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK).
-* [ukb_gp](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK).
-* [ukb_cancer](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK).
+* [UKB BASELINE](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/ukb_baseline).
+* [UKB HESIN](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/ukb_hesin).
+* [UKB GP](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/ukb_gp).
+* [UKB CANCER](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/ukb_cancer).
