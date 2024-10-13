@@ -2,7 +2,7 @@
 layout: default
 title: Person
 nav_order: 1
-parent: HES OP
+parent: HES_OP
 description: "Person mapping from HES OP hesop_patient table"
 
 ---
@@ -15,7 +15,7 @@ The patients mapped to the CDM from HES OP in this instance were restricted to t
 
 
 
-![](images/image2.12.png)
+![](../images/image2.12.png)
 
 **Figure.1**
 

@@ -3,7 +3,7 @@ layout: default
 title: CDM v5.3
 nav_order: 1
 parent: Visit_Occurrence
-grand_parent: HES OP
+grand_parent: HES_OP
 description: "Visit_occurrence v5.3 description"
 
 ---
@@ -13,7 +13,7 @@ description: "Visit_occurrence v5.3 description"
 
 ## Reading from hesop_appointment.
 **Reading from hesop_appointment to Visit_Occurrence CDM v5.3 table:**
-![](images/image4.12.png)
+![](../images/image4.12.png)
 
 **Figure.1**
 

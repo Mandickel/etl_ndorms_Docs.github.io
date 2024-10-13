@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HES OP
+title: HES_OP
 nav_order: 3
 parent: HES
 has_children: true
@@ -15,7 +15,7 @@ The image below (Figure.1) shows a high-level diagram of how the native tables i
 
 *HES OP source Data Mapping for CDM v5.3 & CDM v5.4*
 
-![](images/image1.12.png)
+![](../images/image1.12.png)
 
 **Figure.1**
 

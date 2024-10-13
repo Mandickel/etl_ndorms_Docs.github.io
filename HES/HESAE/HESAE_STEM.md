@@ -2,7 +2,7 @@
 layout: default
 title: HES AE to STEM
 nav_order: 8
-parent: HES A&E
+parent: HES_A&E
 has_children: true
 description: "Stem table description"
 ---
@@ -13,7 +13,7 @@ The stem_table is a staging area where HES A&E source codes like Read codes will
 
 **Reading from hes_diagnosis_epi**
 
-![](images/image12.11.png)
+![](../images/image12.11.png)
 
 **Figure.1**
 

@@ -2,7 +2,7 @@
 layout: default
 title: Visit_Detail
 nav_order: 6
-parent: HES A&E
+parent: HES_A&E
 has_children: true
 description: "Visit_Detil mapping from hes_episodes tables"
 

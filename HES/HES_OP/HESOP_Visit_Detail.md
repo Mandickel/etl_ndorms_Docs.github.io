@@ -2,7 +2,7 @@
 layout: default
 title: Visit_Detail
 nav_order: 6
-parent: HES OP
+parent: HES_OP
 has_children: true
 description: "Visit_Detil mapping from hesop_appointment table"
 
