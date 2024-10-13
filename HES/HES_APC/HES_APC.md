@@ -16,7 +16,7 @@ The image below (Figure.1) shows a high-level diagram of how the native tables i
 
 *HES APC source Data Mapping for CDM v5.3 & CDM v5.4*
 
-![](HES_APC/images/image1.png)
+![](../images/image1.png)
 
 **Figure.1**
 
