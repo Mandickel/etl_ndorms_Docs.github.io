@@ -4,7 +4,6 @@ title: Person
 nav_order: 1
 parent: UKB HESIN
 description: "Person mapping from HES AE hesae_patient table"
-permalink: /docs/UK_BIOBANK/UKB_HESIN/
 
 ---
 

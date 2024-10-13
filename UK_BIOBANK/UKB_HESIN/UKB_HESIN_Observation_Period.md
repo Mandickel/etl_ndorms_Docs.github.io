@@ -4,7 +4,7 @@ title: Observation_Period
 nav_order: 2
 parent: UKB HESIN
 description: "Person mapping from HES AE hesae_patient table"
-permalink: /docs/UK_BIOBANK/UKB_HESIN/
+
 ---
 
 # CDM Table name: Observation_Period (CDM v5.4)

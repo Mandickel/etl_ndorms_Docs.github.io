@@ -4,7 +4,7 @@ title: Visit_Occurrence
 nav_order: 4
 parent: UKB HESIN
 description: "VISIT_OCCURRENCE mapping from HESIN table"
-permalink: /docs/UK_BIOBANK/UKB_HESIN/
+
 ---
 
 # CDM Table name: VISIT_OCCURRENCE (CDM v5.4)
