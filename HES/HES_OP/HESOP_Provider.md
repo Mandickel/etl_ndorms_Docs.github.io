@@ -2,7 +2,7 @@
 layout: default
 title: Provider
 nav_order: 5
-parent: HES_OP
+parent: HES OP
 description: "Provider mapping from HES OP hesop_clinical table"
 
 ---

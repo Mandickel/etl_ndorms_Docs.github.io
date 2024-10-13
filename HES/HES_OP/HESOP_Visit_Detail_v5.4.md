@@ -2,7 +2,7 @@
 layout: default
 title: CDM v5.4
 nav_order: 2
-parent: Visit_Detail
+parent: Visit Detail
 grand_parent: HES OP
 description: "Visit_detail v5.4 description"
 

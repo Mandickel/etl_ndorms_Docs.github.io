@@ -3,7 +3,7 @@ layout: default
 title: CDM v5.4
 nav_order: 2
 parent: Visit_Occurrence
-grand_parent: HES_APC
+grand_parent: HES APC
 description: "Visit_occurrence v5.4 description"
 ---
 

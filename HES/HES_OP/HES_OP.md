@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HES_OP
+title: HES OP
 nav_order: 3
 parent: HES
 has_children: true

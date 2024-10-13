@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Observation_Period
+title: Observation Period
 nav_order: 3
-parent: HES_OP
+parent: HES OP
 description: "OBSERVATION_PERIOD mapping from hes_hospital table"
 
 ---

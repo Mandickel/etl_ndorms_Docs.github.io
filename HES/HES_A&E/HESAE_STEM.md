@@ -2,7 +2,7 @@
 layout: default
 title: HES AE to STEM
 nav_order: 8
-parent: HES_A&E
+parent: HES A&E
 has_children: true
 description: "Stem table description"
 ---

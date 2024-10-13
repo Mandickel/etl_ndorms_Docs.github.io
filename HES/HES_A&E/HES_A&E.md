@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HES_A&E
+title: HES A&E
 nav_order: 2
 parent: HES
 has_children: true

@@ -2,7 +2,7 @@
 layout: default
 title: HES APC to STEM
 nav_order: 8
-parent: HES_APC
+parent: HES APC
 has_children: true
 description: "Stem table description"
 ---

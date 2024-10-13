@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HES_APC
+title: HES APC
 nav_order: 1
 parent: HES
 has_children: true

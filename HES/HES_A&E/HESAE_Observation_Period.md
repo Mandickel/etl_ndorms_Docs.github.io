@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Observation_Period
+title: Observation Period
 nav_order: 3
 parent: HES A&E
 description: "OBSERVATION_PERIOD mapping from hes_hospital table"
@@ -13,7 +13,7 @@ description: "OBSERVATION_PERIOD mapping from hes_hospital table"
 ## Reading from hesae_attendance.
 Use the hesae_attendance table to populate the observation_period table.
 
-![](images/image15.11.png)
+![](../images/image15.11.png)
 
 **Figure.1**
 
