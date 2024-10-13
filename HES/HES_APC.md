@@ -5,6 +5,7 @@ nav_order: 1
 parent: HES
 has_children: true
 description: "Hospital Episode Statistics (HES) Admitted Patient Care (APC) ETL Documentation"
+permalink: /docs/HES/HES_APC/
 ---
 
 # Hospital Episode Statistics (HES) Admitted Patient Care (APC) ETL Documentation
