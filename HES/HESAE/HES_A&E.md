@@ -5,6 +5,7 @@ nav_order: 2
 parent: HES
 has_children: true
 description: "Hospital Episode Statistics (HES) Accident & Emergency (A&E) ETL Documentation"
+permalink: /docs/HES/HES_A&E/
 ---
 
 # Hospital Episode Statistics (HES) Accident & Emergency ETL Documentation

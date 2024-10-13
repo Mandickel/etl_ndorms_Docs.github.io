@@ -5,6 +5,7 @@ nav_order: 3
 parent: HES
 has_children: true
 description: "Hospital Episode Statistics (HES) Out Patient (OP) ETL Documentation"
+permalink: /docs/HES/HES_OP/
 ---
 
 # Hospital Episode Statistics (HES)Outpatient Care ETL Documentation

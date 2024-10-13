@@ -13,7 +13,7 @@ This documentation is meant to show how NDORMS converted its licensed CPRD Linke
 **Hospital Episode Statistics (HES)**
 
 * [Hospital Episode Statistics (HES) Admitted Patient Care (APC)](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/HES/HES_APC).
-* [Hospital Episode Statistics (HES) Accident and Emergency (A&E)](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/HES/HES_AE).
+* [Hospital Episode Statistics (HES) Accident and Emergency (A&E)](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/HES/HESAE).
 * [Hospital Episode Statistics (HES) Outpatients (OP)](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/HES/HES_OP).
 
 **Office for National Statistics (ONS)**
