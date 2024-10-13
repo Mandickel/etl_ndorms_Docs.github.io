@@ -3,14 +3,14 @@ layout: default
 title: CDM v5.4
 nav_order: 2
 parent: Visit_Occurrence
-grand_parent: HES APC
+grand_parent: HES_APC
 description: "Visit_occurrence v5.4 description"
 ---
 
 # CDM Table name: Visit_Occurrence (CDM v5.4)
 
 ## Reading from hes_hospital to Visit_Occurrence CDM v5.4 table:
-![](images/image12.png)
+![](../images/image12.png)
 
 **Figure.1**
 

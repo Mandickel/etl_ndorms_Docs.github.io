@@ -2,7 +2,7 @@
 layout: default
 title: Person
 nav_order: 1
-parent: HES APC
+parent: HES_APC
 description: "Person mapping from HES APC hes_patient table"
 
 ---
@@ -15,7 +15,7 @@ The patients mapped to the CDM from HES APC in this instance were restricted to 
 
 
 
-![](images/image2.png)
+![](../images/image2.png)
 
 **Figure.1**
 

@@ -2,7 +2,7 @@
 layout: default
 title: HES APC to STEM
 nav_order: 8
-parent: HES APC
+parent: HES_APC
 has_children: true
 description: "Stem table description"
 ---
@@ -13,7 +13,7 @@ The stem_table is a staging area where HESAPC source codes like Read codes will 
 
 **Reading from hes_diagnosis_epi**
 
-![](images/image7.png)
+![](../images/image7.png)
 
 **Figure.1**
 
@@ -65,7 +65,7 @@ The stem_table is a staging area where HESAPC source codes like Read codes will 
 
 **Reading from hes_procedures_epi**
 
-![](images/image8.png)
+![](../images/image8.png)
 
 **Figure.2**
 

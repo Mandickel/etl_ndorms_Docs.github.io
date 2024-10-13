@@ -2,7 +2,7 @@
 layout: default
 title: Provider
 nav_order: 5
-parent: HES APC
+parent: HES_APC
 description: "Provider mapping from HES APC hes_episodes table"
 
 ---
@@ -13,7 +13,7 @@ description: "Provider mapping from HES APC hes_episodes table"
 
 Use the hes_episodes table to populate the provider table.  
 
-![](images/image3.png)
+![](../images/image3.png)
 
 **Figure.1**
 

@@ -2,7 +2,7 @@
 layout: default
 title: Visit_Occurrence
 nav_order: 7
-parent: HES APC
+parent: HES_APC
 has_children: true
 description: "Visit_Occurrence mapping from hes_hospital table"
 

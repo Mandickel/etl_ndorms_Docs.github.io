@@ -3,14 +3,14 @@ layout: default
 title: CDM v5.3
 nav_order: 1
 parent: Visit_Detail
-grand_parent: HES APC
+grand_parent: HES_APC
 description: "Visit_detail v5.3 description"
 ---
 
 # CDM Table name: Visit_detail (CDM v5.3)
 
 ## Reading from hes_episodes to Visit_Detail CDM v5.3 table:
-![](images/image4.png)
+![](../images/image4.png)
 
 **Figure.1**
 
@@ -37,7 +37,7 @@ description: "Visit_detail v5.3 description"
 | visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value |
 
 ## Reading from hes_acp to Visit_Detail CDM v5.3 table:
-![](images/image5.png)
+![](../images/image5.png)
 
 **Figure.2**
 
@@ -64,7 +64,7 @@ description: "Visit_detail v5.3 description"
 | visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value   |
 
 ## Reading from hes_ccare to Visit_Detail CDM v5.3 table:
-![](images/image10.1.png)
+![](../images/image10.1.png)
 
 **Figure.3**
 

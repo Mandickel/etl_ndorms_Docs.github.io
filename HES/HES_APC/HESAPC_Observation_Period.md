@@ -2,7 +2,7 @@
 layout: default
 title: Observation_Period
 nav_order: 3
-parent: HES APC
+parent: HES_APC
 description: "OBSERVATION_PERIOD mapping from hes_hospital table"
 
 ---
@@ -13,7 +13,7 @@ description: "OBSERVATION_PERIOD mapping from hes_hospital table"
 ## Reading from hes_hospital,hes_episodes.
 Use the hes_hospital & hes_episodes tables to populate the observation_period table.
 
-![](images/image13.png)
+![](../images/image13.png)
 
 **Figure.1**
 
