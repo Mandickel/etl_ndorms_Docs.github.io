@@ -1,11 +1,11 @@
 ---
 layout: default
-title: UKB_HESIN
+title: UKB HESIN
 nav_order: 2
 parent: UK BIOBANK
 has_children: true
 description: "UK Biobank Hospital Episode Statistics Inpatient ETL Documentation"
-permalink: /docs/UK_BIOBANK/UKB_HESIN
+permalink: /docs/UK_BIOBANK/UKB_HESIN/
 
 ---
 

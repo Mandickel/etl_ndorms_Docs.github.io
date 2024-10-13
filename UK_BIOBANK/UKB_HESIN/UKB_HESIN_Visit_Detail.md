@@ -2,9 +2,9 @@
 layout: default
 title: Visit_Detail
 nav_order: 3
-parent: UKB_HESIN
+parent: UKB HESIN
 description: "visit_detail mapping from hesin_critical & hesin_psych tables"
-permalink: /docs/UK_BIOBANK/UKB_HESIN/UKB_HESIN_Visit_Detail
+permalink: /docs/UK_BIOBANK/UKB_HESIN/
 ---
 
 # CDM Table name: VISIT_DETAIL (CDM v5.4)

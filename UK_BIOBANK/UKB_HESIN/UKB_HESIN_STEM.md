@@ -2,9 +2,9 @@
 layout: default
 title: UKB_HESIN_STEM
 nav_order: 6
-parent: UKB_HESIN
+parent: UKB HESIN
 description: "Stem table description"
-permalink: /docs/UK_BIOBANK/UKB_HESIN/UKB_HESIN_STEM
+permalink: /docs/UK_BIOBANK/UKB_HESIN/
 ---
 
 # CDM Table name: stem_table (CDM v5.4)
