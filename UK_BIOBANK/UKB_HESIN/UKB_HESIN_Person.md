@@ -2,8 +2,9 @@
 layout: default
 title: Person
 nav_order: 1
-parent: UKB HESIN
+parent: UKB_HESIN
 description: "Person mapping from HES AE hesae_patient table"
+permalink: /docs/UK_BIOBANK/UKB_HESIN/Person
 
 ---
 
@@ -11,7 +12,7 @@ description: "Person mapping from HES AE hesae_patient table"
 
 ## Reading from hesin
 
-![](images/image2.png)
+![](../images/image2.png)
 
 **Figure.1**
 

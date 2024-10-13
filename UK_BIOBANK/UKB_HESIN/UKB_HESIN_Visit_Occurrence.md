@@ -2,9 +2,9 @@
 layout: default
 title: Visit_Occurrence
 nav_order: 4
-parent: UKB HESIN
+parent: UKB_HESIN
 description: "VISIT_OCCURRENCE mapping from HESIN table"
-
+permalink: /docs/UK_BIOBANK/UKB_HESIN/Visit_Occurrence
 ---
 
 # CDM Table name: VISIT_OCCURRENCE (CDM v5.4)
@@ -12,7 +12,7 @@ description: "VISIT_OCCURRENCE mapping from HESIN table"
 ## Reading from HESIN
 
 
-![](images/image6.png)
+![](../images/image6.png)
 
 **Figure.1**
 
