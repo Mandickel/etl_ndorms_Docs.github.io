@@ -22,12 +22,7 @@ This documentation is meant to show how NDORMS converted its licensed CPRD Linke
 
 **UK BioBank (UKB)**
 
-* [UKB BASELINE](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_Baseline.md).
-* [UKB HESIN](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_HESIN.md).
-* [UKB GP](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_GP.md).
-* [UKB CANCER](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_Cancer.md).
-
-
-HES/HES_APC.md
-
-HES_APC
+* [UKB BASELINE](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_Baseline).
+* [UKB HESIN](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_HESIN).
+* [UKB GP](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_GP).
+* [UKB CANCER](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_Cancer).
