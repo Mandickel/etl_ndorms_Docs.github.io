@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UKB_HESIN_STEM
+title: UKB HESIN to STEM
 nav_order: 6
 parent: UKB HESIN
 description: "Stem table description"
