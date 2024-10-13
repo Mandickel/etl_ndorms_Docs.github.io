@@ -5,7 +5,7 @@ nav_order: 1
 parent: UK BIOBANK
 has_children: true
 description: "UK Biobank Baseline ETL Documentation"
-
+permalink: /docs/UK_BIOBANK/UKB_Baseline/
 ---
 
 # UK Biobank Baseline ETL Documentation
