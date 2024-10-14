@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Visit_Detail
+title: Visit Detail
 nav_order: 3
 parent: UKB HESIN
 description: "visit_detail mapping from hesin_critical & hesin_psych tables"

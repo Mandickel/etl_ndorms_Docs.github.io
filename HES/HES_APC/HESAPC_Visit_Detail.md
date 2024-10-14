@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Visit_Detail
+title: Visit Detail
 nav_order: 6
 parent: HES APC
 has_children: true
