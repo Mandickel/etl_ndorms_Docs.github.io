@@ -22,7 +22,7 @@ description: "Stem table description"
 | person_id | eid | | | 
 | visit_occurrence_id |eid,ins_index | | Use eid+ins_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,ins_index ||Use eid+ins_index to retrieve visit_detail_id |
-| source_value| diag_icd9,diag_icd10 |||
+| source_value| diag_icd9,diag_icd10 |CONCAT(LEFT(COALESCE(diag_icd9, diag_icd10), 3), '.', RIGHT(COALESCE(diag_icd9, diag_icd10), 1))||
 | source_concept_id | diag_icd9,diag_icd10 | concept_id of either diag_icd9 or diag_icd10 | |
 | type_concept_id |  | 32829 | |
 | start_date | epistart | | |
@@ -46,7 +46,7 @@ description: "Stem table description"
 | person_id | eid | | | 
 | visit_occurrence_id |eid,ins_index | | Use eid+ins_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,ins_index ||Use eid+ins_index to retrieve visit_detail_id |
-| source_value| oper4|||
+| source_value| oper4 | CONCAT(LEFT(oper4, 3), '.', RIGHT(oper4, 1))||
 | source_concept_id | oper4 | concept_id of oper4 | |
 | type_concept_id |  | 32829 | |
 | modifier_source_value | level | | |
