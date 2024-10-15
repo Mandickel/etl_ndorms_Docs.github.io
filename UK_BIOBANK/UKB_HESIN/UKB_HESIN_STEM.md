@@ -44,8 +44,8 @@ description: "Stem table description"
 | id|||Removed for performance reasons|
 | domain_id | NULL | | | 
 | person_id | eid | | | 
-| visit_occurrence_id |eid,ins_index,arr_index | | Use eid+ins_index+arr_index to retrieve visit_occurrence_id |
-| visit_detail_id|eid,ins_index,arr_index ||Use eid+ins_index+arr_index to retrieve visit_detail_id |
+| visit_occurrence_id |eid,ins_index | | Use eid+ins_index to retrieve visit_occurrence_id |
+| visit_detail_id|eid,ins_index ||Use eid+ins_index to retrieve visit_detail_id |
 | source_value| oper4|||
 | source_concept_id | oper4 | concept_id of oper4 | |
 | type_concept_id |  | 32829 | |
