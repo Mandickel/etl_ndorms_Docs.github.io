@@ -49,11 +49,11 @@ description: "Stem table description"
 | source_value| oper4|||
 | source_concept_id | oper4 | concept_id of oper4 | |
 | type_concept_id |  | 32829 | |
-| modifier_source_value | level | | |
+| modifier_source_value | | | |
 | start_date | opdate | | |
 | start_datetime | opdate |   | |
 | end_date | opdate | | |
 | end_datetime | opdate | | |
 | end_datetime | opdate | | |
-| concept_id  | oper4 | WHEN LENGTH(hesin_oper.oper4) = 4 THEN CONCAT(LEFT(hesin_oper.oper4, 3), '.', RIGHT(hesin_oper.oper4, 1))  |  |
+| concept_id  | NULL  |  |  |
 | stem_source_table | | "hesin_oper" | |
