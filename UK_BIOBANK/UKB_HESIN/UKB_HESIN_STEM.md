@@ -30,7 +30,7 @@ description: "Stem table description"
 | start_datetime | epistart |   | |
 | concept_id  | NULL |  |  |
 | end_datetime | epiend| | |
-| disease_status_source_value | level| | |
+| disease_status_source_value | | | |
 | stem_source_table | | "hesin_diag" | |
  
 ## Reading from hesin_oper
