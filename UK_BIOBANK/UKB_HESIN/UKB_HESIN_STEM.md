@@ -49,7 +49,7 @@ description: "Stem table description"
 | source_value| oper4|||
 | source_concept_id | oper4 | concept_id of oper4 | |
 | type_concept_id |  | 32829 | |
-| modifier_source_value | | | |
+| modifier_source_value | level | | |
 | start_date | opdate | | |
 | start_datetime | opdate |   | |
 | end_date | opdate | | |
