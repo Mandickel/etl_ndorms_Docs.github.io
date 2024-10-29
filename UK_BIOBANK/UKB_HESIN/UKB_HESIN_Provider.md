@@ -13,7 +13,7 @@ description: "Provider mapping from HESIN table"
 
 Use the hesin table to populate the provider table. 
 
-![](../images/image5.12.png)
+![](../images/image11.png)
 
 **Figure.1**
 
