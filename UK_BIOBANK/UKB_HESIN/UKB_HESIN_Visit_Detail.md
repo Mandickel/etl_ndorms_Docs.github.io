@@ -23,8 +23,8 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 | visit_detail_concept_id| | 9201 = Inpatient visit| |
 | visit_detail_start_date | epistart | COALESCE(MIN(epistart), admidate, disdate)|    |
 | visit_detail_start_datetime| epistart | COALESCE(MIN(epistart), admidate, disdate)|  |
-| visit_detail_end_date | disdate| COALESCE(MAX(epiend), MIN(epistart), disdate)|  |
-| visit_detail_end_datetime | disdate | COALESCE(MAX(epiend), MIN(epistart), disdate) | |
+| visit_detail_end_date | epiend| COALESCE(MAX(epiend), MIN(epistart), disdate)|  |
+| visit_detail_end_datetime | epiend | COALESCE(MAX(epiend), MIN(epistart), disdate) | |
 | visit_detail_type_concept_id| | 32818 = EHR administration record| |
 | provider_id| NULL | | |
 | care_site_id| NULL | | |
