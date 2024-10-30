@@ -12,7 +12,7 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 ## Reading from hesin
 
 
-![](../images/image4.png)
+![](../images/image12.png)
 
 **Figure.1**
 
@@ -65,6 +65,7 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 | preceding_visit_detail_id| | | check for preceding_visit_detail_id by checking the max(visit_detail_id) for this patient using eid+ins_index|
 | parent_visit_detail_id| NULL | | |
 | visit_occurrence_id| ins_index,eid | |Use ins_index, eid to retrieve visit_occurrence_id from visit_occurrence |
+
 ## Reading from hesin_critical & hesin
 
 
