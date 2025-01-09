@@ -19,7 +19,7 @@ description: "Stem table description"
 | id|||Removed for performance reasons|
 | domain_id | NULL | | | 
 | person_id | eid | | | 
-| visit_occurrence_id |eid,<br>ins_index | | Use eid+ins_index to retrieve visit_occurrence_id |
+| visit_occurrence_id |eid,<br>ins_index | | Use eid, ins_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,<br>ins_index ||Use eid, ins_index to retrieve visit_detail_id |
 | source_value| diag_icd9,<br>diag_icd10 |CONCAT(LEFT(COALESCE(diag_icd9, diag_icd10), 3), '.', RIGHT(COALESCE(diag_icd9, diag_icd10), 1))||
 | source_concept_id | diag_icd9,<br>diag_icd10 | concept_id of either diag_icd9 or diag_icd10 | |
