@@ -20,10 +20,10 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 | visit_detail_id| | NEXTVAL('public.sequence_vd')| Autogenerate|
 | person_id| eid | | |
 | visit_detail_concept_id| | 9201 = Inpatient visit| |
-| visit_detail_start_date | epistart,<br>admidate,<br>disdate | COALESCE(MIN(epistart), admidate, disdate)|    |
-| visit_detail_start_datetime| epistart,<br>admidate,<br>disdate | COALESCE(MIN(epistart), admidate, disdate)|  |
-| visit_detail_end_date | epiend,<br>epistart,<br>disdate| COALESCE(MAX(epiend), MIN(epistart), disdate)|  |
-| visit_detail_end_datetime | epiend,<br>epistart,<br>disdate| COALESCE(MAX(epiend), MIN(epistart), disdate) | |
+| visit_detail_start_date | epistart,<br>admidate,<br>disdate | COALESCE(epistart, admidate, disdate)|    |
+| visit_detail_start_datetime| epistart,<br>admidate,<br>disdate | COALESCE(epistart, admidate, disdate)|  |
+| visit_detail_end_date | epiend,<br>epistart,<br>disdate| COALESCE(epiend, epistart, disdate)|  |
+| visit_detail_end_datetime | epiend,<br>epistart,<br>disdate| COALESCE(epiend, epistart, disdate) | |
 | visit_detail_type_concept_id| | 32818 = EHR administration record| |
 | provider_id| NULL | | |
 | care_site_id| NULL | | |
@@ -46,10 +46,10 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 | visit_detail_id| | NEXTVAL('public.sequence_vd')| Autogenerate|
 | person_id| eid | | |
 | visit_detail_concept_id| | 9201 = Inpatient visit | |
-|| visit_detail_start_date | hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(MIN(hesin.epistart), hesin.admidate, hesin.disdate)|    |
-| visit_detail_start_datetime| hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(MIN(hesin.epistart), hesin.admidate, hesin.disdate)|  |
-| visit_detail_end_date | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(MAX(hesin.epiend), MIN(hesin.epistart), disdate)|  |
-| visit_detail_end_datetime | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(MAX(hesin.epiend), MIN(hesin.epistart), hesin.disdate) | |
+| visit_detail_start_date | hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(hesin.epistart, hesin.admidate, hesin.disdate)|    |
+| visit_detail_start_datetime| hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(hesin.epistart, hesin.admidate, hesin.disdate)|  |
+| visit_detail_end_date | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(hesin.epiend, hesin.epistart, disdate)|  |
+| visit_detail_end_datetime | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(hesin.epiend, hesin.epistart, hesin.disdate) | |
 | visit_detail_type_concept_id| | 32818 = EHR administration record | |
 | provider_id| NULL | | |
 | care_site_id| NULL | | |
@@ -74,10 +74,10 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 | visit_detail_id| | NEXTVAL('public.sequence_vd')| Autogenerate|
 | person_id| eid | | |
 | visit_detail_concept_id| | 9201 = Inpatient visit| |
-|| visit_detail_start_date | hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(MIN(hesin.epistart), hesin.admidate, hesin.disdate)|    |
-| visit_detail_start_datetime| hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(MIN(hesin.epistart), hesin.admidate, hesin.disdate)|  |
-| visit_detail_end_date | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(MAX(hesin.epiend), MIN(hesin.epistart), disdate)|  |
-| visit_detail_end_datetime | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(MAX(hesin.epiend), MIN(hesin.epistart), hesin.disdate) | |
+| visit_detail_start_date | hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(hesin.epistart, hesin.admidate, hesin.disdate)|    |
+| visit_detail_start_datetime| hesin.epistart,<br>hesin.admidate,<br>hesin.disdate | COALESCE(hesin.epistart, hesin.admidate, hesin.disdate)|  |
+| visit_detail_end_date | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(hesin.epiend, hesin.epistart, disdate)|  |
+| visit_detail_end_datetime | hesin.epiend,<br>hesin.epistart,<br>hesin.disdate| COALESCE(hesin.epiend, hesin.epistart, hesin.disdate) | |
 | visit_detail_type_concept_id| | 32818 = EHR administration record| |
 | provider_id| NULL | | |
 | care_site_id| NULL | | |
