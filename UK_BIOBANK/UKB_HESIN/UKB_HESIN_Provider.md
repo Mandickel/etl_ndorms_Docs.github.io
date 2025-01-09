@@ -11,8 +11,6 @@ description: "Provider mapping from HESIN table"
 
 ## Reading from source_ukb_hesin.hesin
 
-Use the hesin table to populate the provider table. 
-
 ![](../images/image11.png)
 
 
