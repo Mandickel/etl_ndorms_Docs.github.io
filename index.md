@@ -12,9 +12,9 @@ This documentation is meant to show how NDORMS converted its licensed CPRD Linke
 
 **Hospital Episode Statistics (HES)**
 
-* [Hospital Episode Statistics (HES) Admitted Patient Care (APC)](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/HES/HES_APC).
-* [Hospital Episode Statistics (HES) Accident and Emergency (A&E)](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/HES/HES_A&E).
-* [Hospital Episode Statistics (HES) Outpatients (OP)](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/HES/HES_OP).
+* [Hospital Episode Statistics (HES) Admitted Patient Care (APC)](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/HES/HES_APC).
+* [Hospital Episode Statistics (HES) Accident and Emergency (A&E)](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/HES/HES_A&E).
+* [Hospital Episode Statistics (HES) Outpatients (OP)](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/HES/HES_OP).
 
 **Office for National Statistics (ONS)**
 
@@ -22,7 +22,7 @@ This documentation is meant to show how NDORMS converted its licensed CPRD Linke
 
 **UK BioBank (UKB)**
 
-* [UKB BASELINE](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_Baseline).
-* [UKB HESIN](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_HESIN).
-* [UKB GP](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_GP).
-* [UKB CANCER](https://mandickel.github.io/etl_ndorms_Docs.github.io/docs/UK_BIOBANK/UKB_Cancer).
+* [UKB BASELINE](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_Baseline).
+* [UKB HESIN](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_HESIN).
+* [UKB GP](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_GP).
+* [UKB CANCER](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_Cancer).

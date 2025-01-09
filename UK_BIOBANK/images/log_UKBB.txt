@@ -1,0 +1,37 @@
+INFO  [2024-11-30 12:28:45] Create CDM object
+INFO  [2024-11-30 12:29:02] Load paracetamol cohort
+INFO  [2024-11-30 12:34:07] Number of records in paracetamol cohort: 243654
+INFO  [2024-11-30 12:34:07] Calculate demographics
+INFO  [2024-11-30 12:34:25] Create denominator incidence/prevalence paracetamol
+INFO  [2024-11-30 12:37:51] Calculate incidence
+INFO  [2024-11-30 12:40:11] Calculate prevalence
+INFO  [2024-11-30 12:40:38] Load paracetamol cohorts by formulation
+INFO  [2024-11-30 12:41:59] Number of records in paracetamol formulation cohorts: 56967
+INFO  [2024-11-30 12:41:59] Create denominator incidence/prevalence paracetamol
+INFO  [2024-11-30 12:45:49] Calculate incidence
+INFO  [2024-11-30 12:53:13] Calculate prevalence
+INFO  [2024-11-30 12:54:51] Load paracetamol overdose cohort
+INFO  [2024-11-30 12:55:15] Number of records in paracetamol overdose cohort: 1132
+INFO  [2024-11-30 12:55:15] Create denominator incidence paracetamol overdose
+INFO  [2024-11-30 12:57:20] Calculate incidence
+INFO  [2024-11-30 12:58:41] Load paracetamol overdose cohort objective 3
+INFO  [2024-11-30 12:58:45] Number of records in paracetamol overdose cohort: 1904
+INFO  [2024-11-30 12:58:45] Calculate demographics
+INFO  [2024-11-30 12:58:48] Start patient characteristics
+INFO  [2024-11-30 12:58:48] Create complications cohort
+INFO  [2024-11-30 12:59:59] Number of records in complications cohort: 12732
+INFO  [2024-11-30 12:59:59] Create comorbidities cohort
+INFO  [2024-11-30 13:11:29] Number of records in comorbidities cohort: 633244
+INFO  [2024-11-30 13:11:29] Create short comorbidities cohort
+INFO  [2024-11-30 13:20:16] Number of records in short comorbidities cohort: 484771
+INFO  [2024-11-30 13:20:16] Create comedications cohort
+INFO  [2024-11-30 13:21:03] Number of records in comedications cohort: 562309
+INFO  [2024-11-30 13:21:03] Create mortality cohort
+INFO  [2024-11-30 13:21:07] Number of records in mortality cohort: 19226
+INFO  [2024-11-30 13:21:07] Add patient demographics Age group (narrow)
+INFO  [2024-11-30 13:21:08] Calculate large scale characteristics Age group (narrow)
+INFO  [2024-11-30 13:21:56] Calculate characteristics Age group (narrow)
+INFO  [2024-11-30 13:22:44] Add patient demographics Age group (broad)
+INFO  [2024-11-30 13:22:45] Calculate large scale characteristics Age group (broad)
+INFO  [2024-11-30 13:23:21] Calculate characteristics Age group (broad)
+INFO  [2024-11-30 13:24:14] Create zip file
