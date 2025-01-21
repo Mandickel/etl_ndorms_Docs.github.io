@@ -48,9 +48,9 @@ description: "Stem table description"
 | source_concept_id |  | | |
 | type_concept_id |  | 32829 | |
 | modifier_source_value | level | | |
-| start_date | opdate,<br>hesin.epistart | If opdate is null the use hesin.epistart| |
+| start_date | opdate,<br>hesin.epistart | If opdate is null then use hesin.epistart| |
 | start_datetime | opdate,<br>hesin.epistart |   | |
-| end_date | opdate,<br>hesin.epistart | If opdate is null the use hesin.epistart| |
+| end_date | opdate,<br>hesin.epistart | If opdate is null then use hesin.epistart| |
 | end_datetime | opdate,<br>hesin.epistart  | | |
 | concept_id  | NULL  |  |  |
 | stem_source_table | | "hesin_oper" | |
