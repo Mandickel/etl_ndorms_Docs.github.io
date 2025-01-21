@@ -11,7 +11,7 @@ description: "Person mapping from source_ukb_hesin.hesin & public_ukb.death tabl
 
 ## Reading from source_ukb_hesin.hesin, public_ukb.death
 
-![](../images/image3.png)
+![](images/ukb_hesin_to_op.png)
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
