@@ -16,11 +16,11 @@ description: "Provider mapping from HESIN table"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| provider_id | | nextval('public.sequence_pro') AS provider_id| Autogenerate|
+| provider_id | | | Autogenerate|
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea |NULL  |  |  |
-| specialty_concept_id | tretspef,<br>mainspef | ||
+| specialty_concept_id | tretspef,<br>mainspef | specialty_concept_id will be mapped to Athena Standard Concept by using HES_SPEC_STCM ||
 | care_site_id | NULL| | |
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
