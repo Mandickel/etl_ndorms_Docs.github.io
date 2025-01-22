@@ -20,7 +20,7 @@ description: "Provider mapping from HESIN table"
 | provider_name | NULL |  |  |
 | npi | NULL |  |  |
 | dea |NULL  |  |  |
-| specialty_concept_id | tretspef,<br>mainspef | In the absence of a provider_id, we have created a dummy provider_id, each associated with a different specialty, using the first available values from tretspef and mainspef. ||
+| specialty_concept_id | tretspef,<br>mainspef | In the absence of a provider_id, we have created a dummy provider_id, each associated with a different specialty, using the first available value from either tretspef or mainspef. ||
 | care_site_id | NULL| | |
 | year_of_birth | NULL |  |  |
 | gender_concept_id | NULL | |  |
