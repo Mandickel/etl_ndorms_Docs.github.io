@@ -9,7 +9,7 @@ description: "Stem table description"
 
 # CDM Table name: stem_table (CDM v5.4)
 
-## Reading from source_ukb_hesin.hesin_diag, source_ukb_hesin.hesin
+## Reading from hesin_diag, hesin
 
 ![](images/ukb_diag_to_stem.png)
 
@@ -32,7 +32,7 @@ description: "Stem table description"
 | disease_status_source_value | | | |
 | stem_source_table | | "hesin_diag" | |
  
-## Reading from source_ukb_hesin.hesin_oper, source_ukb_hesin.hesin
+## Reading from hesin_oper, hesin
 
 ![](images/ukb_oper_to_stem.png)
 
