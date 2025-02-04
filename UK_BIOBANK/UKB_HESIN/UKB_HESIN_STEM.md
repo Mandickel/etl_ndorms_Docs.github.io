@@ -26,7 +26,7 @@ description: "Stem table description"
 | type_concept_id |  | 32829 | |
 | start_date | hesin.epistart,<br>hesin.admidate | | If hesin.epistart is null use hesin.admidate|
 | start_datetime | hesin.epistart,<br>hesin.admidate|   | |
-| end_date | hesin.epiend,<br>hesin.disdate,<br>hesin.epistart,<br>hesin.admidate | | If is null then use the first not null of (hesin.epiend,hesin.disdate,hesin.epistart,hesin.admidate)|
+| end_date | hesin.epiend,<br>hesin.disdate,<br>hesin.epistart,<br>hesin.admidate | | Use the first not null of (hesin.epiend,hesin.disdate,hesin.epistart,hesin.admidate)|
 | end_datetime | hesin.epiend,<br>hesin.disdate,<br>hesin.epistart,<br>hesin.admidate | | |
 | concept_id  | NULL |  |  |
 | disease_status_source_value | | | |
