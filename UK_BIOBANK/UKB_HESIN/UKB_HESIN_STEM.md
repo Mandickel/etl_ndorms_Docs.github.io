@@ -42,15 +42,15 @@ description: "Stem table description"
 | id|||Autogenerate|
 | domain_id | NULL | | | 
 | person_id | eid | | | 
-| visit_occurrence_id |eid,<br>spell_index | | Use eid, spell_index to retrieve visit_occurrence_id |
+| visit_occurrence_id |eid,<br>hesin.spell_index | | Use eid, hesin.spell_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,<br>ins_index ||Use eid, ins_index to retrieve visit_detail_id |
 | source_value| oper4 | Add dots when necessary| OPCS4 Codes are provided without dots|
 | source_concept_id |  | | |
 | type_concept_id |  | 32829 | |
 | modifier_source_value | level | | |
-| start_date | opdate,<br>hesin.epistart | If opdate is null then use hesin.epistart| |
+| start_date | opdate,<br>hesin.epistart | | If opdate is null then use hesin.epistart|
 | start_datetime | opdate,<br>hesin.epistart |   | |
-| end_date | opdate,<br>hesin.epistart | If opdate is null then use hesin.epistart| |
+| end_date | opdate,<br>hesin.epiend | | If opdate is null then use hesin.epiend |
 | end_datetime | opdate,<br>hesin.epistart  | | |
 | concept_id  | NULL  |  |  |
 | stem_source_table | | "hesin_oper" | |
