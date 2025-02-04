@@ -21,12 +21,12 @@ description: "Stem table description"
 | person_id | eid | | | 
 | visit_occurrence_id |eid,<br>hesin.spell_index | | Use eid, hesin.spell_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,<br>ins_index ||Use eid, ins_index to retrieve visit_detail_id |
-| source_value| diag_icd9,<br>diag_icd10 |Add dots when necessary | ICD10 codes provided without dots|
+| source_value| diag_icd9,<br>diag_icd10 |Add dots when necessary | ICD9 & ICD10 codes provided without dots|
 | source_concept_id |  | | |
 | type_concept_id |  | 32829 | |
-| start_date | hesin.epistart,<br>hesin.admidate | If hesin.epistart is null use hesin.admidate| |
+| start_date | hesin.epistart,<br>hesin.admidate | | If hesin.epistart is null use hesin.admidate|
 | start_datetime | hesin.epistart,<br>hesin.admidate|   | |
-| end_date | hesin.epiend,<br>hesin.disdate,<br>hesin.epistart,<br>hesin.admidate | | If hesin.epiend is null then use the first not null of (hesin.disdate,hesin.epistart,hesin.admidate)|
+| end_date | hesin.epiend,<br>hesin.disdate,<br>hesin.epistart,<br>hesin.admidate | | If is null then use the first not null of (hesin.epiend,hesin.disdate,hesin.epistart,hesin.admidate)|
 | end_datetime | hesin.epiend,<br>hesin.disdate,<br>hesin.epistart,<br>hesin.admidate | | |
 | concept_id  | NULL |  |  |
 | disease_status_source_value | | | |
