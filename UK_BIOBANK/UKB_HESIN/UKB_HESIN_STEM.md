@@ -22,7 +22,7 @@ description: "Stem table description"
 | visit_occurrence_id |eid,<br>hesin.spell_index | | Use eid, hesin.spell_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,<br>ins_index ||Use eid, ins_index to retrieve visit_detail_id |
 | source_value| diag_icd9,<br>diag_icd10 |Add dots when necessary | ICD9 & ICD10 codes provided without dots|
-| source_concept_id |  | | |
+| source_concept_id | diag_icd9,<br>diag_icd10 | | |
 | type_concept_id |  | 32829 | |
 | start_date | hesin.epistart,<br>hesin.admidate | | If hesin.epistart is null use hesin.admidate|
 | start_datetime | hesin.epistart,<br>hesin.admidate|   | |
@@ -45,7 +45,7 @@ description: "Stem table description"
 | visit_occurrence_id |eid,<br>hesin.spell_index | | Use eid, hesin.spell_index to retrieve visit_occurrence_id |
 | visit_detail_id|eid,<br>ins_index ||Use eid, ins_index to retrieve visit_detail_id |
 | source_value| oper4 | Add dots when necessary| OPCS4 Codes are provided without dots|
-| source_concept_id |  | | |
+| source_concept_id | oper4 | | |
 | type_concept_id |  | 32829 | |
 | modifier_source_value |  | | |
 | start_date | opdate,<br>hesin.epistart | | If opdate is null then use hesin.epistart|
