@@ -23,4 +23,4 @@ Use the hes_hospital & hes_episodes tables to populate the observation_period ta
 | person_id | patid| | |
 | observation_period_start_date | hes_hospital.admidate,<br>hes_episodes.epistart | use the earliest of (hes_hospital.admidate, hes_episodes.epistart) that is not null.| |
 | observation_period_end_date | hes_hospital.discharged,<br>hes_episodes.epiend | use the latest of (hes_hospital.discharged, hes_episodes.epiend) that is not null | |
-| period_type_concept_id | | [32880 - Standard algorithm](https://athena.ohdsi.org/search-terms/terms/32880)| | |
+| period_type_concept_id | | [32880 - Standard algorithm](https://athena.ohdsi.org/search-terms/terms/32880)| | 
