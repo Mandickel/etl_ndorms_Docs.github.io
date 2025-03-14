@@ -16,25 +16,25 @@ description: "Visit_detail v5.4 description"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | Autogenerate|
+| visit_detail_id |  |  | Autogenerate|
 | person_id | patid |  |  |
-| visit_detail_concept_id |  | 9201 = Inpatient visit |  |
-| visit_detail_start_date | epistart | COALESCE(epistart, admidate, epiend)|   |
-| visit_detail_start_datetime | epistart | COALESCE(epistart, admidate, epiend)|  |
-| visit_detail_end_date | epiend | COALESCE(epiend, discharged, epistart)|   |
-| visit_detail_end_datetime | epiend | COALESCE(epiend, discharged, epistart) |   |
-| visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
-| provider_id | pconsult | use hes_episode.pconsult inorder to retrieve the provider_id from provider by LEFT JOINING provider as t1 on  t1.provider_source_value = hes_episode.pconsult. | |
+| visit_detail_concept_id |  | [9201- Inpatient visit](https://athena.ohdsi.org/search-terms/terms/9201)|  |
+| visit_detail_start_date | epistart,<br>admidate,<br>epiend | use the minimum of the first not null of (epistart,admidate,epiend )|   |
+| visit_detail_start_datetime | epistart,<br>admidate,<br>epiend | |  |
+| visit_detail_end_date | epiend,<br>discharged,<br>epistart | use the first not null of (epiend,discharged,epistart ) |   |
+| visit_detail_end_datetime | epiend,<br>discharged,<br>epistart | |   |
+| visit_detail_type_concept_id |  | [32818- EHR administration record](https://athena.ohdsi.org/search-terms/terms/32818)| |
+| provider_id | pconsult | use pconsult to retrieve the provider_id from the provider table. | |
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | epikey | | This will allow us to retrieve visit_detail_id using patid. |
 | visit_detail_source_concept_id |NULL  |  |  |
-| admitted_from_concept_id | admimeth | use admimeth to retrieve the target_concept_id from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.admimeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_ADMIMETH_STCM”. | |
-| admitted_from_source_value | admimeth | use admimeth to retrieve the source_code_description from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.admimeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_ADMIMETH_STCM”.| |
-| discharged_to_concept_id | dismeth | use dismeth to retrieve the target_concept_id from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.dismeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_DISMETH_STCM”. | |
+| admitted_from_concept_id | admimeth | use HESAPC_ADMIMETH_STCM | |
+| admitted_from_source_value | admimeth | | |
+| discharged_to_concept_id | dismeth |  use HESAPC_DISMETH_STCM | |
 | discharged_to_source_value | dismeth | use dismeth to retrieve the source_code_description from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.dismeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_DISMETH_STCM”. |  |
-| preceding_visit_detail_id | eorder | If eorder = 1 then 0 else check for preceding_visit_detail_id by using eorder for this patient using patid+epikey+spno. |  |
+| preceding_visit_detail_id | | latest visit_detail_id before this one, for the patient if available |  |
 | parent_visit_detail_id | NULL |  |  |
-| visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value |
+| visit_occurrence_id | patid,spno |  | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |
 
 ## Reading from hes_acp to Visit_Detail CDM v5.4 table:
 ![](../images/image11.png)
