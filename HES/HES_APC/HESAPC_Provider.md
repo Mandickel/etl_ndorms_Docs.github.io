@@ -21,8 +21,6 @@ Use the hes_episodes table to populate the provider table.
 | --- | --- | :---: | --- |
 | provider_id |  |  | Autogenerate|
 | provider_name | NULL |  |  |
-| npi | NULL |  |  |
-| dea | NULL |  |  |
 | specialty_concept_id | tretspef,mainspef | In the absence of a provider_id, we have created dummy provider_ids, each associated with a different specialty, using the first available value from either tretspef or mainspef.|  |
 | care_site_id |NULL | | |
 | year_of_birth | NULL |  |  |
