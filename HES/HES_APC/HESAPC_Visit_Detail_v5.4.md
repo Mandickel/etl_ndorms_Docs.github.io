@@ -26,12 +26,12 @@ description: "Visit_detail v5.4 description"
 | visit_detail_type_concept_id |  | [32818- EHR administration record](https://athena.ohdsi.org/search-terms/terms/32818)| |
 | provider_id | pconsult | use pconsult to retrieve the provider_id from the provider table. | |
 | care_site_id |NULL |  |  |
-| visit_detail_source_value | epikey | | This will allow us to retrieve visit_detail_id using patid. |
+| visit_detail_source_value | epikey | | |
 | visit_detail_source_concept_id |NULL  |  |  |
 | admitted_from_concept_id | admimeth | use HESAPC_ADMIMETH_STCM | |
 | admitted_from_source_value | admimeth | | |
 | discharged_to_concept_id | dismeth |  use HESAPC_DISMETH_STCM | |
-| discharged_to_source_value | dismeth | use dismeth to retrieve the source_code_description from source_to_standard_vocab_map by doing a LEFT JOIN to source_to_standard_vocab_map as t1 on hes_hospital.dismeth = t1.source_code AND t1.source_vocabulary_id = “HESAPC_DISMETH_STCM”. |  |
+| discharged_to_source_value | dismeth | |  |
 | preceding_visit_detail_id | | latest visit_detail_id before this one, for the patient if available |  |
 | parent_visit_detail_id | NULL |  |  |
 | visit_occurrence_id | patid,spno |  | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |
