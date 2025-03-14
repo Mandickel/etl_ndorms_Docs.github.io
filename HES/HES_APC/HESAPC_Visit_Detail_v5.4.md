@@ -34,7 +34,7 @@ description: "Visit_detail v5.4 description"
 | discharged_to_source_value | dismeth | |  |
 | preceding_visit_detail_id | | latest visit_detail_id before this one, for the patient if available |  |
 | parent_visit_detail_id | NULL |  |  |
-| visit_occurrence_id | patid,spno |  | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |
+| visit_occurrence_id | patid,spno | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |  |
 
 ## Reading from hes_acp to Visit_Detail CDM v5.4 table:
 ![](../images/image11.png)
