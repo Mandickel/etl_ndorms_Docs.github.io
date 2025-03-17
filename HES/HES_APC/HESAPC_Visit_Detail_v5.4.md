@@ -9,7 +9,7 @@ description: "Visit_detail v5.4 description"
 
 # CDM Table name: Visit_detail (CDM v5.4)
 
-## Reading from hes_episodes to Visit_Detail CDM v5.4 table:
+## Reading from hes_episodes to Visit_Detail:
 ![](../images/image9.png)
 
 **Figure.1**
@@ -36,7 +36,7 @@ description: "Visit_detail v5.4 description"
 | parent_visit_detail_id | NULL |  |  |
 | visit_occurrence_id | patid,spno | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |  |
 
-## Reading from hes_acp to Visit_Detail CDM v5.4 table:
+## Reading from hes_acp to Visit_Detail:
 ![](../images/image11.png)
 
 **Figure.2**
@@ -45,13 +45,13 @@ description: "Visit_detail v5.4 description"
 | --- | --- | :---: | --- |
 | visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | Autogenerate|
 | person_id | patid |  |  |
-| visit_detail_concept_id |  | 32037 = Intensive care |  |
-| visit_detail_start_date | acpstar,epistart | COALESCE(acpstar,epistart) |  |
-| visit_detail_start_datetime | acpstar, epistart | COALESCE(acpstar,epistart) |   |
-| visit_detail_end_date | acpend, epiend | COALESCE(acpend, epiend) |  |
-| visit_detail_end_datetime | acpend, epiend | COALESCE(acpend,epiend) |  |
-| visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
-| provider_id | hes_episodes.pconsult |  | Use patid+epikey to get it (only if efficient and provider populated) |
+| visit_detail_concept_id |  | 32037 = Intensive care [32037- Intensive care](https://athena.ohdsi.org/search-terms/terms/32037)|  |
+| visit_detail_start_date | acpstar,<br>epistart | use the minimum of the first not null of (acpstar, epistart ) |  |
+| visit_detail_start_datetime | acpstar,<br>epistart |  |   |
+| visit_detail_end_date | acpend,<br>epiend | use the first not null of (acpend, epiend ) |  |
+| visit_detail_end_datetime | acpend,<br>epiend | |  |
+| visit_detail_type_concept_id |  | [32818- EHR administration record](https://athena.ohdsi.org/search-terms/terms/32818)|   |
+| provider_id | hes_episodes.pconsult | use hes_episodes.pconsult to retrieve the provider_id from the provider table. |  |
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | epikey | | This will allow to retrieve visit_details_id using patid If acpn = 1 then 0 else use acpn with patid+epikey and visit_detail_source_value = “Augmented care period (ACP)” to find the preceding_visit_detail_id  |
 | visit_detail_source_concept_id | NULL |  |  |
