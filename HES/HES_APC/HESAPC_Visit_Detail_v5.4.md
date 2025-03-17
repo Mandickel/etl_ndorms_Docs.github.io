@@ -43,7 +43,7 @@ description: "Visit_detail v5.4 description"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | Autogenerate|
+| visit_detail_id |  |   | Autogenerate|
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | [32037- Intensive care](https://athena.ohdsi.org/search-terms/terms/32037)|  |
 | visit_detail_start_date | acpstar,<br>epistart | use the minimum of the first not null of (acpstar, epistart ) |  |
@@ -53,15 +53,15 @@ description: "Visit_detail v5.4 description"
 | visit_detail_type_concept_id |  | [32818- EHR administration record](https://athena.ohdsi.org/search-terms/terms/32818)|   |
 | provider_id | hes_episodes.pconsult | use hes_episodes.pconsult to retrieve the provider_id from the provider table. |  |
 | care_site_id |NULL |  |  |
-| visit_detail_source_value | epikey | | This will allow to retrieve visit_details_id using patid If acpn = 1 then 0 else use acpn with patid+epikey and visit_detail_source_value = “Augmented care period (ACP)” to find the preceding_visit_detail_id  |
+| visit_detail_source_value | epikey | | |
 | visit_detail_source_concept_id | NULL |  |  |
-| admitted_from_concept_id | acpsour | use acpsour to retrieve the target_concept_id from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_apc.acpsour AND t1.source_vocabulary_id = “HESAPC_ACPSOUR_STCM”. | |
-| admitted_from_source_value | acpsour | use acpsour to retrieve the source_code_description from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_apc.acpsour AND t1.source_vocabulary_id = “HESAPC_ACPSOUR_STCM”. |  |
-| discharged_to_concept_id | acpdisp | use acpdisp to retrieve the target_concept_id from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_apc.acpdisp AND t1.source_vocabulary_id = “HESAPC_ACPDISP_STCM”. |  |
-| discharged_to_source_value  | acpdisp | use acpdisp to retrieve the source_code_description from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_apc.acpdisp AND t1.source_vocabulary_id = “HESAPC_ACPDISP_STCM”. |  |
-| preceding_visit_detail_id | | If acpn = 1 then 0 else use acpn with patid+epikey and visit_detail_source_value = “Augmented care period (ACP)” to find the preceding_visit_detail_id |  |
-| parent_visit_detail_id |  |  | Use patid + epikey where visit_detail_source_value= “Visit episode” to get the visit_detail_parent_id  |
-| visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value   |
+| admitted_from_concept_id | acpsour | use HESAPC_ACPSOUR_STCM | |
+| admitted_from_source_value | acpsour | |  |
+| discharged_to_concept_id | acpdisp | use HESAPC_ACPDISP_STCM |  |
+| discharged_to_source_value  | acpdisp | |  |
+| preceding_visit_detail_id | | latest visit_detail_id before this one, for the patient if available |  |
+| parent_visit_detail_id | NULL |  |  |
+| visit_occurrence_id | patid,<br>spno |  | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |
 
 
 
