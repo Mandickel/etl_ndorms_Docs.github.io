@@ -61,7 +61,7 @@ description: "Visit_detail v5.4 description"
 | discharged_to_source_value  | acpdisp | |  |
 | preceding_visit_detail_id | | latest visit_detail_id before this one, for the patient if available |  |
 | parent_visit_detail_id | NULL |  |  |
-| visit_occurrence_id | patid,<br>spno |  | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |
+| visit_occurrence_id | patid,<br>spno | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |  |
 
 
 
