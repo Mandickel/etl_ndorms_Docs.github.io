@@ -45,7 +45,7 @@ description: "Visit_detail v5.4 description"
 | --- | --- | :---: | --- |
 | visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | Autogenerate|
 | person_id | patid |  |  |
-| visit_detail_concept_id |  | 32037 = Intensive care [32037- Intensive care](https://athena.ohdsi.org/search-terms/terms/32037)|  |
+| visit_detail_concept_id |  | [32037- Intensive care](https://athena.ohdsi.org/search-terms/terms/32037)|  |
 | visit_detail_start_date | acpstar,<br>epistart | use the minimum of the first not null of (acpstar, epistart ) |  |
 | visit_detail_start_datetime | acpstar,<br>epistart |  |   |
 | visit_detail_end_date | acpend,<br>epiend | use the first not null of (acpend, epiend ) |  |
