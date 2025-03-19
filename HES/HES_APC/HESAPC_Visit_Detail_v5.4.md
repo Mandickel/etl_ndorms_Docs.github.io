@@ -72,22 +72,22 @@ description: "Visit_detail v5.4 description"
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | :---: | --- |
-| visit_detail_id |  |  nextval('public.sequence_vd') AS visit_detail_id | Autogenerate|
+| visit_detail_id |  |  | Autogenerate|
 | person_id | patid |  |  |
-| visit_detail_concept_id |  | 32037 = Intensive care |  |
+| visit_detail_concept_id |  | [32037- Intensive care](https://athena.ohdsi.org/search-terms/terms/32037)|  |
 | visit_detail_start_date | ccstartdate | | |
 | visit_detail_start_datetime | ccstartdate | use ccstartdate if ccstarttime is null else ccstartdate::timestamp + ccstarttime::time as visit_detail_start_datetime. | |
 | visit_detail_end_date | ccdisdate | | |
 | visit_detail_end_datetime | ccdisdate | use ccdisdate if ccdistime is null else ccdisdate::timestamp + ccdistime::time as visit_detail_end_datetime.  |  |
-| visit_detail_type_concept_id |  | 32818 = "EHR administration record” |  |
-| provider_id | hes_episodes.pconsult |  | Use patid+epikey to get it (only if efficient and provider populated) |
+| visit_detail_type_concept_id |  | [32818- EHR administration record](https://athena.ohdsi.org/search-terms/terms/32818)|     |
+| provider_id | hes_episodes.pconsult | use hes_episodes.pconsult to retrieve the provider_id from the provider table. |  |
 | care_site_id | NULL|  |  |
-| visit_detail_source_value | epikey | | This will allow to retrieve visit_details_id set to 0 at the end |
+| visit_detail_source_value | epikey | | |
 | visit_detail_source_concept_id | NULL |  |  |
-| admitted_from_concept_id | ccadmisorc | use ccadmisorc to retrieve the target_concept_id from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccadmisorc AND t1.source_vocabulary_id = “HESAPC_ADMISORC_STCM”. |  |
-| admitted_from_source_value | ccadmisorc | use ccadmisorc to retrieve the source_code_description from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccadmisorc AND t1.source_vocabulary_id = “HESAPC_ADMISORC_STCM”. |  |
-| discharged_to_concept_id | ccdisdest | use ccdisdest to retrieve the target_concept_id from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccdisdest AND t1.source_vocabulary_id = “HESAPC_DISDEST_STCM”. | |
-| discharged_to_source_value | ccdisdest | use ccdisdest to retrieve the source_code_description from source_to_concept_map by doing a LEFT JOIN to source_to_concept_map as t1 on t1.source_code = hes_ccare.ccdisdest AND t1.source_vocabulary_id = “HESAPC_DISDEST_STCM”. |  |
-| preceding_visit_detail_id | | If eorder = 1 then 0 else use eorder with patid+epikey to find the preceding_visit_detail_id |  |
-| parent_visit_detail_id |  |  | Use patid + epikey where visit_detail_source_value= “Visit episode” to get the visit_detail_parent_id  |
-| visit_occurrence_id |  |  | Use spno to retrieve visit_occurrence_id from visit_occurrence.visit_source_value   |
+| admitted_from_concept_id | ccadmisorc | use HESAPC_ADMISORC_STCM |  |
+| admitted_from_source_value | ccadmisorc | |  |
+| discharged_to_concept_id | ccdisdest | use HESAPC_DISDEST_STCM | |
+| discharged_to_source_value | ccdisdest |  |  |
+| preceding_visit_detail_id | | latest visit_detail_id before this one, for the patient if available |  |
+| parent_visit_detail_id | NULL |  |   |
+| visit_occurrence_id | patid,<br>spno | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table.   |
