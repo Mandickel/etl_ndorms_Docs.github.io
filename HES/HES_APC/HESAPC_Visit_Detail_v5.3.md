@@ -74,9 +74,9 @@ description: "Visit_detail v5.3 description"
 | person_id | patid |  |  |
 | visit_detail_concept_id |  | [32037- Intensive care](https://athena.ohdsi.org/search-terms/terms/32037)|  |
 | visit_detail_start_date | ccstartdate | | |
-| visit_detail_start_datetime | ccstartdate | use ccstartdate if ccstarttime is null else ccstartdate::timestamp + ccstarttime::time as visit_detail_start_datetime. | |
+| visit_detail_start_datetime | ccstartdate,<br>ccstarttime | use ccstartdate if ccstarttime is null else ccstartdate::timestamp + ccstarttime::time as visit_detail_start_datetime. | |
 | visit_detail_end_date | ccdisdate | | |
-| visit_detail_end_datetime | ccdisdate | use ccdisdate if ccdistime is null else ccdisdate::timestamp + ccdistime::time as visit_detail_end_datetime.  |  |
+| visit_detail_end_datetime | ccdisdate,<br>ccdistime | use ccdisdate if ccdistime is null else ccdisdate::timestamp + ccdistime::time as visit_detail_end_datetime.  |  |
 | visit_detail_type_concept_id |  | [32818- EHR administration record](https://athena.ohdsi.org/search-terms/terms/32818)|     |
 | provider_id | hes_episodes.pconsult | use hes_episodes.pconsult to retrieve the provider_id from the provider table. |  |
 | care_site_id | NULL|  |  |
