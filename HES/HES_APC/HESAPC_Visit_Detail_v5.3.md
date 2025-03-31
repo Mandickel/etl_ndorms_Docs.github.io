@@ -9,7 +9,7 @@ description: "Visit_detail v5.3 description"
 
 # CDM Table name: Visit_detail (CDM v5.3)
 
-## Reading from hes_episodes to Visit_Detail CDM v5.3 table:
+## Reading from hes_episodes to Visit_Detail:
 ![](../images/image4.png)
 
 **Figure.1**
@@ -36,7 +36,7 @@ description: "Visit_detail v5.3 description"
 | parent_visit_detail_id | NULL |  |  |
 | visit_occurrence_id | patid,spno | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |  |
 
-## Reading from hes_acp to Visit_Detail CDM v5.3 table:
+## Reading from hes_acp to Visit_Detail:
 ![](../images/image5.png)
 
 **Figure.2**
@@ -63,7 +63,7 @@ description: "Visit_detail v5.3 description"
 | parent_visit_detail_id | NULL |  |  |
 | visit_occurrence_id | patid,<br>spno | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |  |
 
-## Reading from hes_ccare to Visit_Detail CDM v5.3 table:
+## Reading from hes_ccare to Visit_Detail:
 ![](../images/image10.1.png)
 
 **Figure.3**
