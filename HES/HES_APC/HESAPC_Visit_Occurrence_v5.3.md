@@ -21,7 +21,7 @@ description: "Visit_occurrence v5.3 description"
 | visit_concept_id |  | [9201- Inpatient visit](https://athena.ohdsi.org/search-terms/terms/9201)|  |
 | visit_start_date | admidate<br>epistart<br>discharged | use the minimum of the first not null of (admidate,epistart,discharged) within the hospital spell|    |
 | visit_start_datetime | admidate<br>epistart<br>discharged | |  |
-| visit_end_date | discharged,<br>epiend,<br>epistart | use the maximum of the first not null of (discharged, epiend, epistart) within the hospital spell|  |
+| visit_end_date | discharged,<br>epiend,<br>epistart | use the first not null value of either discharged and the maximum of (epiend, epistart) within the hospital spell|  |
 | visit_end_datetime | discharged,<br>epiend,<br>epistart | | |
 | visit_type_concept_id |  |  [32818- EHR administration record](https://athena.ohdsi.org/search-terms/terms/32818)| |
 | provider_id |NULL | |  |

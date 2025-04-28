@@ -28,10 +28,10 @@ description: "Visit_detail v5.4 description"
 | care_site_id |NULL |  |  |
 | visit_detail_source_value | epikey | | |
 | visit_detail_source_concept_id |NULL  |  |  |
-| admitted_from_concept_id | admimeth | use HESAPC_ADMIMETH_STCM | |
-| admitted_from_source_value | admimeth | | |
-| discharged_to_concept_id | dismeth |  use HESAPC_DISMETH_STCM | |
-| discharged_to_source_value | dismeth | |  |
+| admitted_from_concept_id | NULL  | |  |
+| admitted_from_source_value | admisorc,<br>admimeth | concatenate admisorc and admimeth values into one text field separated by a slash|  |
+| discharged_to_concept_id | NULL  | |  |
+| discharged_to_source_value | disdest,<br>dismeth | concatenate disdest and dismeth values into one text field separated by a slash.|  |
 | preceding_visit_detail_id | | latest visit_detail_id before this one, for the patient if available |  |
 | parent_visit_detail_id | NULL |  |  |
 | visit_occurrence_id | patid,spno | Use patid & spno to retrieve visit_occurrence_id from visit_occurrence table. |  |
