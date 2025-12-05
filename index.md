@@ -26,8 +26,8 @@ This documentation is meant to show how NDORMS converted its licensed CPRD Linke
 
 **Data Linkages**
 
-* [Ethnicity](https://oxford-pharmacoepi.github.io/etl_ndorms/Linkage/Ethnicity.html).
-* [Townsend Index](https://oxford-pharmacoepi.github.io/etl_ndorms/Linkage/Townsend.html).
+* [Linkages](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/Linkage).
+
 
 
 **UK BioBank (UKB)**
