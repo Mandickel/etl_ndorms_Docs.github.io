@@ -50,11 +50,7 @@ description: "Stem table description"
 | modifier_source_value | level | | |
 | start_date | opdate,<br>hesin.epistart | | use the first not null of (opdate,hesin.epistart)|
 | start_datetime | opdate,<br>hesin.epistart |   | |
-<<<<<<< HEAD
-| end_date | opdate,<br>hesin.epistart | | If opdate is null then use hesin.epistart |
-=======
 | end_date | opdate,<br>hesin.epistart | | use the first not null of (opdate,hesin.epistart) |
->>>>>>> 214a1dcf64bfc6abc956365e246d5437bd0ddee4
 | end_datetime | opdate,<br>hesin.epistart  | | |
 | concept_id  | oper4  |  | use OPSC4 vocabulary |
 | stem_source_table | | hesin_oper | |

@@ -18,7 +18,7 @@ description: "visit_detail mapping from hesin_critical & hesin_psych tables"
 | --- | --- | :---: | --- |
 | visit_detail_id| | | Autogenerate|
 | person_id| eid | | |
-| visit_detail_concept_id| | [9201- Inpatient visit](https://athena.ohdsi.org/search-terms/terms/9201)| | 
+| visit_detail_concept_id| | [9201- Inpatient visit](https://athena.ohdsi.org/search-terms/terms/9201)| | |
 | visit_detail_start_date | epistart,<br>admidate | use the minimum of the first not null of (epistart, admidate) |    |
 | visit_detail_start_datetime| epistart,<br>admidate | |  |
 | visit_detail_end_date | epiend,<br>disdate,<br>epistart,<br>admidate| use the first not null of (epiend, disdate, epistart, admidate)|  |
