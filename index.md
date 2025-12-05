@@ -24,6 +24,12 @@ This documentation is meant to show how NDORMS converted its licensed CPRD Linke
 
 * [National Cancer Registration and Analysis Service (NCRAS)](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/NCRASCR).
 
+**Data Linkages**
+
+* [Ethnicity](https://oxford-pharmacoepi.github.io/etl_ndorms/Linkage/Ethnicity.html).
+* [Townsend Index](https://oxford-pharmacoepi.github.io/etl_ndorms/Linkage/Townsend.html).
+
+
 **UK BioBank (UKB)**
 
 * [UKB BASELINE](https://oxford-pharmacoepi.github.io/etl_ndorms/docs/UK_BIOBANK/UKB_Baseline).
