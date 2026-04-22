@@ -56,7 +56,7 @@ Please note that using the Athena vocabularies, a minority of diagnoses are mapp
 
 **site_coded / site_coded_desc** 
 
-We should use the ‘site_coded’ field ONLY when site_icd10_o2 is not populated.  
+We should use the **‘site_coded’** field ONLY when **site_icd10_o2** is not populated.  
 
 If **‘site_icd10_o2’** is not populated, the **site_code**d field contains 3 digits followed by “-“ or 4 digits. The coding system used seems to be **ICD9CM**, which report conditions in sites, and they can all be mapped. In this case, the description “site_coded_desc” is completely missing
 
