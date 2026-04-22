@@ -39,7 +39,19 @@ Fields in the STEM table
 **ONLY NCRAS data within the linkage_coverage period and valid in the database linked (i.e. patients do not exists in the source_nok) to are used in our mapping.**
 ### Diagnosis
 
-All cancer diagnoses in the form of [Histology]/[behavour]-[Topography] (For example, 8010/3-C50.9) are ideally mapped to the CDM Condition by using ICDO3 vocabulary.  
+Cancer diagnoses are represented concatenating the morph_icd10_o2, behaviour_icd10_o2, and site_icd10_o2 fields present in the source data as follows. If site_icd10_o2 has 3 characters, then a “.9” string needs to be added at the end. 
+
+morph_icd10_o2/behaviour_icd10_o2-site_icd10_o2[.9] 
+
+All cancer diagnoses in the form of [Histology]/[behaviour]-[Topography] (For example, 8010/3-C50.9) are ideally mapped to the Condition or Measurement domains by using the ICDO3 vocabulary.  
+
+When a match cannot be found in this way, site_icd10_o2 can be used on its own for the mapping using the ICD10 vocabulary. 
+
+When site_icd10_o2 is null then site_coded (see below) can be used for the mapping using the ICD9CM vocabulary.  
+
+With this approach, all the cancer diagnoses have been mapped to Athena standard concept_ids. 
+
+Please note that using the Athena vocabularies, a minority of diagnoses are mapped to more than one standard concept_id. These concept_ids might belong to the same domain (i.e. Condition or Measurement) or not (i.e. spread between Condition and Measurement). 
 ![](images/cancer_diagnosis.png)
 
 | Destination Field | Source field | Logic | Comment field |
