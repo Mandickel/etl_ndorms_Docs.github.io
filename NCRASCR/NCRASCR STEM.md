@@ -6,11 +6,11 @@ parent: NCRASCR
 description: "NCRASCR Tumour to STEM"
 ---
 
-# CDM Table name: stem_table
+# CDM Table name: STEM
 
 The STEM table is a staging area where NCRASCR source codes will first be mapped to concept_ids. The STEM table itself is an amalgamation of the OMOP event tables to facilitate record movement. This means that all fields present across the OMOP event tables are present in the STEM table. After a record is mapped and staged, the domain of the concept_id dictates which OMOP table (Condition_occurrence, Drug_exposure, Procedure_occurrence, Measurement, Observation, Device_exposure, Specimen) the record will move to. Please see the STEM -> CDM mapping files for a description of which STEM fields move to which STEM tables.
 
-Fields in the STEM table
+**Fields in the STEM table**
 
 | Field		          |
 | --- 				  |
@@ -36,7 +36,10 @@ Fields in the STEM table
 
 ## Reading from tumour
 
+---
+
 **ONLY NCRAS data within the linkage_coverage period and valid in the database linked (i.e. patients do not exists in the source_nok) to are used in our mapping.**
+
 ### Diagnosis
 
 Cancer diagnoses are represented concatenating the **morph_icd10_o2**, **behaviour_icd10_o2**, and **site_icd10_o2** fields present in the source data as follows. If **site_icd10_o2** has 3 characters, then a **“.9”** string needs to be added at the end. 
