@@ -69,6 +69,8 @@ Please note that using the Athena vocabularies, a minority of diagnoses are mapp
 
 ![](images/ncrascr_diag.png)
 
+**Figure.1**
+---
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | --- | --- |
 | id |  | | Autogenerate |
