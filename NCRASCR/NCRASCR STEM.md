@@ -58,11 +58,13 @@ Cancer diagnoses are represented concatenating the following source fields:
 **Example:**
 8010/3-C50.9
 
-All cancer diagnoses in the form of [Histology]/[behaviour]-[Topography] are ideally mapped to the Condition or Measurement domains by using the ICDO3 vocabulary.  
+All cancer diagnoses in the form of **[Histology]/[behaviour]-[Topography]** are ideally mapped to the Condition or Measurement domains by using the ICDO3 vocabulary.  
 When a match cannot be found in this way, site_icd10_o2 can be used on its own for the mapping using the ICD10 vocabulary. 
-When site_icd10_o2 is null then site_coded (see below) can be used for the mapping using the ICD9CM vocabulary.  
+When site_icd10_o2 is null then site_coded can be used for the mapping using the ICD9CM vocabulary. 
+
 With this approach, all the cancer diagnoses have been mapped to Athena standard concept_ids. 
 Please note that using the Athena vocabularies, a minority of diagnoses are mapped to more than one standard concept_id. These concept_ids might belong to the same domain (i.e. Condition or Measurement) or not (i.e. spread between Condition and Measurement). 
+
 ---
 
 ![](images/ncrascr_diag.png)
