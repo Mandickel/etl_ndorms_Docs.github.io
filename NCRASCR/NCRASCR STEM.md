@@ -34,7 +34,7 @@ The STEM table is a staging area where NCRASCR source codes will first be mapped
 | stem_source_table   | 
 | stem_source_id      | 
 
-## Table name: DIAGNOSIS
+## Reading from Tumour
 ---
 ### Scope
 Only **NCRAS data** within the *linkage_coverage* period are included.  
