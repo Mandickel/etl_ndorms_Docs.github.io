@@ -52,8 +52,10 @@ Cancer diagnoses are represented concatenating the following source fields:
 
 **Rule:**
 - If `site_icd10_o2` has only 3 characters, append `.9`
+
 **Example:**
 8010/3-C50.9
+
 ---
 
 fields present in the source data as follows. If site_icd10_o2 has 3 characters, then a “.9” string needs to be added at the end. 
