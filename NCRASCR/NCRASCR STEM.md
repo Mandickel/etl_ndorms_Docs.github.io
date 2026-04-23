@@ -45,8 +45,11 @@ Cancer diagnoses are represented concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
 - `site_icd10_o2` 
+
 **Format:**
+
 ![](images/cancer_diagnosis.png)
+
 **Rule:**
 - If `site_icd10_o2` has only 3 characters, append `.9`
 **Example:**
