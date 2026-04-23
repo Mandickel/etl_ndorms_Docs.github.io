@@ -36,29 +36,21 @@ The STEM table is a staging area where NCRASCR source codes will first be mapped
 
 ## Table name: DIAGNOSIS
 ---
-
 ### Scope
 Only **NCRAS data** within the *linkage_coverage* period are included.  
 Records are restricted to patients that exist in the linked database (i.e. excluded if present in `source_nok`).
-
 ---
-
 ### Diagnosis Construction
-
 Cancer diagnoses are represented concatenating the following source fields:
-
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
 - `site_icd10_o2` 
-
 **Format:**
 ![](images/cancer_diagnosis.png)
-
 **Rule:**
 - If `site_icd10_o2` has only 3 characters, append `.9`
 **Example:**
 8010/3-C50.9
-
 ---
 
 fields present in the source data as follows. If site_icd10_o2 has 3 characters, then a “.9” string needs to be added at the end. 
