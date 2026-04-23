@@ -66,10 +66,11 @@ With this approach, all the cancer diagnoses have been mapped to Athena standard
 Please note that using the Athena vocabularies, a minority of diagnoses are mapped to more than one standard concept_id. These concept_ids might belong to the same domain (i.e. Condition or Measurement) or not (i.e. spread between Condition and Measurement). 
 
 ---
-
+## Reading from Tumour:
+---
 ![](images/ncrascr_diag.png)
+***Figure.1***
 
-**Figure.1**
 ---
 
 | Destination Field | Source field | Logic | Comment field |
