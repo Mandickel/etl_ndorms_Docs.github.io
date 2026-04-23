@@ -34,15 +34,15 @@ The STEM table is a staging area where NCRASCR source codes will first be mapped
 | stem_source_table   | 
 | stem_source_id      | 
 
-## Reading from Tumour
+## Reading from Tumour:
 ---
-### Scope
+### Scope:
 Only **NCRAS data** within the *linkage_coverage* period are included.  
 Records are restricted to patients that exist in the linked database (i.e. excluded if present in `source_nok`).
 
 ---
 
-### Diagnosis Construction
+### Diagnosis Construction:
 Cancer diagnoses are represented concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
