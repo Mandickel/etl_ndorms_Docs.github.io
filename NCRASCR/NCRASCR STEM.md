@@ -43,7 +43,7 @@ Records are restricted to patients that exist in the linked database (i.e. exclu
 ---
 
 ### Diagnosis Construction:
-Cancer diagnoses are represented concatenating the following source fields:
+Cancer diagnoses are represented by concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
 - `site_icd10_o2` 
@@ -69,6 +69,7 @@ Please note that using the Athena vocabularies, a minority of diagnoses are mapp
 ## Reading from Tumour:
 ---
 ![](images/ncrascr_diag.png)
+
 ***Figure.1***
 
 ---
