@@ -42,16 +42,16 @@ Records are restricted to patients that exist in the linked database (i.e. exclu
 ---
 ### Diagnosis Construction
 Cancer diagnoses are represented concatenating the following source fields:
-- ` morph_icd10_o2 `, 
-- ` behaviour_icd10_o2 `
-- ` site_icd10_o2 ` 
+- `morph_icd10_o2`, 
+- `behaviour_icd10_o2`
+- `site_icd10_o2` 
 
 **Format:**
 
 ![](images/cancer_diagnosis.png)
 
 **Rule:**
-- If ` site_icd10_o2 ` has only 3 characters, append `.9`
+- If `site_icd10_o2` has only 3 characters, append `.9`
 **Example:**
 8010/3-C50.9
 ---
