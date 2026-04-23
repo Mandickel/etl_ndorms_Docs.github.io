@@ -58,28 +58,13 @@ Cancer diagnoses are represented concatenating the following source fields:
 **Example:**
 8010/3-C50.9
 
+All cancer diagnoses in the form of [Histology]/[behaviour]-[Topography] are ideally mapped to the Condition or Measurement domains by using the ICDO3 vocabulary.  
+When a match cannot be found in this way, site_icd10_o2 can be used on its own for the mapping using the ICD10 vocabulary. 
+When site_icd10_o2 is null then site_coded (see below) can be used for the mapping using the ICD9CM vocabulary.  
+With this approach, all the cancer diagnoses have been mapped to Athena standard concept_ids. 
+Please note that using the Athena vocabularies, a minority of diagnoses are mapped to more than one standard concept_id. These concept_ids might belong to the same domain (i.e. Condition or Measurement) or not (i.e. spread between Condition and Measurement). 
 ---
 
-fields present in the source data as follows. If site_icd10_o2 has 3 characters, then a “.9” string needs to be added at the end. 
-
-**morph_icd10_o2/behaviour_icd10_o2-site_icd10_o2[.9]**
-
-All cancer diagnoses in the form of [Histology]/[behaviour]-[Topography] (For example, 8010/3-C50.9) are ideally mapped to the Condition or Measurement domains by using the ICDO3 vocabulary.  
-
-When a match cannot be found in this way, site_icd10_o2 can be used on its own for the mapping using the ICD10 vocabulary. 
-
-When site_icd10_o2 is null then site_coded (see below) can be used for the mapping using the ICD9CM vocabulary.  
-
-With this approach, all the cancer diagnoses have been mapped to Athena standard concept_ids. 
-
-Please note that using the Athena vocabularies, a minority of diagnoses are mapped to more than one standard concept_id. These concept_ids might belong to the same domain (i.e. Condition or Measurement) or not (i.e. spread between Condition and Measurement). 
-![](images/cancer_diagnosis.png)
-
-**site_coded / site_coded_desc** 
-
-We should use the ‘site_coded’ field ONLY when site_icd10_o2 is not populated.  
-
-If ‘site_icd10_o2’ is not populated, the site_coded field contains 3 digits followed by “-“ or 4 digits. The coding system used seems to be ICD9CM, which report conditions in sites, and they can all be mapped. In this case, the description “site_coded_desc” is completely missing
 ![](images/ncrascr_diag.png)
 
 | Destination Field | Source field | Logic | Comment field |
