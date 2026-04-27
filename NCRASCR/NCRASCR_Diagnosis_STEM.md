@@ -8,12 +8,10 @@ description: "NCRASCR Diagnosis table to STEM"
 ---
 
 # CDM Table name: STEM
----
 ## Reading from Tumour:
 ---
 ### Scope:
-Only **NCRAS data** within the *linkage_coverage* period are included.  
-Records are restricted to patients that exist in the linked database (i.e. excluded if present in `source_nok`).
+Only **NCRAS data** within the *linkage_coverage* period are included. Records are restricted to patients that exist in the linked database (i.e. excluded if present in `source_nok`).
 
 ---
 
