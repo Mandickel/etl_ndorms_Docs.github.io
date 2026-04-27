@@ -76,7 +76,7 @@ Table S3 reports manual mapping made when automatic mapping was not possible: we
 
 **Table S2a: Source-to-standard mapping for cancer: stage_best**
 
-| stage_best  | target_concept_id  | target_concept_name  | target_vocabulary_id | target_domain_id |
+|stage_best  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
 | --- | --- | --- | --- | --- |
 | A  | 1635315  | Binet Stage A  | Cancer Modifier  | Measurement  |
 | B  | 1635179  | Binet Stage B  | Cancer Modifier  | Measurement  |
