@@ -74,6 +74,84 @@ As the source data includes three sets of stage fields (_best, _img, and _path),
 
 Table S3 reports manual mapping made when automatic mapping was not possible: we assigned “Tx/Nx” when T or N could not be determined. For metastasis, we assigned M1 where there was M2, M3, M4 because in the case of brain tumour, these codes could exist.  
 
+**Table S2a: Source-to-standard mapping for cancer: stage_best**
+
+| stage_best  | target_concept_id  | target_concept_name  | target_vocabulary_id | target_domain_id |
+| --- | --- | --- | --- | --- |
+| A  | 1635315  | Binet Stage A  | Cancer Modifier  | Measurement  |
+| B  | 1635179  | Binet Stage B  | Cancer Modifier  | Measurement  |
+| C  | 1635062  | Binet Stage C  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-STAGE-2S  | 1634209  | AJCC/UICC Stage 2  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-STAGE-3E  | 1633650  | AJCC/UICC Stage 3  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-STAGE-3S  | 1633650  | AJCC/UICC Stage 3  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-STAGE-4S  | 1633308  | AJCC/UICC Stage 4  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 6TH_AJCC/UICC-STAGE-4S  | 1635323  | AJCC/UICC 6th Stage 4  | Cancer Modifier  | Measurement  |
+| 6TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 6TH_AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 6TH_AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 7TH_AJCC/UICC-STAGE-2S  | 1634181  | AJCC/UICC 7th Stage 2  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-STAGE-3S  | 1633382  | AJCC/UICC 7th Stage 3  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-STAGE-4S  | 1633902  | AJCC/UICC 7th Stage 4  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 7TH_AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 7TH_AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 7TH_AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 8TH_AJCC/UICC-STAGE-4S  | 1634131  | AJCC/UICC 8th Stage 4  | Cancer Modifier  | Measurement  |
+| 8TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| 8TH_AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| ANN_ARBOR-1A  | 1633291  | Ann Arbor Stage 1  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-1AE  | 1633291  | Ann Arbor Stage 1  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-1AEX  | 1633291  | Ann Arbor Stage 1  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-1AX  | 1633291  | Ann Arbor Stage 1  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-1B  | 1633291  | Ann Arbor Stage 1  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-1BE  | 1633291  | Ann Arbor Stage 1  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-2A  | 1634430  | Ann Arbor Stage 2  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-2AE  | 1634430  | Ann Arbor Stage 2  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-2AX  | 1634430  | Ann Arbor Stage 2  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-2B  | 1634430  | Ann Arbor Stage 2  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-2X  | 1634430  | Ann Arbor Stage 2  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-3A  | 1635140  | Ann Arbor Stage 3  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-3AE  | 1635140  | Ann Arbor Stage 3  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-3B  | 1635140  | Ann Arbor Stage 3  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-3BE  | 1635140  | Ann Arbor Stage 3  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-3BS  | 1635140  | Ann Arbor Stage 3  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-3BX  | 1635140  | Ann Arbor Stage 3  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-3X  | 1635140  | Ann Arbor Stage 3  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4A  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4AE   | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4B  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4BE  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4BEX  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4BS  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4BX  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4E  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4ES  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ANN_ARBOR-4S  | 1633464  | Ann Arbor Stage 4  | Cancer Modifier  | Measurement  |
+| ENETS 2007-1  | 1635838  | Stage 1  | Cancer Modifier  | Measurement  |
+| ENETS 2007-1A  | 1635838  | Stage 1  | Cancer Modifier  | Measurement  |
+| ENETS 2007-1B  | 1635838  | Stage 1  | Cancer Modifier  | Measurement  |
+| ENETS 2007-2A  | 1635131  | Stage 2  | Cancer Modifier  | Measurement  |
+| ENETS 2007-2B  | 1635131  | Stage 2  | Cancer Modifier  | Measurement  |
+| ENETS 2007-3A  | 1634191  | Stage 3  | Cancer Modifier  | Measurement  |
+| ENETS 2007-3B  | 1634191  | Stage 3  | Cancer Modifier  | Measurement  |
+| ENETS 2007-4  | 1633987  | Stage 4  | Cancer Modifier  | Measurement  |
+| ENETS 2007-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| ENETS 2007-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| FIGO-2C  | 1634127  | FIGO Stage 2  | Cancer Modifier  | Measurement  |
+| FIGO-3A1I  | 1634024  | FIGO Stage 3  | Cancer Modifier  | Measurement  |
+| FIGO-3A1II  | 1634024  | FIGO Stage 3  | Cancer Modifier  | Measurement  |
+| FIGO-3BII  | 1634024  | FIGO Stage 3  | Cancer Modifier  | Measurement  |
+
+
+
+
+
+
+
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | --- | --- |
 | id |  | | Autogenerate |
