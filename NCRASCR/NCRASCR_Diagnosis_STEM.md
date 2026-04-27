@@ -68,7 +68,7 @@ Cancer modifiers (e.g., stage, grade) are mapped to the Measurement table. Each 
 
 **Stage:**
 
-Stage in the form of [stage system_]AJCC/UICC-Stage-[value] (for example, 6th_AJCC/UICC-Stage-1A) are mapped to the Measurement table by using the Cancer Modifier vocabulary, when stage_system is >=6. When stage_system < 6 there is no prefix before “AJCC/UICC”. [stage system] refers to stage_best_system, stage_img_system and stage_path_system, and [value] refers to stage_best, stage_img and stage_path. 
+Stage in the form of **[stage system_]AJCC/UICC-Stage-[value]** (for example, **6th_AJCC/UICC-Stage-1A**) are mapped to the Measurement table by using the Cancer Modifier vocabulary, when stage_system is >=6. When stage_system < 6 there is no prefix before “AJCC/UICC”. [stage system] refers to stage_best_system, stage_img_system and stage_path_system, and [value] refers to stage_best, stage_img and stage_path. 
 
 As the source data includes three sets of stage fields (_best, _img, and _path), the specific field names (e.g., stage_best, stage_img, stage_path) are stored in the value_source_value field for reference. Table 2 reports manual mapping for the Binet system present in stage_best. 
 
