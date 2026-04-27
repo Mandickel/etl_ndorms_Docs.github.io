@@ -4,7 +4,7 @@ title: NCRASCR to STEM
 nav_order: 5
 parent: NCRASCR
 has_children: true
-description: "NCRASCR Tumour to STEM"
+description: "Stem table description"
 ---
 
 # CDM Table name: STEM
