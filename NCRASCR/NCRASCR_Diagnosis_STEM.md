@@ -66,6 +66,12 @@ Please note that using the Athena vocabularies, a minority of diagnoses are mapp
 ### Cancer Modifiers
 Cancer modifiers (e.g., stage, grade) are mapped to the Measurement table. Each modifier is linked to its corresponding diagnosis using measurement_event_id (set to the condition_occurrence_id) and meas_event_field_concept_id (set to [1147127](https://athena.ohdsi.org/search-terms/terms/1147127)). However, some cancer modifiers may not be adequately represented by Athena Measurement concepts. In cases where mapping to the Measurement domain is not feasible, these modifiers are mapped instead to the Observation table. 
 
+**Stage:**
+Stage in the form of [stage system_]AJCC/UICC-Stage-[value] (for example, 6th_AJCC/UICC-Stage-1A) are mapped to the Measurement table by using the Cancer Modifier vocabulary, when stage_system is >=6. When stage_system < 6 there is no prefix before “AJCC/UICC”. [stage system] refers to stage_best_system, stage_img_system and stage_path_system, and [value] refers to stage_best, stage_img and stage_path. 
+
+As the source data includes three sets of stage fields (_best, _img, and _path), the specific field names (e.g., stage_best, stage_img, stage_path) are stored in the value_source_value field for reference. Table 2 reports manual mapping for the Binet system present in stage_best. 
+
+Table S3 reports manual mapping made when automatic mapping was not possible: we assigned “Tx/Nx” when T or N could not be determined. For metastasis, we assigned M1 where there was M2, M3, M4 because in the case of brain tumour, these codes could exist.  
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | --- | --- |
