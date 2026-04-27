@@ -146,8 +146,172 @@ Table S3 reports manual mapping made when automatic mapping was not possible: we
 | FIGO-3A1II  | 1634024  | FIGO Stage 3  | Cancer Modifier  | Measurement  |
 | FIGO-3BII  | 1634024  | FIGO Stage 3  | Cancer Modifier  | Measurement  |
 
+**Table S2b: Source-to-standard mapping for cancer: stage_img**
+
+|stage_img   |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| C-AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| C-AJCC/UICC-STAGE-3E  | 1634876  | AJCC/UICC clinical Stage 3  | Cancer Modifier  | Measurement  |
+| C-AJCC/UICC-STAGE-3S  | 1634876  | AJCC/UICC clinical Stage 3  | Cancer Modifier  | Measurement  |
+| C-AJCC/UICC-STAGE-4S  | 1634447  | AJCC/UICC clinical Stage 4  | Cancer Modifier  | Measurement  |
+| C-7TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+
+**Table S2c: Source-to-standard mapping for cancer: stage_path**
+
+|stage_path    |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| P-AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-7TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-7TH_AJCC/UICC-STAGE-2S  | 1634619  | AJCC/UICC 7th pathological Stage 2  | Cancer Modifier  | Measurement  |
+
+**TNM staging**
+
+TNM staging in the form of [stage system_]AJCC/UICC-[value] (for example, 6th_AJCC/UICC-M1a) are mapped to the 
+Measurement table by using Cancer Modifier vocabulary, when stage_system is >=6. When stage_system < 6 there is no 
+prefix before “AJCC/UICC”. [stage system] refers to stage_best_system, stage_img_system and stage_path_system, [value] 
+refers to the TNM-specific attributes, including t_best, n_best, m_best, t_img, n_img, m_img, t_path, n_path, m_path. Table S2 
+reports manual mapping made when automatic mapping was not possible: see comment in the paragraph above. 
+
+**Table S3a: Source-to-standard mapping for cancer staging: t_best / n_best / m_best**
+
+|t_best / n_best / m_best  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| N+  | 4121194  | N+  | SNOMED  | Measurement  |
+| AJCC/UICC-M1E  | 1635142  | AJCC/UICC M1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-M2  | 1635142  | AJCC/UICC M1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-M3  | 1635142  | AJCC/UICC M1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-M4  | 1635142  | AJCC/UICC M1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-M9  | 1633547  | AJCC/UICC MX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-MP  | 1633547  | AJCC/UICC MX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-N00  | 1633440  | AJCC/UICC N0 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-N11  | 1633885  | AJCC/UICC NX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-N1P  | 1634434  | AJCC/UICC N1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-N26  | 1633885  | AJCC/UICC NX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-N3P  | 1635320  | AJCC/UICC N3 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-N9  | 1633885  | AJCC/UICC NX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-NC0  | 1633440  | AJCC/UICC N0 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-NC1  | 1634434  | AJCC/UICC N1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-NCX  | 1633885  | AJCC/UICC NX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-NO  | 1633440  | AJCC/UICC N0 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-NP1  | 1634434  | AJCC/UICC N1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-NP2  | 1634119  | AJCC/UICC N2 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T16  | 1635682  | AJCC/UICC TX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T2.  | 1635562  | AJCC/UICC T2 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T2P  | 1635562  | AJCC/UICC T2 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T2S  | 1635562  | AJCC/UICC T2 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T3/4  | 1634654  | AJCC/UICC T4 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T30  | 1635682  | AJCC/UICC TX Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T3P  | 1634376  | AJCC/UICC T3 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-T3S  | 1634376  | AJCC/UICC T3 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TC1  | 1635564  | AJCC/UICC T1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TC2  | 1635562  | AJCC/UICC T2 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TC3  | 1634376  | AJCC/UICC T3 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TC4  | 1634654  | AJCC/UICC T4 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TIS(LCIS)  | 1634530  | AJCC/UICC Tis Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TP1  | 1635564  | AJCC/UICC T1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TP2  | 1635562  | AJCC/UICC T2 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TP4  | 1634654  | AJCC/UICC T4 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TPA  | 1635114  | AJCC/UICC Ta Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TPT1  | 1635564  | AJCC/UICC T1 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TPT3  | 1634376  | AJCC/UICC T3 Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TPTA  | 1635114  | AJCC/UICC Ta Category  | Cancer Modifier  | Measurement  |
+| AJCC/UICC-TS  | 1635682  | AJCC/UICC TX Category  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-M2  | 1633696  | AJCC/UICC 7th M1 Category  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-T11  | 1633390  | AJCC/UICC 7th TX Category  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-T2S  | 1634506  | AJCC/UICC 7th T2 Category  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-T3/4  | 1634576  | AJCC/UICC 7th T4 Category  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-T3S  | 1635854  | AJCC/UICC 7th T3 Category  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-TIS(LCIS)  | 1633798  | AJCC/UICC 7th Tis Category  | Cancer Modifier  | Measurement  |
+| 7TH_AJCC/UICC-TS  | 1633390  | AJCC/UICC 7th TX Category  | Cancer Modifier  | Measurement  |
+| 8TH_AJCC/UICC-M9  | 1634340  | AJCC/UICC 8th MX Category  | Cancer Modifier  | Measurement  |
+| 8TH_AJCC/UICC-N9  | 1634216  | AJCC/UICC 8th NX Category  | Cancer Modifier  | Measurement  |
+| 8TH_AJCC/UICC-T3S  | 1633528  | AJCC/UICC 8th T3 Category  | Cancer Modifier  | Measurement  |
+| 8TH_AJCC/UICC-TIS(LCIS)  | 1634720  | AJCC/UICC 8th Tis Category  | Cancer Modifier  | Measurement  |
+
+**Table S3b: Source-to-standard mapping for cancer staging: t_img / n_img / m_img**
+
+|t_img, n_img / m_img |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| C-AJCC/UICC-T2S  | 1635033  | AJCC/UICC clinical T2 Category  | Cancer Modifier  | Measurement  |
+| C-AJCC/UICC-T3S  | 1635895  | AJCC/UICC clinical T3 Category  | Cancer Modifier  | Measurement  |
+| C-AJCC/UICC-M1E  | 1635085  | AJCC/UICC clinical M1 Category  | Cancer Modifier  | Measurement  |
+| C-7TH_AJCC/UICC-T2S  | 1634029  | AJCC/UICC 7th clinical T2 Category  | Cancer Modifier  | Measurement  |
+| C-7TH_AJCC/UICC-T3S  | 1633324  | AJCC/UICC 7th clinical T3 Category  | Cancer Modifier  | Measurement  |
+| ENETS 2007-T1  | 35919386  | cT1  | NAACCR  | Meas Value  |
+| ENETS 2007-T3  | 35919139  | cT3  | NAACCR  | Meas Value  |
+| ENETS 2007-T4  | 35919454  | cT4  | NAACCR  | Meas Value  |
+| ENETS 2007-N0  | 35919626  | cN0  | NAACCR  | Meas Value  |
+| ENETS 2007-N1  | 35919638  | cN1  | NAACCR  | Meas Value  |
+| ENETS 2007-M0  | 35919673  | cM0  | NAACCR  | Meas Value  |
+| ENETS 2007-M1  | 35919664  | cM1  | NAACCR  | Meas Value  |
+| ENETS 2007-M1B  | 35919223  | cM1b  | NAACCR  | Meas Value  |
+| ENETS 2007-M1C  | 35919795  | cM1c  | NAACCR  | Meas Value  |
 
 
+**Table S3c: Source-to-standard mapping for cancer staging: t_path / n_path / m_path**
+
+|t_path, n_path / m_path |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| N+ | 35918791  | TNM Path N  | NAACCR  | Measurement  |
+| P-AJCC/UICC-T2S  | 1633978  | AJCC/UICC pathological T2 Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-T3S  | 1634406  | AJCC/UICC pathological T3 Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-TIS(LCIS)  | 1634581  | AJCC/UICC pathological Tis Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-TS  | 1633925  | AJCC/UICC pathological TX Category  | Cancer Modifier  | Measurement  |
+| P-7TH_AJCC/UICC-TIS(LCIS)  | 1634116  | AJCC/UICC 7th pathological Tis Category  | Cancer Modifier  | Measurement  |
+| P-7TH_AJCC/UICC-TS  | 1635402  | AJCC/UICC 7th pathological TX Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-N9  | 1635170  | AJCC/UICC pathological NX Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-N11  | 1635170  | AJCC/UICC pathological NX Category  | Cancer Modifier  | Measurement  |
+| P-8TH_AJCC/UICC-N9  | 1634117  | AJCC/UICC 8th pathological NX Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-M1E  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-M2  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-M3  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-M4  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
+| ENETS 2007-T1  | 35919829  | pT1  | NAACCR  | Meas Value  |
+| ENETS 2007-T1A  | 35919756  | pT1a  | NAACCR  | Meas Value  |
+| ENETS 2007-T1B  | 35919186  | pT1b  | NAACCR  | Meas Value  |
+| ENETS 2007-T2  | 35919074  | pT2  | NAACCR  | Meas Value  |
+| ENETS 2007-T3  | 35919081  | pT3  | NAACCR  | Meas Value  |
+| ENETS 2007-T4  | 35919919  | pT4  | NAACCR  | Meas Value  |
+| ENETS 2007-N0  | 35919637  | pN0  | NAACCR  | Meas Value  |
+| ENETS 2007-N1  | 35919098  | pN1  | NAACCR  | Meas Value  |
+| ENETS 2007-N1A  | 35919353  | pN1a  | NAACCR  | Meas Value  |
+| ENETS 2007-M1  | 35919480  | pM1  | NAACCR  | Meas Value  |
+| ENETS 2007-M1A  | 35919199  | pM1a  | NAACCR  | Meas Value  |
+| ENETS 2007-MX  | 45876323  | Mx  | LOINC  | Meas Value  |
+
+**Grade**
+
+Reported tumour grades and their mapping are listed in Table S4 below. We have not found a mapping in the Measurement 
+domain for “G5 = T Cell”, “G6 = B Cell” and “G7 = Null cell”. 
+
+**Table S4: Source-to-standard mapping for the grade of tumour field**
+
+|gleason_primary |description  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Gleason Primary Pattern Grade 1  | 1635448  | Gleason Primary Pattern Grade 1  | Cancer Modifier  | Measurement  |
+| 2 | Gleason Primary Pattern Grade 2  | 1635165  | Gleason Primary Pattern Grade 2  | Cancer Modifier  | Measurement  |
+| 3 | Gleason Primary Pattern Grade 3  | 1633643  | Gleason Primary Pattern Grade 3  | Cancer Modifier  | Measurement  |
+| 4 | Gleason Primary Pattern Grade 4  | 1633348  | Gleason Primary Pattern Grade 4  | Cancer Modifier  | Measurement  |
+| 5 | Gleason Primary Pattern Grade 5  | 1635122  | Gleason Primary Pattern Grade 5  | Cancer Modifier  | Measurement  |
+
+**Gleason secondary**
+
+Reported Gleason secondary pattern grades and their mapping are listed in Table S6 below.
+
+**Table S6: Source-to-standard mapping for Gleason secondary pattern field**
+
+|gleason_secondary |description  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Gleason Secondary Pattern Grade 1  | 1635517  | Gleason Secondary Pattern Grade 1  | Cancer Modifier  | Measurement  |
+| 2 | Gleason Secondary Pattern Grade 2  | 1635385  | Gleason Secondary Pattern Grade 2  | Cancer Modifier  | Measurement  |
+| 3 | Gleason Secondary Pattern Grade 3  | 1634808  | Gleason Secondary Pattern Grade 3  | Cancer Modifier  | Measurement  |
+| 4 | Gleason Secondary Pattern Grade 4  | 1633367  | Gleason Secondary Pattern Grade 4  | Cancer Modifier  | Measurement  |
+| 5 | Gleason Secondary Pattern Grade 5  | 1634739  | Gleason Secondary Pattern Grade 5  | Cancer Modifier  | Measurement  |
+
+**Gleason tertiary** 
 
 
 
