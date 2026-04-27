@@ -8,6 +8,7 @@ description: "NCRASCR Diagnosis table to STEM"
 ---
 
 # CDM Table name: STEM
+---
 ## Reading from Tumour:
 ---
 ### Scope:
