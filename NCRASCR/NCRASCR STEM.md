@@ -42,7 +42,7 @@ Records are restricted to patients that exist in the linked database (i.e. exclu
 
 ---
 
-### Diagnosis Concept Mapping:
+### Key conventions:
 Cancer diagnoses are represented by concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
