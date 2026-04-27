@@ -64,10 +64,8 @@ Please note that using the Athena vocabularies, a minority of diagnoses are mapp
 
 
 ### Cancer Modifiers
+Cancer modifiers (e.g., stage, grade) are mapped to the Measurement table. Each modifier is linked to its corresponding diagnosis using measurement_event_id (set to the condition_occurrence_id) and meas_event_field_concept_id (set to [1147127](https://athena.ohdsi.org/search-terms/terms/1147127)). However, some cancer modifiers may not be adequately represented by Athena Measurement concepts. In cases where mapping to the Measurement domain is not feasible, these modifiers are mapped instead to the Observation table. 
 
-All cancer diagnoses are ideally mapped to the CDM Condition. Cancer modifiers, which include additional diagnostic details such as stage and grade, should be mapped to the CDM Measurement domain. 
-These modifiers are linked to the corresponding cancer diagnosis using the measurement_event_id field, which is set to the respective condition_occurrence_id, and the meas_event_field_concept_id, which is assigned the concept ID =[1147127](https://athena.ohdsi.org/search-terms/terms/1147127).
-However, some cancer modifiers may not be adequately represented by Athena Measurement concepts. In cases where mapping to the CDM Measurement domain is not feasible, these modifiers are mapped instead to the CDM Observation domain. 
 
 | Destination Field | Source field | Logic | Comment field |
 | --- | --- | --- | --- |
