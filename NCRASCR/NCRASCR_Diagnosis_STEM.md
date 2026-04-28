@@ -160,12 +160,22 @@ Table S3 reports manual mapping made when automatic mapping was not possible: we
 
 |stage_path    |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
 | --- | --- | --- | --- | --- |
+| P-AJCC/UICC-STAGE-2S  | 1633702  | AJCC/UICC pathological Stage 2  | Cancer Modifier  | Measurement  |
 | P-AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
 | P-AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
 | P-AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
 | P-AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-7TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-6TH_AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-6TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-6TH_AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
 | P-7TH_AJCC/UICC-STAGE-2S  | 1634619  | AJCC/UICC 7th pathological Stage 2  | Cancer Modifier  | Measurement  |
+| P-7TH_AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-7TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-7TH_AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-7TH_AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| P-8TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+| ENETS 2007-3  |  |  |  |  |
+
 
 **TNM staging**
 
