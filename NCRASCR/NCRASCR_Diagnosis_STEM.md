@@ -8,14 +8,12 @@ description: "NCRASCR Tumour to STEM"
 ---
 
 # CDM Table name: STEM
-## Reading from Tumour:
----
-### Scope:
+## Reading from Tumour
 **ONLY NCRAS** data within the linkage_coverage period and valid in the database linked (i.e. patients do not exists in the `source_nok`) to are used in our mapping.
 
 ---
 
-### Key conventions:
+### Diagnosis
 Cancer diagnoses are represented by concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
