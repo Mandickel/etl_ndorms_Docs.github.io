@@ -32,6 +32,7 @@ Cancer diagnoses are represented by concatenating the following source fields:
 8010/3-C50.9
 
 **Morph_icd10_o2, behaviour_icd10_o2, site_icd10_o2**
+
 Cancer diagnoses are represented concatenating the morph_icd10_o2, behaviour_icd10_o2, and site_icd10_o2 fields present in the source data as follows. If site_icd10_o2 has 3 characters, then a “.9” string needs to be added at the end. 
 morph_icd10_o2/behaviour_icd10_o2-site_icd10_o2[.9] 
 
@@ -43,11 +44,13 @@ With this approach, all the cancer diagnoses have been mapped to Athena standard
 Please note that using the Athena vocabularies, a minority of diagnoses are mapped to more than one standard concept_id. These concept_ids might belong to the same domain (i.e. Condition or Measurement) or not (i.e. spread between Condition and Measurement). 
 
 **Site_coded / site_coded_desc** 
+
 We should use the ‘site_coded’ field ONLY when site_icd10_o2 is not populated.  
 
 If ‘site_icd10_o2’ is not populated, the site_coded field contains 3 digits followed by “-“ or 4 digits. The coding system used seems to be ICD9CM, which report conditions in sites, and they can all be mapped. In this case, the description “site_coded_desc” is completely missing.
 
 **basisofdiagnosis and dco**
+
 Mappings for the “Basis of diagnosis of the tumour” (basisofdiagnosis) field, combined with the “Diagnosis death certificate only” (dco) flag, are detailed in Table S1 below: 
 
 **Table S1: Source-to-standard mapping for the basis of tumour diagnosis field**
