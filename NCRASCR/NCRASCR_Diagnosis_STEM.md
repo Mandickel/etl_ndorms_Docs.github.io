@@ -90,6 +90,25 @@ Mappings for the “Basis of diagnosis of the tumour” (basisofdiagnosis) field
 ### Cancer Modifiers
 Cancer modifiers (e.g., stage, grade) are mapped to the Measurement table. Each modifier is linked to its corresponding diagnosis using measurement_event_id (set to the condition_occurrence_id) and meas_event_field_concept_id (set to [1147127](https://athena.ohdsi.org/search-terms/terms/1147127)). However, some cancer modifiers may not be adequately represented by Athena Measurement concepts. In cases where mapping to the Measurement domain is not feasible, these modifiers are mapped instead to the Observation table. 
 
+| Destination Field | Source field | Logic | Comment field |
+| --- | --- | --- | --- |
+| id |  | | Autogenerate |
+| person_id | e_patid | | |
+| visit_occurrence_id | | from visit_detail | |
+| visit_detail_id | e_cr_id<br>'tumour' | Look up visit_detail_id based on the unique combination of e_cr_id and source table name | |
+| concept_id | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best, stage_img, stage_path<br>t_best, n_best, m_best<br>t_img, n_img, m_img<br>t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | source_value is mapped by using Cancer Modifier, NCRAS_TUMOUR_MODIFIER_STCM, NCRAS_TUMOUR_GRADE_STCM, NCRAS_TUMOUR_GLEASON_PRI_STCM, NCRAS_TUMOUR_GLEASON_SEC_STCM, NCRAS_TUMOUR_GLEASON_TER_STCM and NCRAS_TUMOUR_BASIS_DIAG_STCM | |
+| source_value | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best, stage_img, stage_path<br>t_best, n_best, m_best<br>t_img, n_img, m_img<br>t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | | |
+| source_concept_id | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best, stage_img, stage_path<br>t_best, n_best, m_best<br>t_img, n_img, m_img<br>t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | concept_id representing the source_value in Athna for standard terminology. 0 for customised source_code. | |
+| type_concept_id | basisofdiagnosis<br>dco | basisofdiagnosis is mapped by using NCRAS_TUMOUR_BASIS_DIAG_STCM.<br>if basisofdiagnosis=9, dco = 'Y' will be taken into consideration in the mapping. | |
+| start_date | diagnosisdatebest | | |
+| end_date | diagnosisdatebest | | |
+| start_time | | '00:00:00' | |
+| value_as_number     | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best_system, stage_best, stage_img, stage_path<br>stage_img_system, t_best, n_best, m_best<br>t_img, n_img, m_img<br>stage_path_system, t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | | | 
+| unit_source_value   | | 'mm' for tumoursize<br>'month' for chrl_tot_27_03 and chrl_tot_78_06 | | 
+| value_source_value  | source data field name | | There are 3 sets of AJCC/UICC code in source data indentified by prefix(e.g. best_, img_, and path_) in the source data field name  | 
+| stem_source_table   | | 'Tumour-[modifier name]'  | | 
+| stem_source_id      | e_cr_id | | |
+
 **Stage:**
 
 Stage in the form of **[stage system_]AJCC/UICC-Stage-[value]** (for example, **6th_AJCC/UICC-Stage-1A**) are mapped to the Measurement table by using the Cancer Modifier vocabulary, when stage_system is >=6. When stage_system < 6 there is no prefix before “AJCC/UICC”. [stage system] refers to stage_best_system, stage_img_system and stage_path_system, and [value] refers to stage_best, stage_img and stage_path. 
@@ -531,26 +550,55 @@ There is no generic concept_id for this information. There are concept_ids speci
 | Cancers detected by national screening programme, SC Screening Detected Cancer  | C53.0, C53.9, C54.1, D06.9 | 4064913  | Ca cervix screening abnormal | SNOMED  | Condition  |
 
 
+**laterality**
+
+|laterality   |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+|R | 36770058  | Right  | Cancer Modifier  | Measurement  |
+|L | 36770232  | Left  | Cancer Modifier  | Measurement  |
+|B | 36770109  | Bilateral  | Cancer Modifier  | Measurement  |
+|M | 36769853  | Midline  | Cancer Modifier  | Measurement  |
 
 
-| Destination Field | Source field | Logic | Comment field |
-| --- | --- | --- | --- |
-| id |  | | Autogenerate |
-| person_id | e_patid | | |
-| visit_occurrence_id | | from visit_detail | |
-| visit_detail_id | e_cr_id<br>'tumour' | Look up visit_detail_id based on the unique combination of e_cr_id and source table name | |
-| concept_id | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best, stage_img, stage_path<br>t_best, n_best, m_best<br>t_img, n_img, m_img<br>t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | source_value is mapped by using Cancer Modifier, NCRAS_TUMOUR_MODIFIER_STCM, NCRAS_TUMOUR_GRADE_STCM, NCRAS_TUMOUR_GLEASON_PRI_STCM, NCRAS_TUMOUR_GLEASON_SEC_STCM, NCRAS_TUMOUR_GLEASON_TER_STCM and NCRAS_TUMOUR_BASIS_DIAG_STCM | |
-| source_value | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best, stage_img, stage_path<br>t_best, n_best, m_best<br>t_img, n_img, m_img<br>t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | | |
-| source_concept_id | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best, stage_img, stage_path<br>t_best, n_best, m_best<br>t_img, n_img, m_img<br>t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | concept_id representing the source_value in Athna for standard terminology. 0 for customised source_code. | |
-| type_concept_id | basisofdiagnosis<br>dco | basisofdiagnosis is mapped by using NCRAS_TUMOUR_BASIS_DIAG_STCM.<br>if basisofdiagnosis=9, dco = 'Y' will be taken into consideration in the mapping. | |
-| start_date | diagnosisdatebest | | |
-| end_date | diagnosisdatebest | | |
-| start_time | | '00:00:00' | |
-| value_as_number     | tumoursize<br>nodesexcised, nodesinvolved<br>tumourcount, bigtumourcount<br>chrl_tot_27_03, chrl_tot_78_06<br>grade<br>stage_best_system, stage_best, stage_img, stage_path<br>stage_img_system, t_best, n_best, m_best<br>t_img, n_img, m_img<br>stage_path_system, t_path, n_path, m_path<br>gleason_primary, gleason_secondary, gleason_tertiary, gleason_combined | | | 
-| unit_source_value   | | 'mm' for tumoursize<br>'month' for chrl_tot_27_03 and chrl_tot_78_06 | | 
-| value_source_value  | source data field name | | There are 3 sets of AJCC/UICC code in source data indentified by prefix(e.g. best_, img_, and path_) in the source data field name  | 
-| stem_source_table   | | 'Tumour-[modifier name]'  | | 
-| stem_source_id      | e_cr_id | | | 
+**first_hosp_date**
+
+This information cannot be mapped
+
+**multifocal**
+
+|multifocal   |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+|Y | 36769933  | Multifocal Tumor  | Cancer Modifier  | Measurement  |
+|N | 36769332  | Unifocal Tumor  | Cancer Modifier  | Measurement  |
+
+**clarks - Clark's levels (I-V) (for melanoma of the skin)**
+
+|clarks   |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+|1 | 4306480  | Clark melanoma level 1  | SNOMED  | Condition  |
+|2 | 4197288  | Clark melanoma level 2  | SNOMED  | Condition  |
+|3 | 4059564  | Clark melanoma level 3  | SNOMED  | Condition  |
+|4 | 4049019  | Clark melanoma level 4  | SNOMED  | Condition  |
+|5 | 4050810  | Clark melanoma level 5  | SNOMED  | Condition  |
+
+**excisionmargin**
+
+|excisionmargin   |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+|1, 2, 3 | 4149319  | Excision - clear margin  | SNOMED  | Measurement  |
+|4, 7, 8, 9 | 36768441  | Margin Uninvolved  | Cancer Modifier  | Measurement  |
+|5 | 36770563  | Margin Involved  | Cancer Modifier  | Measurement  |
+
+## Episode and Episode_Event tables 
+
+All mapped cancer diagnoses are additionally mapped to the **Episode** table, with episode_concept_id set to **32533** (Disease 
+Episode) and episode_object_concept_id assigned to the corresponding condition_concept_id. Furthermore, all related cancer 
+diagnosis modifiers, regardless of their target domain, are linked to the **Episode** table using the same episode_id via the 
+**Episode_Event** table.  The field episode_end_date is always null, as that information is not available in the source data. 
+
+This mechanism allows linking and trace all episodes related to a cancer  
+
+ 
 
 ## Reading from treatment
 
