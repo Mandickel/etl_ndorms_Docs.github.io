@@ -527,28 +527,8 @@ There is no generic concept_id for this information. There are concept_ids speci
 
 |screeningstatusfull_name | site_icd10_o2 |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
 | --- | --- | --- | --- | --- | --- |
-| - Cancers detected by national screening programme
-  - SC Screening Detected Cancer 
-  - SC 2 - Screening Detected Cancer | C50.0
-C50.1 
-C50.2
-C50.3
-C50.4 
-C50.5 
-C50.6
-C50.8
-C50.9
-D05.0
-D05.1
-D05.7
-D05.9
-D48.6 | 44811954  | Breast cancer detected by national screening programme  | SNOMED  | Condition  |
-| - Cancers detected by national screening programme
-  - SC Screening Detected Cancer  | C53.0
-C53.9
-C54.1
-D06.9
-  | 4064913  | Ca cervix screening abnormal | SNOMED  | Condition  |
+| Cancers detected by national screening programme, SC Screening Detected Cancer, Screening Detected Cancer | C50.0, C50.1, C50.2, C50.3, C50.4, C50.5, C50.6, C50.8, C50.9, D05.0, D05.1, D05.7, D05.9, D48.6 | 44811954  | Breast cancer detected by national screening programme  | SNOMED  | Condition  |
+| Cancers detected by national screening programme, SC Screening Detected Cancer  | C53.0, C53.9, C54.1, D06.9 | 4064913  | Ca cervix screening abnormal | SNOMED  | Condition  |
 
 
 
