@@ -13,7 +13,7 @@ description: "NCRASCR Tumour to STEM"
 
 ---
 
-### Diagnosis
+## Morph_icd10_o2, behaviour_icd10_o2, site_icd10_o2**
 Cancer diagnoses are represented by concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
@@ -28,8 +28,6 @@ Cancer diagnoses are represented by concatenating the following source fields:
 
 **Example:**
 8010/3-C50.9
-
-**Morph_icd10_o2, behaviour_icd10_o2, site_icd10_o2**
 
 All cancer diagnoses in the form of **[Histology]/[behaviour]-[Topography]** are ideally mapped to the **Condition** or **Measurement** domains by using the **ICDO3** vocabulary.  
 When a match cannot be found in this way, site_icd10_o2 can be used on its own for the mapping using the **ICD10** vocabulary. 
