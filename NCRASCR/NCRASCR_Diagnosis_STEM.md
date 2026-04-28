@@ -11,7 +11,7 @@ description: "NCRASCR Tumour to STEM"
 ## Reading from Tumour:
 ---
 ### Scope:
-Only **NCRAS data** within the *linkage_coverage* period are included. Records are restricted to patients that exist in the linked database (i.e. excluded if present in `source_nok`).
+**ONLY NCRAS** data within the linkage_coverage period and valid in the database linked (i.e. patients do not exists in the `source_nok`) to are used in our mapping.
 
 ---
 
@@ -31,12 +31,38 @@ Cancer diagnoses are represented by concatenating the following source fields:
 **Example:**
 8010/3-C50.9
 
-All cancer diagnoses in the form of **[Histology]/[behaviour]-[Topography]** are ideally mapped to the Condition or Measurement domains by using the ICDO3 vocabulary.  
-When a match cannot be found in this way, site_icd10_o2 can be used on its own for the mapping using the ICD10 vocabulary. 
-When site_icd10_o2 is null then site_coded can be used for the mapping using the ICD9CM vocabulary. 
+**Morph_icd10_o2, behaviour_icd10_o2, site_icd10_o2**
+Cancer diagnoses are represented concatenating the morph_icd10_o2, behaviour_icd10_o2, and site_icd10_o2 fields present in the source data as follows. If site_icd10_o2 has 3 characters, then a “.9” string needs to be added at the end. 
+morph_icd10_o2/behaviour_icd10_o2-site_icd10_o2[.9] 
+
+All cancer diagnoses in the form of **[Histology]/[behaviour]-[Topography]** are ideally mapped to the **Condition** or **Measurement** domains by using the **ICDO3** vocabulary.  
+When a match cannot be found in this way, site_icd10_o2 can be used on its own for the mapping using the **ICD10** vocabulary. 
+When site_icd10_o2 is null then site_coded can be used for the mapping using the **ICD9CM** vocabulary. 
 
 With this approach, all the cancer diagnoses have been mapped to Athena standard concept_ids. 
 Please note that using the Athena vocabularies, a minority of diagnoses are mapped to more than one standard concept_id. These concept_ids might belong to the same domain (i.e. Condition or Measurement) or not (i.e. spread between Condition and Measurement). 
+
+**Site_coded / site_coded_desc** 
+We should use the ‘site_coded’ field ONLY when site_icd10_o2 is not populated.  
+
+If ‘site_icd10_o2’ is not populated, the site_coded field contains 3 digits followed by “-“ or 4 digits. The coding system used seems to be ICD9CM, which report conditions in sites, and they can all be mapped. In this case, the description “site_coded_desc” is completely missing.
+
+**basisofdiagnosis and dco**
+Mappings for the “Basis of diagnosis of the tumour” (basisofdiagnosis) field, combined with the “Diagnosis death certificate only” (dco) flag, are detailed in Table S1 below: 
+
+**Table S1: Source-to-standard mapping for the basis of tumour diagnosis field**
+
+|basisofdiagnosis |description  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- |
+| 0 | Death certificate  | 32815  | Death Certificate  | Type Concept  | Type Concept  |
+| 1 | Clinical: Diagnosis made before death without (2-7).  | 32828  | EHR episode record  | Type Concept  | Type Concept  |
+| 2 | Clinical investigation: Includes all diagnostic techniques without a tissue diagnosis.  | 32828  | EHR episode record  | Type Concept  | Type Concept  |
+| 4 | Specific tumour markers: Includes biochemical and/or immunological markers which are site specific. Microscopic:  | 32828  | EHR episode record  | Type Concept  | Type Concept  |
+| 5 | Cytology: Examination of cells whether from a primary or secondary site, including fluids aspirated using endoscopes or needles. Also including microscopic examination of peripheral blood films and trephine bone marrow aspirates.  | 32835  | EHR Pathology report  | Type Concept  | Type Concept  |
+| 6 | Histology of a metastases: Includes autopsy specimens.  | 32835  | EHR Pathology report  | Type Concept  | Type Concept  |
+| 7 | Histology of a primary tumour: Includes all cutting and bone marrow biopsies. Also includes autopsy specimens of a primary tumour.  | 32835  | EHR Pathology report  | Type Concept  | Type Concept  |
+| 9 | Unknown, e.g. PAS or HISS record only +  dco = 'Y'  | 32815  | Death Certificate  | Type Concept  | Type Concept  |
+| 9 | Unknown, e.g. PAS or HISS record only + dco = ‘N’  | 32879  | Registry  | Type Concept  | Type Concept  |
 
 ---
 ## Reading from Tumour:
