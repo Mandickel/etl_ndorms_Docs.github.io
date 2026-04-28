@@ -303,6 +303,9 @@ reports manual mapping made when automatic mapping was not possible: see comment
 | P-AJCC/UICC-M2  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
 | P-AJCC/UICC-M3  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
 | P-AJCC/UICC-M4  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
+| P-AJCC/UICC-M9  |||||
+| P-7TH_AJCC/UICC-M9  |||||
+| P-8TH_AJCC/UICC-M9  |||||
 | ENETS 2007-T1  | 35919829  | pT1  | NAACCR  | Meas Value  |
 | ENETS 2007-T1A  | 35919756  | pT1a  | NAACCR  | Meas Value  |
 | ENETS 2007-T1B  | 35919186  | pT1b  | NAACCR  | Meas Value  |
@@ -346,6 +349,206 @@ Reported Gleason secondary pattern grades and their mapping are listed in Table 
 | 5 | Gleason Secondary Pattern Grade 5  | 1634739  | Gleason Secondary Pattern Grade 5  | Cancer Modifier  | Measurement  |
 
 **Gleason tertiary** 
+
+Reported Gleason tertiary pattern grades and their mapping are listed in Table S7 below. 
+
+**Table S7: Source-to-standard mapping for Gleason tertiary pattern field**
+
+|gleason_tertiary |description  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Gleason Tertiary Pattern Grade 1  | 1633991  | Gleason Tertiary Pattern Grade 1  | Cancer Modifier  | Measurement  |
+| 2 | Gleason Tertiary Pattern Grade 2  | 1634870  | Gleason Tertiary Pattern Grade 2  | Cancer Modifier  | Measurement  |
+| 3 | Gleason Tertiary Pattern Grade 3  | 1633295  | Gleason Tertiary Pattern Grade 3  | Cancer Modifier  | Measurement  |
+| 4 | Gleason Tertiary Pattern Grade 4  | 1633951  | Gleason Tertiary Pattern Grade 4  | Cancer Modifier  | Measurement  |
+| 5 | Gleason Tertiary Pattern Grade 5  | 1634454  | Gleason Tertiary Pattern Grade 5  | Cancer Modifier  | Measurement  |
+
+**Other cancer modifiers**
+
+Other reported cancer modifiers and their mapping are listed in Table S8 below. 
+
+**Table S8: Source-to-standard mapping for other cancer modifiers**
+
+|field name  |description  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- |
+| bigtumourcount | Count of every tumour associated with this e_cr_patid in range C00-C97 excluding C44  | 4078513  | Number of neoplasms in excised tissue specimen  | SNOMED  | Observation  |
+| chrl_tot_78_06 | Charlson co-morbidity score over 6 years  | 42538860  | Charlson Comorbidity Index  | SNOMED  | Measurement  |
+| chrl_tot_27_03 | Charlson co-morbidity score over 2 years  | 42538860  | Charlson Comorbidity Index  | SNOMED  | Measurement  |
+| gleason_combined | Gleason combined  | 619648  | Gleason scoring system for malignant neoplasm of prostate  | SNOMED  | Measurement  |
+| nodesexcised | The number of local and regional nodes reported as being positive  | 40479359  | Number of regional lymph nodes containing metastatic neoplasm in excised specimen  | SNOMED  | Measurement  |
+| nodesinvolved | The number of local and regional nodes examined  | 4156565  | Number of regional lymph nodes examined by microscopy in excised specimen  | SNOMED  | Measurement  |
+| tumourcount | Count of every tumour associated with this e_cr_patid  | 4078513  | Number of neoplasms in excised tissue specimen  | SNOMED  | Observation  |
+| tumoursize | Diameter of a tumour in mm, largest if more than one  | 4154259  | Tumor size, largest dimension  | SNOMED  | Measurement  |
+| npi | Nottingham Prognostic Indicator score (for prognosis following surgery for breast cancer)  | 4215959  | Nottingham prognostic index  | SNOMED  | Measurement  |
+| breslow | Thickness of tumour (for staging melanoma of the skin) in mm (number of range)  | 37021218  | Breslow thickness [Length] of Skin melanoma  | LOINC  | Measurement  |
+
+**Vitalstatus and vitalstatusdate are not mapped**
+
+We use the death information from the ONS mortality registry ONLY. 
+
+**route_code / final_route**
+
+We have ignored the route_code and use the “final_route” field instead. Options are mapped as follows: 
+
+|final_route |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| TWW = 2 week wait  | 4046885  | Urgent referral  | SNOMED  | Observation  |
+| GP referral  | 44787814  | Referred by general practitioner  | SNOMED  | Observation  |
+| Emergency presentation  | 4163685  | Emergency department patient visit  | SNOMED  | Observation  |
+| Screening  | 44803659  | Screening  | SNOMED  | Observation  |
+|  |  | Referred by hospital outpatient department  | SNOMED  | Observation  |
+| Other outpatient  | 44809116  |  |  |  |
+| Inpatient elective  | 4228491  | Planned admission  | SNOMED  | Observation  |
+| DCO  | Already mapped by the DCO field  |  |  |  |
+
+**er_status = Oestrogen receptor status of the tumour (for breast cancer)**
+
+|value_source_value |source_value |value_as_concept_id  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- | --- |
+| er_status  |  |  | 4307360  | Estrogen receptor assay (ERA)  | SNOMED  | Measurement  |
+|  | P | 35919678  |  |  | NAACCR  | Meas Value  |
+|  | N | 35919055  |  |  | NAACCR  | Meas Value  |
+
+**er_score = Oestrogen receptor score of the tumour (for breast cancer)**
+
+|value_source_value |source_value |value_as_concept_id  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- | --- |
+| er_score ||  | 35918819  | Estrogen Receptor Total Allred Score  | NAACCR  | Measurement  |
+|  | 0 | 35919095  |  |  | NAACCR  | Meas Value  |
+|  | 1 | 35919804  |  |  | NAACCR  | Meas Value  |
+|  | 2 | 35919902  |  |  | NAACCR  | Meas Value  |
+|  | 3 | 35919181  |  |  | NAACCR  | Meas Value  |
+|  | 4 | 35919373  |  |  | NAACCR  | Meas Value  |
+|  | 5 | 35919036  |  |  | NAACCR  | Meas Value  |
+|  | 6 | 35919497  |  |  | NAACCR  | Meas Value  |
+|  | 7 | 35919196  |  |  | NAACCR  | Meas Value  |
+|  | 8 | 35919763  |  |  | NAACCR  | Meas Value  |
+
+
+**pr_status = Progesterone receptor status of the tumour (for breast cancer)**
+
+|value_source_value |source_value |value_as_concept_id  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- | --- |
+| pr_status |  |  | 4030384  | Progesterone receptor assay measurement  | SNOMED  | Measurement  |
+|  | P | 35919362  |  |  | NAACCR  | Meas Value  |
+|  | N | 35919700  |  |  | NAACCR  | Meas Value  |
+
+
+**pr_score = Progesterone receptor score of the tumour (for breast cancer)**
+
+|value_source_value |source_value |value_as_concept_id  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- | --- |
+| pr_score  |  |  | 35918626  | Progesterone Receptor Total Allred Score  |NAACCR |Measurement |
+|  | 0  | 35919026  |  |  |NAACCR |Meas Value |
+|  | 1  | 35919439  |  |  |NAACCR |Meas Value |
+|  | 2  | 35919607  |  |  |NAACCR |Meas Value |
+|  | 3  | 35919054  |  |  |NAACCR |Meas Value |
+|  | 4  | 35919602  |  |  |NAACCR |Meas Value |
+|  | 5  | 35919915  |  |  |NAACCR |Meas Value |
+|  | 6  | 35919748  |  |  |NAACCR |Meas Value |
+|  | 7  | 35919716  |  |  |NAACCR |Meas Value |
+|  | 8  | 35919200  |  |  |NAACCR |Meas Value |
+
+
+**her2_status = Human Epidermal Growth Factor Receptor 2 status of the tumour (for breast cancer)**
+
+|her2_status |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| P  | 44790895  | Human epidermal growth factor receptor 2 gene positive  | SNOMED  | Measurement  |
+| N  | 44790896  | Human epidermal growth factor receptor 2 gene negative  | SNOMED  | Measurement  |
+
+**dukes - Dukes stage of disease at diagnosis (for colorectal cancer)**
+
+|dukes |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| A  | 4191720  | Dukes stage A  | SNOMED  | Condition  |
+| B  | 4216304  | Dukes stage B  | SNOMED  | Condition  |
+| C  | 1635190  | Duke stage C  | Cancer Modifier  | Measurement  |
+| C1  | 4192885  | Dukes stage C1  | SNOMED  | Condition  |
+| C2  | 4215419  | Dukes stage C2  | SNOMED  | Condition  |
+| D  | 4192886  | Dukes stage D  | SNOMED  | Condition  |
+
+**figo - Fédération Internationale de Gynécologie et d'Obstétrique - Staging system (for tumours of the female reproductive system)**
+
+|figo  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| 1  | 1634826  | FIGO Stage 1  | Cancer Modifier  | Measurement  |
+| 1A  | 1633471  | FIGO Stage 1A  | Cancer Modifier  | Measurement  |
+| 1A1  | 1633850  | FIGO Stage 1A1  | Cancer Modifier  | Measurement  |
+| 1A2  | 1635128  | FIGO Stage 1A2  | Cancer Modifier  | Measurement  |
+| 1B  | 1633590  | FIGO Stage 1B  | Cancer Modifier  | Measurement  |
+| 1B1  | 1635463  | FIGO Stage 1B1  | Cancer Modifier  | Measurement  |
+| 1B2  | 1635572  | FIGO Stage 1B2  | Cancer Modifier  | Measurement  |
+| 1C  | 1635358  | FIGO Stage 1C  | Cancer Modifier  | Measurement  |
+| 1C1  | 1633792  | FIGO Stage 1C1  | Cancer Modifier  | Measurement  |
+| 1C2  | 1634475  | FIGO Stage 1C2  | Cancer Modifier  | Measurement  |
+| 1C3  | 1633311  | FIGO Stage 1C3  | Cancer Modifier  | Measurement  |
+| 2  | 1634127  | FIGO Stage 2  | Cancer Modifier  | Measurement  |
+| 2A  | 1633317  | FIGO Stage 2A  | Cancer Modifier  | Measurement  |
+| 2A1  | 1634026  | FIGO Stage 2A1  | Cancer Modifier  | Measurement  |
+| 2A2  | 1633963  | FIGO Stage 2A2  | Cancer Modifier  | Measurement  |
+| 2B  | 1635822  | FIGO Stage 2B  | Cancer Modifier  | Measurement  |
+| 2C (mapped as 2)  | 1634127  | FIGO Stage 2  | Cancer Modifier  | Measurement  |
+| 3  | 1634024  | FIGO Stage 3  | Cancer Modifier  | Measurement  |
+| 3A  | 1634412  | FIGO Stage 3A  | Cancer Modifier  | Measurement  |
+| 3A1  | 1635742  | FIGO Stage 3A1  | Cancer Modifier  | Measurement  |
+| 3A1I  | 1635060  | FIGO Stage 3A1(I)  | Cancer Modifier  | Measurement  |
+| 3A1II  | 1633791  | FIGO Stage 3A1(II)  | Cancer Modifier  | Measurement  |
+| 3A2  | 1634108  | FIGO Stage 3A2  | Cancer Modifier  | Measurement  |
+| 3B  | 1635339  | FIGO Stage 3B  | Cancer Modifier  | Measurement  |
+| 3BII  | No stage, no mapping  |  |  |  |
+| 3C  | 1633903  | FIGO Stage 3C  | Cancer Modifier  | Measurement  |
+| 3C1  | 1635141  | FIGO Stage 3C1  | Cancer Modifier  | Measurement  |
+| 3C2  | 1633554  | FIGO Stage 3C2  | Cancer Modifier  | Measurement  |
+| 4  | 1634306  | FIGO Stage 4  | Cancer Modifier  | Measurement  |
+| 4A  | 1635588  | FIGO Stage 4A  | Cancer Modifier  | Measurement  |
+| 4B  | 1635186  | FIGO Stage 4B  | Cancer Modifier  | Measurement  |
+
+**screendetected / screeningstatuscosd_code / screeningstatuscosd_name / screeningstatusfull_code**
+
+There is no generic concept_id for this information. There are concept_ids specific for some types of cancer (i.e. bowel, breast) 
+
+**screeningstatusfull_name**
+
+|screeningstatusfull_name  |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- |
+| Breast: Screen Detected  | 44811954  | Breast cancer detected by national screening programme  | SNOMED  | Condition  |
+| Bowel: Screen Detected  | 44791581  | Bowel cancer detected by national screening programme  | SNOMED  | Condition  |
+| Bowel: Screen Detected (Extended 1 Month)  |  |  |  |  |
+| Bowel: Screen Detected (Extended 2 Months)  |  |  |  |  |
+| Bowel: Screen Detected (Extended 3 Months)  |  |  |  |  |
+| Bowel: Surveillance Detected  |  |  |  |  |
+| Cervix: Screen Detected  | 4064913  | Ca cervix screening abnormal  | SNOMED  | Condition  |
+| Cervix: Screen Detected, delayed  |  |  |  |  |
+| Screen detected (after routine smear resulting in suspend code but <=6mths after)  |  |  |  |  |
+| Screen detected delayed (after routine smear resulting in suspend code but >6mths after)  |  |  |  |  |
+
+
+**screeningstatusfull_name + site_icd10_o2**
+
+|screeningstatusfull_name | site_icd10_o2 |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
+| --- | --- | --- | --- | --- | --- |
+| - Cancers detected by national screening programme
+  - SC Screening Detected Cancer 
+  - SC 2 - Screening Detected Cancer | C50.0
+C50.1 
+C50.2
+C50.3
+C50.4 
+C50.5 
+C50.6
+C50.8
+C50.9
+D05.0
+D05.1
+D05.7
+D05.9
+D48.6 | 44811954  | Breast cancer detected by national screening programme  | SNOMED  | Condition  |
+| - Cancers detected by national screening programme
+  - SC Screening Detected Cancer  | C53.0
+C53.9
+C54.1
+D06.9
+  | 4064913  | Ca cervix screening abnormal | SNOMED  | Condition  |
 
 
 
