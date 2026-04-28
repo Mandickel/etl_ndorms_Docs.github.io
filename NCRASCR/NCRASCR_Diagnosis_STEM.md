@@ -12,8 +12,9 @@ description: "NCRASCR Tumour to STEM"
 **ONLY NCRAS** data within the linkage_coverage period and valid in the database linked (i.e. patients do not exists in the `source_nok`) to are used in our mapping.
 
 ---
+## Diagnosis
 
-## Morph_icd10_o2, behaviour_icd10_o2, site_icd10_o2**
+**Morph_icd10_o2, behaviour_icd10_o2, site_icd10_o2**
 Cancer diagnoses are represented by concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
