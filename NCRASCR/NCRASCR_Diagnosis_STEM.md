@@ -15,6 +15,7 @@ description: "NCRASCR Tumour to STEM"
 ## Diagnosis
 
 **Morph_icd10_o2, behaviour_icd10_o2, site_icd10_o2**
+
 Cancer diagnoses are represented by concatenating the following source fields:
 - `morph_icd10_o2`, 
 - `behaviour_icd10_o2`
