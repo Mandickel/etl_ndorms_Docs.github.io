@@ -203,27 +203,28 @@ Table S3 reports manual mapping made when automatic mapping was not possible: we
 
 |stage_path    |target_concept_id  |target_concept_name  |target_vocabulary_id |target_domain_id |
 | --- | --- | --- | --- | --- |
-| P-AJCC/UICC-STAGE-2S  | 1633702  | AJCC/UICC pathological Stage 2  | Cancer Modifier  | Measurement  |
-| P-AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-6TH_AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-6TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-6TH_AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-7TH_AJCC/UICC-STAGE-2S  | 1634619  | AJCC/UICC 7th pathological Stage 2  | Cancer Modifier  | Measurement  |
-| P-7TH_AJCC/UICC-STAGE-6  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-7TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-7TH_AJCC/UICC-STAGE-U  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-7TH_AJCC/UICC-STAGE-X  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| P-8TH_AJCC/UICC-STAGE-?  | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
-| ENETS 2007-3  |  |  |  |  |
+|P-AJCC/UICC-STAGE-2S | 1633702  | AJCC/UICC pathological Stage 2  | Cancer Modifier  | Measurement  |
+|P-AJCC/UICC-STAGE-6 | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-AJCC/UICC-STAGE-? | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-AJCC/UICC-STAGE-U | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-AJCC/UICC-STAGE-X | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-6TH_AJCC/UICC-STAGE-6 | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-6TH_AJCC/UICC-STAGE-? | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-6TH_AJCC/UICC-STAGE-X | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-7TH_AJCC/UICC-STAGE-2S | 1634619  | AJCC/UICC 7th pathological Stage 2  | Cancer Modifier  | Measurement  |
+|P-7TH_AJCC/UICC-STAGE-6 | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-7TH_AJCC/UICC-STAGE-? | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-7TH_AJCC/UICC-STAGE-U | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-7TH_AJCC/UICC-STAGE-X | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|P-8TH_AJCC/UICC-STAGE-? | 35919533  | Stage Unknown  | NAACCR  | Meas Value  |
+|ENETS 2007-3 | 1634191  | Stage 3  | Cancer Modifier  | Measurement  |
+
 
 
 **TNM staging**
 
 TNM staging in the form of [stage system_]AJCC/UICC-[value] (for example, 6th_AJCC/UICC-M1a) are mapped to the 
-Measurement table by using Cancer Modifier vocabulary, when stage_system is >=6. When stage_system < 6 there is no 
+**Measurement** table by using **Cancer Modifier** vocabulary, when stage_system is >=6. When stage_system < 6 there is no 
 prefix before “AJCC/UICC”. [stage system] refers to stage_best_system, stage_img_system and stage_path_system, [value] 
 refers to the TNM-specific attributes, including t_best, n_best, m_best, t_img, n_img, m_img, t_path, n_path, m_path. Table S2 
 reports manual mapping made when automatic mapping was not possible: see comment in the paragraph above. 
@@ -322,9 +323,9 @@ reports manual mapping made when automatic mapping was not possible: see comment
 | P-AJCC/UICC-M2  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
 | P-AJCC/UICC-M3  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
 | P-AJCC/UICC-M4  | 1635505  | AJCC/UICC pathological M1 Category  | Cancer Modifier  | Measurement  |
-| P-AJCC/UICC-M9  |||||
-| P-7TH_AJCC/UICC-M9  |||||
-| P-8TH_AJCC/UICC-M9  |||||
+| P-AJCC/UICC-M9  | 1633421 | AJCC/UICC pathological MX Category | Cancer Modifier  | Measurement  |
+| P-7TH_AJCC/UICC-M9  | 1634362 | AJCC/UICC 7th pathological MX Category  | Cancer Modifier  | Measurement  |
+| P-8TH_AJCC/UICC-M9  | 1633757 | AJCC/UICC 8th pathological MX Category | Cancer Modifier  | Measurement  |
 | ENETS 2007-T1  | 35919829  | pT1  | NAACCR  | Meas Value  |
 | ENETS 2007-T1A  | 35919756  | pT1a  | NAACCR  | Meas Value  |
 | ENETS 2007-T1B  | 35919186  | pT1b  | NAACCR  | Meas Value  |
